@@ -1,0 +1,37 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      # Всередині контейнера хост бази — ім'я сервісу.
+      DB_HOST: db
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      # 3307 і 3308 вже зайняті іншими проєктами на цій машині.
+      - "3310:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: estetika
+      MYSQL_USER: estetika
+      MYSQL_PASSWORD: secret
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  db_data:

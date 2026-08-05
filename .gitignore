@@ -1,0 +1,9 @@
+/.env
+/vendor/
+/node_modules/
+/storage/originals/
+/storage/logs/*.log
+/public_html/media/
+/public_html/cache/*.html
+.DS_Store
+*.local

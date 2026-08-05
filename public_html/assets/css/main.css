@@ -1,0 +1,1209 @@
+/* Основний CSS. Вантажиться відкладено — усе, що нижче першого екрана. */
+
+/* ================================================================
+   Спільне для секцій
+   ================================================================ */
+
+.section {
+    padding-block: var(--sp-6);
+}
+
+@media (min-width: 768px) {
+    .section { padding-block: var(--sp-7); }
+}
+
+.section--tight { padding-block: var(--sp-5); }
+
+.section--surface {
+    background: var(--c-surface);
+}
+
+.section__head {
+    max-width: var(--wrap-narrow);
+    margin-bottom: var(--sp-5);
+}
+
+.section__head--center {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section__title {
+    font-size: var(--t-2xl);
+    font-weight: 400;
+    margin: 0 0 var(--sp-2);
+}
+
+.section__lead {
+    color: var(--c-muted);
+    font-size: var(--t-md);
+    max-width: 58ch;
+}
+.section__head--center .section__lead { margin-inline: auto; }
+
+/* ---------- Підпис-ескіз ----------
+   Розділювач між секціями намальований від руки, а не рівною лінією border'а.
+   Це відсилання до того, з чого починається кожна процедура: майстер малює
+   ескіз форми олівцем просто на обличчі, і тільки після згоди клієнтки береться
+   за роботу. Тому «лінія від руки» тут — не орнамент, а те саме, чим торгує салон. */
+
+.rule {
+    display: block;
+    width: min(100%, var(--wrap));
+    margin-inline: auto;
+    height: 8px;
+    color: var(--c-accent);
+    opacity: .5;
+}
+
+.rule path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    stroke-linecap: round;
+}
+
+/* Лінія «промальовується» при появі в екрані. */
+.rule[data-draw] path {
+    stroke-dasharray: var(--len, 1300);
+    stroke-dashoffset: var(--len, 1300);
+}
+.rule[data-draw].is-visible path {
+    transition: stroke-dashoffset 1400ms var(--ease);
+    stroke-dashoffset: 0;
+}
+
+/* ---------- Поява секцій ----------
+   Приховування прив'язане до класу .js, який ставить інлайновий скрипт у <head>.
+   Якщо JS не завантажився або впав, [data-reveal] лишається видимим — інакше
+   вся сторінка нижче першого екрана була б порожньою. */
+
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] { opacity: 1; transform: none; }
+    .rule[data-draw] path { stroke-dashoffset: 0; }
+}
+
+/* ================================================================
+   Довіра одним рядком
+   ================================================================ */
+
+.trust {
+    border-block: 1px solid var(--c-line);
+    padding-block: var(--sp-4);
+}
+
+.trust__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4) var(--sp-2);
+    list-style: none;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .trust__list { grid-template-columns: repeat(4, 1fr); }
+}
+
+.trust__num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--t-xl);
+    font-weight: 500;
+    color: var(--c-accent);
+    line-height: 1.1;
+    /* Цифра змінюється під час анімації підрахунку — табличні цифри не дають
+       рядку смикатися по ширині. */
+    font-variant-numeric: tabular-nums;
+}
+
+.trust__label {
+    display: block;
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+    margin-top: 0.35rem;
+}
+
+/* ================================================================
+   Про майстра
+   ================================================================ */
+
+.about__grid {
+    display: grid;
+    gap: var(--sp-5);
+}
+
+@media (min-width: 900px) {
+    .about__grid {
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: var(--sp-6);
+        align-items: start;
+    }
+    .about__figure { position: sticky; top: 100px; }
+}
+
+.about__figure { margin: 0; }
+.about__figure img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.about__body > * + * { margin-top: var(--sp-3); }
+.about__body p { color: var(--c-muted); }
+
+.quote {
+    margin: var(--sp-4) 0 0;
+    padding-left: var(--sp-3);
+    border-left: 1px solid var(--c-accent);
+}
+
+.quote p {
+    font-family: var(--font-display);
+    font-size: var(--t-lg);
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--c-ink);
+}
+
+.quote footer {
+    margin-top: var(--sp-2);
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+}
+
+.credentials {
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+    margin-top: var(--sp-4);
+}
+
+.credentials li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+}
+
+.credentials li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.62em;
+    width: 10px; height: 1px;
+    background: var(--c-accent);
+}
+
+/* ================================================================
+   Інтерв'ю на телебаченні
+   ================================================================ */
+
+.interview__frame {
+    position: relative;
+    max-width: 900px;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    background: var(--c-surface);
+    overflow: hidden;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.interview__frame img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 700ms var(--ease), filter 400ms var(--ease);
+}
+
+.interview__frame:hover img { transform: scale(1.03); filter: brightness(.92); }
+
+.interview__frame::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(255, 255, 255, .55);
+    pointer-events: none;
+}
+
+.interview__play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 76px; height: 76px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--c-bg) 92%, transparent);
+    box-shadow: var(--shadow-lift);
+    transition: transform 250ms var(--ease), background-color 250ms var(--ease);
+}
+
+.interview__frame:hover .interview__play {
+    transform: scale(1.07);
+    background: var(--c-bg);
+}
+
+.interview__play svg { width: 22px; height: 26px; fill: var(--c-accent-dk); margin-left: 4px; }
+
+.interview__caption {
+    max-width: 900px;
+    margin: var(--sp-3) auto 0;
+    text-align: center;
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+}
+
+.interview__frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+
+/* ================================================================
+   Послуги
+   ================================================================ */
+
+.services__group + .services__group { margin-top: var(--sp-6); }
+
+.services__group-title {
+    font-size: var(--t-lg);
+    font-weight: 500;
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    border-bottom: 1px solid var(--c-line);
+}
+
+.cards {
+    display: grid;
+    gap: var(--sp-2);
+    grid-template-columns: 1fr;
+    list-style: none;
+}
+
+@media (min-width: 640px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+
+/* Картки в ряду мають бути однакової висоти. Без цього сусід із довшою назвою
+   провисає нижче за інших, і ряд читається як зламаний. */
+.cards > li { display: flex; }
+.cards > li > .card { height: 100%; }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    padding: var(--sp-3);
+    text-align: left;
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color 250ms var(--ease),
+                box-shadow 250ms var(--ease),
+                transform 250ms var(--ease);
+}
+
+.section--surface .card { background: var(--c-bg); }
+
+.card:hover {
+    border-color: var(--c-accent);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+}
+
+.card__icon { width: 28px; height: 28px; color: var(--c-accent); }
+.card__icon svg { width: 100%; height: 100%; }
+
+.card__title {
+    font-family: var(--font-display);
+    font-size: var(--t-md);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.card__meta {
+    font-size: var(--t-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+}
+
+.card__desc {
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+    flex-grow: 1;
+}
+
+.card__more {
+    font-size: var(--t-sm);
+    font-weight: 600;
+    color: var(--c-ink);
+    margin-top: 0.25rem;
+}
+
+.card__more::after {
+    content: ' →';
+    color: var(--c-accent);
+    transition: margin-left 200ms var(--ease);
+    display: inline-block;
+}
+.card:hover .card__more::after { margin-left: 4px; }
+
+/* ================================================================
+   Роботи до / після
+   ================================================================ */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--sp-4);
+    list-style: none;
+}
+
+.filters button {
+    padding: 0.5rem 1rem;
+    font-size: var(--t-sm);
+    background: none;
+    border: 1px solid var(--c-line);
+    border-radius: 100px;
+    color: var(--c-muted);
+    cursor: pointer;
+    transition: border-color 200ms var(--ease), color 200ms var(--ease), background-color 200ms var(--ease);
+}
+
+.filters button:hover { border-color: var(--c-accent); color: var(--c-ink); }
+
+.filters button[aria-pressed='true'] {
+    background: var(--c-ink);
+    border-color: var(--c-ink);
+    color: var(--c-bg);
+}
+
+/* Колонкова кладка, а не сітка з фіксованою пропорцією.
+   Роботи — це готові колажі різних форматів: десь квадрат, десь 9:16 із вшитими
+   підписами «До» біля самих країв. Будь-який спільний aspect-ratio зрізав би комусь
+   із них половину змісту, а зміст тут і є товаром. Тому кожне фото показується
+   цілим, а різну висоту розкладає column-layout.
+
+   На мобільному дві колонки: в одну кілька десятків робіт розтягують сторінку
+   на сорок екранів, і до форми запису читачка вже не догортає. */
+.works__grid {
+    columns: 2;
+    column-gap: var(--sp-1);
+    list-style: none;
+}
+
+@media (min-width: 640px) {
+    .works__grid { columns: 3; column-gap: var(--sp-2); }
+}
+
+@media (min-width: 1024px) {
+    .works__grid { columns: 4; }
+}
+
+.work {
+    position: relative;
+    margin: 0 0 var(--sp-1);
+    /* Картка не має розриватися між колонками. */
+    break-inside: avoid;
+}
+
+.work__btn { background: var(--c-surface); border-radius: var(--radius); }
+
+@media (min-width: 640px) {
+    .work { margin-bottom: var(--sp-2); }
+}
+
+.work__btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    transition: transform 600ms var(--ease);
+}
+
+.work:hover img { transform: scale(1.04); }
+
+/* Підпис стоїть під фото, а не поверх нього. Накладення тут неможливе:
+   у самих колажах уже є вшиті плашки «До» й назва процедури, і будь-який
+   оверлей неминуче на щось із них наїжджає. */
+.work__tag {
+    display: block;
+    padding: 0.5rem 0.2rem 0.2rem;
+    font-size: var(--t-xs);
+    letter-spacing: 0.06em;
+    color: var(--c-muted);
+    background: var(--c-bg);
+}
+
+.section--surface .work__tag { background: var(--c-surface); }
+
+.works__empty {
+    padding: var(--sp-5);
+    text-align: center;
+    color: var(--c-muted);
+    border: 1px dashed var(--c-line);
+    border-radius: var(--radius);
+}
+
+/* Слайдер-порівняння. Використовується лише для робіт з layout='pair',
+   тобто там, де є два окремі знімки. На склеєних колажах його не існує. */
+.compare {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+    cursor: ew-resize;
+}
+
+.compare__after { display: block; width: 100%; }
+
+.compare__before {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0);
+}
+
+.compare__before img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.compare__handle {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: var(--pos, 50%);
+    width: 2px;
+    background: var(--c-bg);
+    transform: translateX(-1px);
+    pointer-events: none;
+}
+
+.compare__handle::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 40px; height: 40px;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--c-bg);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--c-ink) 30%, transparent);
+    backdrop-filter: blur(4px);
+}
+
+/* ================================================================
+   Як проходить візит
+   ================================================================ */
+
+/* Нумерація тут доречна: це справжня послідовність, і порядок кроків —
+   саме та інформація, яку читачка шукає. */
+.steps {
+    display: grid;
+    gap: var(--sp-4);
+    list-style: none;
+    counter-reset: step;
+}
+
+@media (min-width: 768px) {
+    .steps { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--sp-3); }
+}
+
+.step {
+    counter-increment: step;
+    padding-top: var(--sp-3);
+    border-top: 1px solid var(--c-line);
+}
+
+.step::before {
+    content: counter(step, decimal-leading-zero);
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--t-md);
+    color: var(--c-accent);
+    margin-bottom: 0.6rem;
+}
+
+.step h3 {
+    font-size: var(--t-md);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.step p { font-size: var(--t-sm); color: var(--c-muted); }
+
+/* Той самий пронумерований список, але вертикальний — для вузької колонки біля форми. */
+.steps--compact { gap: var(--sp-3); }
+@media (min-width: 768px) { .steps--compact { grid-template-columns: 1fr; } }
+
+/* ================================================================
+   Безпека і стерильність
+   ================================================================ */
+
+.safety__grid {
+    display: grid;
+    gap: var(--sp-3);
+    list-style: none;
+}
+
+@media (min-width: 700px) { .safety__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .safety__grid { grid-template-columns: repeat(3, 1fr); } }
+
+.safety__item {
+    padding: var(--sp-3);
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+}
+
+.safety__item h3 {
+    font-size: var(--t-base);
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.safety__item p { font-size: var(--t-sm); color: var(--c-muted); }
+
+/* ================================================================
+   Дипломи
+   ================================================================ */
+
+.diplomas__grid {
+    display: grid;
+    gap: var(--sp-2);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    list-style: none;
+}
+
+.diploma {
+    margin: 0;
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+    padding: 0.5rem;
+}
+
+.diploma button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+}
+
+.diploma img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #fff;
+}
+
+.diploma figcaption {
+    font-size: var(--t-xs);
+    color: var(--c-muted);
+    padding: 0.6rem 0.3rem 0.2rem;
+}
+
+.diploma[data-award='1'] { border-color: var(--c-accent); }
+
+.center-action { text-align: center; margin-top: var(--sp-4); }
+
+[hidden] { display: none !important; }
+
+/* ================================================================
+   Відгуки
+   ================================================================ */
+
+.reviews__grid {
+    display: grid;
+    gap: var(--sp-2);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    list-style: none;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-3);
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+}
+
+.review__body {
+    font-size: var(--t-sm);
+    color: var(--c-ink);
+    flex-grow: 1;
+}
+
+.review__body::before {
+    content: '';
+    display: block;
+    width: 22px; height: 1px;
+    background: var(--c-accent);
+    margin-bottom: var(--sp-2);
+}
+
+.review__meta {
+    font-size: var(--t-xs);
+    color: var(--c-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+}
+
+.review__author { font-weight: 700; color: var(--c-ink); }
+
+.review__source {
+    align-self: flex-start;
+    font-size: var(--t-xs);
+    color: var(--c-accent-dk);
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 1px;
+    background: none;
+    border-width: 0 0 1px;
+    cursor: pointer;
+}
+
+/* ================================================================
+   Питання і відповіді
+   ================================================================ */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: var(--sp-4);
+    border-bottom: 1px solid var(--c-line);
+}
+
+.tabs button {
+    position: relative;
+    padding: 0.7rem 1rem;
+    background: none;
+    border: 0;
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+    cursor: pointer;
+    transition: color 200ms var(--ease);
+}
+
+.tabs button:hover { color: var(--c-ink); }
+
+.tabs button[aria-selected='true'] { color: var(--c-ink); font-weight: 600; }
+
+.tabs button[aria-selected='true']::after {
+    content: '';
+    position: absolute;
+    left: 1rem; right: 1rem; bottom: -1px;
+    height: 1px;
+    background: var(--c-accent);
+}
+
+.accordion { max-width: var(--wrap-narrow); }
+
+.accordion details {
+    border-bottom: 1px solid var(--c-line);
+}
+
+.accordion summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--sp-2);
+    padding: var(--sp-3) 0;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion summary::-webkit-details-marker { display: none; }
+
+.accordion summary::after {
+    content: '+';
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-size: var(--t-md);
+    line-height: 1;
+    color: var(--c-accent);
+    transition: transform 250ms var(--ease);
+}
+
+.accordion details[open] summary::after { transform: rotate(45deg); }
+
+.accordion__answer {
+    padding-bottom: var(--sp-3);
+    color: var(--c-muted);
+    max-width: 62ch;
+}
+
+.accordion__answer p + p { margin-top: 0.8rem; }
+
+/* ================================================================
+   Подарункові сертифікати
+   ================================================================ */
+
+.gift {
+    display: grid;
+    gap: var(--sp-4);
+    align-items: center;
+    padding: var(--sp-5);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+}
+
+@media (min-width: 800px) {
+    .gift { grid-template-columns: 1.4fr 1fr; padding: var(--sp-6); }
+}
+
+.gift h2 { font-size: var(--t-xl); font-weight: 400; margin-bottom: var(--sp-2); }
+.gift p { color: var(--c-muted); max-width: 52ch; }
+
+/* ================================================================
+   Локації
+   ================================================================ */
+
+.locations__grid {
+    display: grid;
+    gap: var(--sp-3);
+}
+
+@media (min-width: 800px) { .locations__grid { grid-template-columns: repeat(2, 1fr); } }
+
+.location {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+    overflow: hidden;
+}
+
+/* Смужка фото кабінету над адресами. */
+.studio-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-3);
+    list-style: none;
+}
+
+.studio-strip button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: var(--c-surface);
+    cursor: zoom-in;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.studio-strip img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform 600ms var(--ease);
+}
+
+.studio-strip button:hover img { transform: scale(1.04); }
+
+.location { border-radius: var(--radius); }
+
+.location__body { padding: var(--sp-3); display: grid; gap: 0.5rem; }
+
+.location__title { font-size: var(--t-md); font-weight: 500; }
+
+.location__address { font-size: var(--t-sm); color: var(--c-ink); }
+.location__district,
+.location__hours { font-size: var(--t-sm); color: var(--c-muted); }
+
+.location__link {
+    margin-top: 0.4rem;
+    font-size: var(--t-sm);
+    font-weight: 600;
+    color: var(--c-accent-dk);
+    justify-self: start;
+    border-bottom: 1px solid var(--c-line);
+    transition: border-color 200ms var(--ease);
+}
+.location__link:hover { border-color: var(--c-accent); }
+
+/* ================================================================
+   Форма запису
+   ================================================================ */
+
+.booking {
+    display: grid;
+    gap: var(--sp-5);
+}
+
+@media (min-width: 900px) {
+    .booking { grid-template-columns: 0.9fr 1.1fr; gap: var(--sp-6); align-items: start; }
+}
+
+.form { display: grid; gap: var(--sp-3); }
+
+.field { display: grid; gap: 0.4rem; }
+
+.field label {
+    font-size: var(--t-sm);
+    font-weight: 600;
+}
+
+.field .req { color: var(--c-accent); }
+
+.field input,
+.field select,
+.field textarea {
+    padding: 0.85rem 1rem;
+    background: var(--c-bg);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--c-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-accent) 18%, transparent);
+}
+
+.field textarea { resize: vertical; min-height: 100px; }
+
+.field__error {
+    font-size: var(--t-xs);
+    color: #A0342A;
+}
+
+/* Підсвітка поля, до якого форма проскролила при помилці валідації.
+   Знімається за таймером у JS. */
+.field.is-invalid input,
+.field.is-invalid select,
+.field.is-invalid textarea {
+    border-color: #A0342A;
+    box-shadow: 0 0 0 3px rgba(160, 52, 42, .12);
+}
+
+.field-row { display: grid; gap: var(--sp-3); }
+@media (min-width: 560px) { .field-row { grid-template-columns: 1fr 1fr; } }
+
+/* Honeypot: приховане поле, яке заповнюють тільки боти. */
+.hp {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px; height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form__note {
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+    max-width: 46ch;
+}
+
+.form__status { font-size: var(--t-sm); }
+.form__status[data-state='error'] { color: #A0342A; }
+.form__status[data-state='ok'] { color: var(--c-accent-dk); }
+
+.booking__aside > * + * { margin-top: var(--sp-3); }
+
+.contact-list { list-style: none; display: grid; gap: 0.8rem; }
+
+.contact-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: var(--t-md);
+    transition: color 200ms var(--ease);
+}
+.contact-list a:hover { color: var(--c-accent-dk); }
+
+/* ================================================================
+   Блог
+   ================================================================ */
+
+.posts { display: grid; gap: var(--sp-3); list-style: none; }
+@media (min-width: 768px) { .posts { grid-template-columns: repeat(3, 1fr); } }
+
+.post { display: grid; gap: 0.6rem; }
+.post img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.post h3 { font-size: var(--t-md); font-weight: 500; }
+.post p { font-size: var(--t-sm); color: var(--c-muted); }
+.post time { font-size: var(--t-xs); color: var(--c-accent); letter-spacing: .08em; text-transform: uppercase; }
+
+.empty-note {
+    padding: var(--sp-4);
+    text-align: center;
+    color: var(--c-muted);
+    border: 1px dashed var(--c-line);
+    font-size: var(--t-sm);
+}
+
+/* ================================================================
+   Футер
+   ================================================================ */
+
+.footer {
+    background: var(--c-ink);
+    color: var(--c-bg);
+    padding-block: var(--sp-6) var(--sp-4);
+    margin-top: var(--sp-6);
+}
+
+.footer__grid {
+    display: grid;
+    gap: var(--sp-4);
+}
+
+@media (min-width: 800px) {
+    .footer__grid { grid-template-columns: 1.4fr 1fr 1fr; gap: var(--sp-5); }
+}
+
+.footer h2, .footer h3 {
+    font-size: var(--t-sm);
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c-nude);
+    margin-bottom: var(--sp-2);
+}
+
+.footer__brand { display: flex; align-items: center; gap: 0.6rem; margin-bottom: var(--sp-2); }
+.footer__brand svg { width: 40px; height: 40px; }
+.footer__brand span { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .04em; }
+
+.footer p, .footer li { font-size: var(--t-sm); color: color-mix(in srgb, var(--c-bg) 72%, transparent); }
+
+.footer ul { list-style: none; display: grid; gap: 0.5rem; }
+
+.footer a { transition: color 200ms var(--ease); }
+.footer a:hover { color: var(--c-nude); }
+
+.footer__bottom {
+    margin-top: var(--sp-5);
+    padding-top: var(--sp-3);
+    border-top: 1px solid color-mix(in srgb, var(--c-bg) 15%, transparent);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2) var(--sp-3);
+    justify-content: space-between;
+    font-size: var(--t-xs);
+    color: color-mix(in srgb, var(--c-bg) 55%, transparent);
+}
+
+.btn--tg {
+    background: color-mix(in srgb, var(--c-bg) 12%, transparent);
+    border-color: color-mix(in srgb, var(--c-bg) 25%, transparent);
+    color: var(--c-bg);
+    margin-top: var(--sp-3);
+}
+.btn--tg:hover { background: var(--c-accent); border-color: var(--c-accent); }
+
+/* ================================================================
+   Плаваюча кнопка запису (мобільна)
+   ================================================================ */
+
+.float-cta {
+    position: fixed;
+    left: var(--sp-2); right: var(--sp-2);
+    bottom: var(--sp-2);
+    z-index: 90;
+    box-shadow: var(--shadow-lift);
+    opacity: 0;
+    transform: translateY(120%);
+    transition: opacity 300ms var(--ease), transform 300ms var(--ease);
+    pointer-events: none;
+}
+
+.float-cta.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+
+@media (min-width: 768px) { .float-cta { display: none; } }
+
+/* ================================================================
+   Мобільне меню
+   ================================================================ */
+
+.mobile-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: var(--c-bg);
+    padding: var(--sp-3);
+    display: grid;
+    align-content: start;
+    gap: var(--sp-1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms var(--ease), visibility 250ms;
+}
+
+.mobile-nav[data-open='true'] { opacity: 1; visibility: visible; }
+
+.mobile-nav__top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--sp-3);
+}
+
+.mobile-nav a {
+    padding: var(--sp-2) 0;
+    font-family: var(--font-display);
+    font-size: var(--t-lg);
+    border-bottom: 1px solid var(--c-line);
+}
+
+.mobile-nav .btn { margin-top: var(--sp-3); }
+
+.icon-btn {
+    width: 44px; height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    background: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* ================================================================
+   Модалка послуги і лайтбокс
+   ================================================================ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 160;
+    display: grid;
+    place-items: center;
+    padding: var(--sp-3);
+    background: color-mix(in srgb, var(--c-ink) 55%, transparent);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 250ms var(--ease), visibility 250ms;
+}
+
+.modal[data-open='true'] { opacity: 1; visibility: visible; }
+
+.modal__panel {
+    position: relative;
+    width: min(640px, 100%);
+    max-height: 86vh;
+    overflow-y: auto;
+    padding: var(--sp-4);
+    background: var(--c-bg);
+    border-radius: var(--radius);
+    transform: scale(.96);
+    transition: transform 250ms var(--ease);
+}
+
+.modal[data-open='true'] .modal__panel { transform: scale(1); }
+
+.modal__close {
+    position: absolute;
+    top: var(--sp-2); right: var(--sp-2);
+    width: 40px; height: 40px;
+    display: grid;
+    place-items: center;
+    background: none;
+    border: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--c-muted);
+    cursor: pointer;
+}
+.modal__close:hover { color: var(--c-ink); }
+
+.modal__title { font-size: var(--t-xl); font-weight: 400; margin-bottom: 0.4rem; padding-right: var(--sp-4); }
+.modal__meta { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: var(--sp-3); }
+.modal__body { color: var(--c-muted); }
+.modal__body p + p { margin-top: 0.9rem; }
+.modal__actions { margin-top: var(--sp-4); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.lightbox { padding: var(--sp-2); }
+
+.lightbox .modal__panel {
+    width: auto;
+    max-width: min(1100px, 96vw);
+    background: none;
+    padding: 0;
+    overflow: visible;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 86vh;
+    width: auto;
+    object-fit: contain;
+    background: var(--c-bg);
+}
+
+.lightbox__caption {
+    margin-top: var(--sp-2);
+    text-align: center;
+    font-size: var(--t-sm);
+    color: var(--c-bg);
+}
+
+.lightbox .modal__close {
+    top: calc(-1 * var(--sp-5));
+    right: 0;
+    color: var(--c-bg);
+}
+
+.lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    display: grid;
+    place-items: center;
+    background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--c-ink);
+}
+.lightbox__nav--prev { left: calc(-1 * var(--sp-5)); }
+.lightbox__nav--next { right: calc(-1 * var(--sp-5)); }
+
+@media (max-width: 720px) {
+    .lightbox__nav--prev { left: 4px; }
+    .lightbox__nav--next { right: 4px; }
+}
+
+body.is-locked { overflow: hidden; }

@@ -1,0 +1,58 @@
+# Estetika — конфігурація Apache для shared-хостингу ukraine.com.ua
+
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ---- Статичний кеш головної ----
+    # Якщо cache/index.html існує, Apache віддає його напряму й PHP не стартує.
+    # Саме це тримає добовий ліміт у 100 CPU-хвилин під рекламним трафіком.
+    # Кеш обходиться для POST, для запитів із query-рядком (UTM-мітки не мають
+    # потрапити в спільний файл) і для сесії адмінки.
+    RewriteCond %{REQUEST_METHOD} =GET
+    RewriteCond %{QUERY_STRING} ^$
+    RewriteCond %{HTTP_COOKIE} !estetika_sid [NC]
+    RewriteCond %{REQUEST_URI} ^/?$
+    RewriteCond %{DOCUMENT_ROOT}/cache/index.html -f
+    RewriteRule ^$ /cache/index.html [L]
+
+    # ---- Front controller ----
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml \
+        application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # Медіа має хеш у імені файлу, тому кешується надовго.
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png  "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+
+    # CSS і JS без хеша — коротший строк, щоб правки доходили після деплою.
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<FilesMatch "^\.env|composer\.(json|lock)$">
+    Require all denied
+</FilesMatch>
