@@ -31,7 +31,10 @@ $path   = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 <script>document.documentElement.classList.add('js')</script>
 <title><?= e($fullTitle) ?></title>
 <meta name="description" content="<?= e($description) ?>">
-<?php if (!empty($noindex)): ?>
+<?php // На тестовому майданчику noindex стоїть завжди, незалежно від сторінки. ?>
+<?php if (\App\Core\Staging::isActive()): ?>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+<?php elseif (!empty($noindex)): ?>
     <meta name="robots" content="noindex, follow">
 <?php endif; ?>
 <link rel="canonical" href="<?= e($appUrl . $path) ?>">

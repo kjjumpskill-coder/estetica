@@ -7,3 +7,4 @@
 /public_html/cache/*.html
 .DS_Store
 *.local
+/.staging

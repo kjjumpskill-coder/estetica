@@ -80,6 +80,22 @@ if [ -n "$DRY" ]; then
     exit 0
 fi
 
+# Маркер тестового майданчика. Поки він лежить поруч із public_html, Apache
+# заводить /media та /assets у PHP, і фото клієнток не відкриваються за прямим
+# посиланням в обхід пароля. На production маркер прибирається, і статику
+# знову віддає веб-сервер напряму.
+APP_ENV_REMOTE="$(get APP_ENV)"
+
+if [ "$APP_ENV_REMOTE" = "production" ]; then
+    ssh -p "$PORT" "${USER}@${HOST}" "rm -f '${PATH_REMOTE}/.staging'"
+    echo "Режим production: маркер .staging знято, статика віддається напряму."
+else
+    ssh -p "$PORT" "${USER}@${HOST}" "touch '${PATH_REMOTE}/.staging'"
+    echo "Режим «${APP_ENV_REMOTE}»: маркер .staging встановлено."
+    echo "  Індексація заборонена, статичний кеш вимкнено."
+    echo "  Медіа й асети закриті тим самим паролем, що й сторінки."
+fi
+
 echo
 echo "Файли передано. Далі на сервері:"
 echo "  1. php bin/migrate.php          застосувати нові міграції"

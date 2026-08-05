@@ -13,17 +13,42 @@ require dirname(__DIR__) . '/app/bootstrap.php';
 
 use App\Controllers\HomeController;
 use App\Controllers\LegalController;
+use App\Core\Config;
 use App\Core\Router;
+use App\Core\Staging;
+
+// Закриває тестовий майданчик до того, як щось буде віддано назовні.
+// На production не робить нічого.
+Staging::protect();
 
 $router = new Router();
 
 $router->get('/', [new HomeController(), 'index']);
+
+$router->get('/robots.txt', static function (): void {
+    header('Content-Type: text/plain; charset=utf-8');
+    echo Staging::robots(rtrim(Config::str('APP_URL', ''), '/'));
+});
 
 $router->get('/polityka-konfidenciynosti', [new LegalController(), 'privacy']);
 $router->get('/dogovir-oferty', [new LegalController(), 'offer']);
 $router->get('/pravyla-zapysu', [new LegalController(), 'rules']);
 
 $router->notFound(static function (): void {
+    // На тестовому майданчику сюди потрапляють ще й /media та /assets:
+    // Apache навмисно заводить їх у PHP, щоб вони пройшли через пароль.
+    $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+
+    if (Staging::isActive() && preg_match('#^/(media|assets)/#', $path) === 1) {
+        http_response_code(200);
+
+        if (Staging::serveStatic($path)) {
+            return;
+        }
+
+        http_response_code(404);
+    }
+
     (new LegalController())->notFound();
 });
 

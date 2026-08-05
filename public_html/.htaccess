@@ -18,6 +18,14 @@ DirectoryIndex index.php
     RewriteCond %{DOCUMENT_ROOT}/cache/index.html -f
     RewriteRule ^$ /cache/index.html [L]
 
+    # ---- Захист тестового майданчика ----
+    # Якщо поруч із public_html лежить файл-маркер .staging, медіа й асети
+    # теж ідуть через PHP — інакше фото клієнток були б доступні за прямим
+    # посиланням в обхід пароля, бо Apache віддає їх, не питаючи нікого.
+    # На production маркера немає, і статика віддається напряму, без втрат.
+    RewriteCond %{DOCUMENT_ROOT}/../.staging -f
+    RewriteRule ^(media|assets)/ index.php [L]
+
     # ---- Front controller ----
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

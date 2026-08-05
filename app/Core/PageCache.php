@@ -21,6 +21,14 @@ final class PageCache
 
     public static function isEnabled(): bool
     {
+        // Поза production кеш вимкнений завжди, і це не зручність, а безпека:
+        // готовий cache/index.html Apache віддає напряму, ще до старту PHP.
+        // Тобто закешована сторінка тестового майданчика поверталася б в обхід
+        // пароля, яким ми його закрили.
+        if (!Config::isProduction()) {
+            return false;
+        }
+
         return Config::int('CACHE_TTL', 0) > 0;
     }
 
