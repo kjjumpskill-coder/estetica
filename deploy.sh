@@ -84,7 +84,10 @@ fi
 # заводить /media та /assets у PHP, і фото клієнток не відкриваються за прямим
 # посиланням в обхід пароля. На production маркер прибирається, і статику
 # знову віддає веб-сервер напряму.
-APP_ENV_REMOTE="$(get APP_ENV)"
+# Це саме ЦІЛЬОВЕ середовище, а не локальне: локально APP_ENV завжди «local»,
+# і брати його тут означало б плутати машину розробника з сервером.
+APP_ENV_REMOTE="$(get DEPLOY_ENV)"
+APP_ENV_REMOTE="${APP_ENV_REMOTE:-staging}"
 
 if [ "$APP_ENV_REMOTE" = "production" ]; then
     ssh -p "$PORT" "${USER}@${HOST}" "rm -f '${PATH_REMOTE}/.staging'"
