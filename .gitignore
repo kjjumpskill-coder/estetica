@@ -1,6 +1,6 @@
 /.env
 /vendor/
-/node_modules/
+/node_modules
 /storage/originals/
 /storage/logs/*.log
 /public_html/media/
