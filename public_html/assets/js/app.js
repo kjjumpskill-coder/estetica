@@ -4,6 +4,7 @@
  * а ініціалізація ні до чого не призводить, якщо потрібних вузлів немає.
  */
 
+import { initHeroEntrance, initImageReveal } from './modules/entrance.js';
 import { initReveal } from './modules/reveal.js';
 import { initCounters } from './modules/counters.js';
 import { initModals } from './modules/modal.js';
@@ -14,6 +15,10 @@ import { initBookingForm } from './modules/form.js';
 import { initTabs, initMobileNav, initHeaderState, initVideoFacade } from './modules/ui.js';
 
 const start = () => {
+    // Перший екран — раніше за все інше: він уже перед очима.
+    initHeroEntrance();
+    initImageReveal();
+
     initReveal();
     initCounters();
     initModals();

@@ -47,14 +47,32 @@
 
 /* ---------- Токени ---------- */
 
+/* ---------- Кольори ----------
+   Палітра з брифу лишається, але для тексту й для декору потрібні різні відтінки:
+   лінія не мусить бути читабельною, а напис мусить. Виміряно за WCAG.
+
+     золото #B08D57 на молочному ........ 2,92:1 — для тексту замало
+     білий на #B08D57 ................... 3,09:1 — теж, а це головна кнопка
+     #857A70 на молочному ............... 3,96:1 — нижче норми 4,5:1
+
+   Тому декоративні застосування (рамки, розділювачі, іконки) лишаються на
+   вихідному золоті, а текст і кнопки отримали затемнені відтінки того ж тону. */
+
 :root {
     --c-bg: #FBF8F5;
     --c-surface: #F3ECE5;
     --c-ink: #2E2A27;
-    --c-muted: #857A70;
+    /* Другорядний текст: 5,12:1 на фоні, 4,63:1 на картці. */
+    --c-muted: #736860;
     --c-line: #E3D8CC;
+    /* Золото для ліній, рамок та іконок — контраст тут не потрібен. */
     --c-accent: #B08D57;
+    /* Фон кнопки: білий напис на ньому дає 4,75:1. */
     --c-accent-dk: #8C6E42;
+    /* Золото для тексту — надзаголовки й посилання, 5,43:1. */
+    --c-accent-text: #7E6139;
+    /* Найтемніше золото — наведення на кнопку, 6,47:1. */
+    --c-accent-deep: #755939;
     --c-nude: #DCC5B4;
 
     --font-display: 'Playfair Display', 'Times New Roman', serif;
@@ -115,6 +133,25 @@ body {
 
 img, picture, svg, video { display: block; max-width: 100%; }
 img { height: auto; }
+
+/* ---------- Проявлення фото ----------
+   Поки справжнє зображення вантажиться, видно 20-піксельну заглушку з бази,
+   розтягнуту на весь кадр. Розмиття ховає її піксельність, а коли фото
+   приходить — розмиття плавно сходить, і кадр ніби наводиться на різкість.
+
+   Прив'язано до .js: без скрипта клас is-loaded ніхто не поставить,
+   і фото лишилося б розмитим назавжди. */
+
+.js img[data-lqip] {
+    filter: blur(12px);
+    transition: filter 600ms ease-out;
+}
+
+.js img[data-lqip].is-loaded { filter: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .js img[data-lqip] { filter: none; }
+}
 
 h1, h2, h3, h4 {
     font-family: var(--font-display);
@@ -177,7 +214,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--c-accent);
+    color: var(--c-accent-text);
     margin: 0 0 var(--sp-2);
 }
 
@@ -205,11 +242,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 
 .btn--primary {
-    background: var(--c-accent);
+    background: var(--c-accent-dk);
     color: #fff;
 }
 .btn--primary:hover {
-    background: var(--c-accent-dk);
+    background: var(--c-accent-deep);
     box-shadow: var(--shadow-lift);
     transform: translateY(-1px);
 }
@@ -220,9 +257,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
 }
 .btn--ghost:hover {
     border-color: var(--c-accent);
-    color: var(--c-accent-dk);
+    color: var(--c-accent-text);
     transform: translateY(-1px);
 }
+
+/* Відгук на натискання. Без нього кнопка на дотик здається «мертвою»:
+   палець уже натиснув, а на екрані нічого не сталося. */
+.btn:active { transform: translateY(0) scale(.985); }
 
 /* ---------- Шапка ---------- */
 
@@ -259,11 +300,27 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (min-width: 1024px) {
     .nav { display: flex; align-items: center; gap: var(--sp-3); }
     .nav a {
+        position: relative;
         font-size: var(--t-sm);
         color: var(--c-muted);
         transition: color 200ms var(--ease);
     }
     .nav a:hover { color: var(--c-ink); }
+
+    /* Золота риска виростає з лівого краю — той самий жест, що й лінія-ескіз
+       між секціями, тільки в мініатюрі. */
+    .nav a::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -5px;
+        height: 1px;
+        background: var(--c-accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 260ms var(--ease);
+    }
+    .nav a:hover::after,
+    .nav a:focus-visible::after { transform: scaleX(1); }
 }
 
 .header__cta { display: none; }
@@ -378,11 +435,43 @@ button, input, select, textarea { font: inherit; color: inherit; }
     margin: 0;
 }
 
+.hero__media {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
 .hero__figure img {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: var(--radius);
+}
+
+/* ---------- Поява першого екрана ----------
+   Рядки виходять по черзі, з кроком 90 мс — око встигає пройти зверху вниз
+   і дійти до кнопок природно, а не зустріти всю сторінку одним ударом.
+
+   Ховається це через .js: якщо скрипт не завантажився, перший екран
+   лишається видимим одразу. */
+
+.js .hero__in {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.hero.is-ready .hero__in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+    transition-delay: calc(var(--hero-step, 0) * 90ms);
+}
+
+/* Повільне наближення портрета: 1,06 → 1 за вісім секунд. Настільки повільно,
+   що руху не видно — помітно лише, що кадр «дихає». */
+.js .hero__media img { transform: scale(1.06); }
+
+.hero.is-ready .hero__media img {
+    transform: scale(1);
+    transition: transform 8s cubic-bezier(.16, .6, .2, 1);
 }
 
 /* Тонка золота рамка зі зсувом — єдина декоративна деталь у hero. */
@@ -402,6 +491,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+
+    /* Перший екран показуємо одразу і без наближення. */
+    .js .hero__in { opacity: 1; transform: none; }
+    .js .hero__media img { transform: none; }
 
     *, *::before, *::after {
         animation-duration: 0.001ms !important;

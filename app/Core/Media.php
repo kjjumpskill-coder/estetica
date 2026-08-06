@@ -47,7 +47,7 @@ final class Media
             : '';
 
         return sprintf(
-            '<img src="/%s-960.webp" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s"%s%s%s decoding="async">',
+            '<img src="/%s-960.webp" srcset="%s" sizes="%s" width="%d" height="%d" alt="%s"%s%s%s%s decoding="async">',
             self::esc($base),
             self::esc($srcset),
             self::esc($sizes),
@@ -56,6 +56,9 @@ final class Media
             self::esc($alt),
             $class !== '' ? ' class="' . self::esc($class) . '"' : '',
             $lazy ? ' loading="lazy"' : ' fetchpriority="high"',
+            // Позначка для плавного проявлення з розмитої заглушки.
+            // Ставиться лише там, де заглушка справді є.
+            $lqip !== '' ? ' data-lqip' : '',
             $style
         );
     }

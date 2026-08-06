@@ -126,7 +126,7 @@
     font-family: var(--font-display);
     font-size: var(--t-xl);
     font-weight: 500;
-    color: var(--c-accent);
+    color: var(--c-accent-text);
     line-height: 1.1;
     /* Цифра змінюється під час анімації підрахунку — табличні цифри не дають
        рядку смикатися по ширині. */
@@ -346,7 +346,7 @@
     font-size: var(--t-xs);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--c-accent);
+    color: var(--c-accent-text);
 }
 
 .card__desc {
@@ -552,7 +552,7 @@
     display: block;
     font-family: var(--font-display);
     font-size: var(--t-md);
-    color: var(--c-accent);
+    color: var(--c-accent-text);
     margin-bottom: 0.6rem;
 }
 
@@ -733,6 +733,26 @@
     background: var(--c-accent);
 }
 
+/* Перемикання вкладок: новий блок проявляється замість того, щоб виникнути.
+   Висота при цьому не анімується — інакше сторінка стрибала б під курсором. */
+[data-panel]:not([hidden]) {
+    animation: panel-in 260ms var(--ease) both;
+}
+
+@keyframes panel-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-panel]:not([hidden]),
+    .accordion details[open] .accordion__answer { animation: none; }
+
+    @supports selector(details::details-content) {
+        .accordion details::details-content { transition: none; }
+    }
+}
+
 .accordion { max-width: var(--wrap-narrow); }
 
 .accordion details {
@@ -758,11 +778,36 @@
     font-family: var(--font-display);
     font-size: var(--t-md);
     line-height: 1;
-    color: var(--c-accent);
+    color: var(--c-accent-text);
     transition: transform 250ms var(--ease);
 }
 
 .accordion details[open] summary::after { transform: rotate(45deg); }
+
+/* Плавне розкриття відповіді.
+   ::details-content дозволяє анімувати саме розкриття, а не імітувати його
+   через max-height із вгаданим значенням. Підтримують не всі браузери, тому
+   нижче лежить універсальний запасний варіант — проявлення тексту. */
+@supports selector(details::details-content) {
+    .accordion details::details-content {
+        block-size: 0;
+        overflow: hidden;
+        transition: block-size 320ms var(--ease), content-visibility 320ms allow-discrete;
+    }
+
+    .accordion details[open]::details-content { block-size: auto; }
+}
+
+@supports not selector(details::details-content) {
+    .accordion details[open] .accordion__answer {
+        animation: answer-in 280ms var(--ease) both;
+    }
+}
+
+@keyframes answer-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+}
 
 .accordion__answer {
     padding-bottom: var(--sp-3);
@@ -883,7 +928,7 @@
     font-weight: 600;
 }
 
-.field .req { color: var(--c-accent); }
+.field .req { color: var(--c-accent-text); }
 
 .field input,
 .field select,
@@ -971,7 +1016,7 @@
 .post img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
 .post h3 { font-size: var(--t-md); font-weight: 500; }
 .post p { font-size: var(--t-sm); color: var(--c-muted); }
-.post time { font-size: var(--t-xs); color: var(--c-accent); letter-spacing: .08em; text-transform: uppercase; }
+.post time { font-size: var(--t-xs); color: var(--c-accent-text); letter-spacing: .08em; text-transform: uppercase; }
 
 .empty-note {
     padding: var(--sp-4);
@@ -1062,7 +1107,7 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--c-accent);
+    color: var(--c-accent-text);
     margin-bottom: var(--sp-2);
 }
 
@@ -1257,7 +1302,7 @@
 .modal__close:hover { color: var(--c-ink); }
 
 .modal__title { font-size: var(--t-xl); font-weight: 400; margin-bottom: 0.4rem; padding-right: var(--sp-4); }
-.modal__meta { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent); margin-bottom: var(--sp-3); }
+.modal__meta { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--c-accent-text); margin-bottom: var(--sp-3); }
 .modal__body { color: var(--c-muted); }
 .modal__body p + p { margin-top: 0.9rem; }
 .modal__actions { margin-top: var(--sp-4); display: flex; flex-wrap: wrap; gap: var(--sp-2); }
