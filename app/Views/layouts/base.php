@@ -19,7 +19,8 @@ $appUrl = rtrim((string) \App\Core\Config::str('APP_URL', ''), '/');
 $path   = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 ?>
 <!doctype html>
-<html lang="uk">
+<?php // translate="no" дублює мета-тег: різні браузери зважають на різні сигнали. ?>
+<html lang="uk" translate="no">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +39,20 @@ $path   = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
     <meta name="robots" content="noindex, follow">
 <?php endif; ?>
 <link rel="canonical" href="<?= e($appUrl . $path) ?>">
+
+<?php
+// Заборона автоперекладу.
+//
+// У багатьох відвідувачів російська досі стоїть серед бажаних мов браузера,
+// і Chrome мовчки підміняє український текст машинним російським перекладом —
+// кривим і не суцільним, через що сторінка виглядає так, ніби мови перемішані.
+// Для салону, де українська мова є частиною позиції, це неприйнятно.
+//
+// Ціна рішення: іноземний відвідувач не зможе перекласти сторінку одним кліком.
+// Для локального салону в Дніпрі це прийнятний обмін.
+?>
+<meta name="google" content="notranslate">
+<meta http-equiv="content-language" content="uk">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="uk_UA">
