@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="uk" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Сторінку не знайдено — Estetika</title>
+<meta name="description" content="Перманентний макіяж, ін’єкційна косметологія та догляд у Дніпрі. Понад 20 років практики, 5 000 клієнток, призерка чемпіонатів України. Запис онлайн.">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="canonical" href="https://kjjumpskill-coder.github.io/estetica/storinku-ne-znaydeno">
+
+<meta name="google" content="notranslate">
+<meta http-equiv="content-language" content="uk">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Estetika">
+<meta property="og:title" content="Сторінку не знайдено — Estetika">
+<meta property="og:description" content="Перманентний макіяж, ін’єкційна косметологія та догляд у Дніпрі. Понад 20 років практики, 5 000 клієнток, призерка чемпіонатів України. Запис онлайн.">
+<meta property="og:image" content="https://kjjumpskill-coder.github.io/estetica/estetica/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/estetica/assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preload" href="/estetica/assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/estetica/assets/fonts/playfair-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>/* Критичний CSS. Інлайниться в <head>, покриває все до першого прокручування:
+   токени, шрифти, скидання, шапку й hero. Решта — у main.css із відкладеним завантаженням. */
+
+/* ---------- Шрифти ----------
+   Українському тексту потрібні обидва сабсети: літери в cyrillic,
+   а апостроф ’ (U+2019) — у latin. Тому latin не можна викидати як «зайвий». */
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/estetica/assets/fonts/playfair-cyrillic.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/estetica/assets/fonts/playfair-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/estetica/assets/fonts/manrope-cyrillic.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/estetica/assets/fonts/manrope-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Токени ---------- */
+
+/* ---------- Кольори ----------
+   Палітра з брифу лишається, але для тексту й для декору потрібні різні відтінки:
+   лінія не мусить бути читабельною, а напис мусить. Виміряно за WCAG.
+
+     золото #B08D57 на молочному ........ 2,92:1 — для тексту замало
+     білий на #B08D57 ................... 3,09:1 — теж, а це головна кнопка
+     #857A70 на молочному ............... 3,96:1 — нижче норми 4,5:1
+
+   Тому декоративні застосування (рамки, розділювачі, іконки) лишаються на
+   вихідному золоті, а текст і кнопки отримали затемнені відтінки того ж тону. */
+
+:root {
+    --c-bg: #FBF8F5;
+    --c-surface: #F3ECE5;
+    --c-ink: #2E2A27;
+    /* Другорядний текст: 5,12:1 на фоні, 4,63:1 на картці. */
+    --c-muted: #736860;
+    --c-line: #E3D8CC;
+    /* Золото для ліній, рамок та іконок — контраст тут не потрібен. */
+    --c-accent: #B08D57;
+    /* Фон кнопки: білий напис на ньому дає 4,75:1. */
+    --c-accent-dk: #8C6E42;
+    /* Золото для тексту — надзаголовки й посилання, 5,43:1. */
+    --c-accent-text: #7E6139;
+    /* Найтемніше золото — наведення на кнопку, 6,47:1. */
+    --c-accent-deep: #755939;
+    --c-nude: #DCC5B4;
+
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Плавна типографіка: від 360px до 1440px */
+    --t-xs: 0.75rem;
+    --t-sm: 0.875rem;
+    --t-base: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
+    --t-md: clamp(1.125rem, 1.06rem + 0.28vw, 1.25rem);
+    --t-lg: clamp(1.375rem, 1.25rem + 0.55vw, 1.75rem);
+    --t-xl: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
+    --t-2xl: clamp(2.125rem, 1.7rem + 1.9vw, 3.5rem);
+    --t-3xl: clamp(2.5rem, 1.9rem + 2.7vw, 4.5rem);
+
+    --sp-1: 0.5rem;
+    --sp-2: 1rem;
+    --sp-3: 1.5rem;
+    --sp-4: 2rem;
+    --sp-5: 3rem;
+    --sp-6: 4rem;
+    --sp-7: 6rem;
+    --sp-8: 8rem;
+
+    --wrap: 1200px;
+    --wrap-narrow: 720px;
+    --radius: 2px;
+
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --dur: 650ms;
+
+    --shadow-soft: 0 1px 2px rgba(46, 42, 39, .04), 0 8px 24px rgba(46, 42, 39, .06);
+    --shadow-lift: 0 2px 4px rgba(46, 42, 39, .06), 0 16px 40px rgba(46, 42, 39, .10);
+}
+
+/* ---------- Скидання ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Якір не має ховатися під липкою шапкою. */
+    scroll-padding-top: 88px;
+}
+
+body {
+    margin: 0;
+    background: var(--c-bg);
+    color: var(--c-ink);
+    font-family: var(--font-body);
+    font-size: var(--t-base);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+
+/* ---------- Проявлення фото ----------
+   Поки справжнє зображення вантажиться, видно 20-піксельну заглушку з бази,
+   розтягнуту на весь кадр. Розмиття ховає її піксельність, а коли фото
+   приходить — розмиття плавно сходить, і кадр ніби наводиться на різкість.
+
+   Прив'язано до .js: без скрипта клас is-loaded ніхто не поставить,
+   і фото лишилося б розмитим назавжди. */
+
+.js img[data-lqip] {
+    filter: blur(12px);
+    transition: filter 600ms ease-out;
+}
+
+.js img[data-lqip].is-loaded { filter: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .js img[data-lqip] { filter: none; }
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px; left: var(--sp-2);
+    z-index: 200;
+    padding: var(--sp-1) var(--sp-2);
+    background: var(--c-ink);
+    color: var(--c-bg);
+    transition: top 150ms var(--ease);
+}
+.skip-link:focus { top: var(--sp-1); }
+
+/* ---------- Каркас ---------- */
+
+.wrap {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-inline: var(--sp-3);
+}
+
+@media (min-width: 768px) {
+    .wrap { padding-inline: var(--sp-4); }
+}
+
+.eyebrow {
+    font-size: var(--t-xs);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-accent-text);
+    margin: 0 0 var(--sp-2);
+}
+
+/* ---------- Кнопки ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    padding: 0.9rem 1.75rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-size: var(--t-sm);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-align: center;
+    background: none;
+    transition: background-color 200ms var(--ease),
+                color 200ms var(--ease),
+                border-color 200ms var(--ease),
+                box-shadow 200ms var(--ease),
+                transform 200ms var(--ease);
+}
+
+.btn--primary {
+    background: var(--c-accent-dk);
+    color: #fff;
+}
+.btn--primary:hover {
+    background: var(--c-accent-deep);
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-1px);
+}
+
+.btn--ghost {
+    border-color: var(--c-line);
+    color: var(--c-ink);
+}
+.btn--ghost:hover {
+    border-color: var(--c-accent);
+    color: var(--c-accent-text);
+    transform: translateY(-1px);
+}
+
+/* Відгук на натискання. Без нього кнопка на дотик здається «мертвою»:
+   палець уже натиснув, а на екрані нічого не сталося. */
+.btn:active { transform: translateY(0) scale(.985); }
+
+/* ---------- Шапка ---------- */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 250ms var(--ease), background-color 250ms var(--ease);
+}
+.header[data-scrolled='true'] { border-bottom-color: var(--c-line); }
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    min-height: 72px;
+}
+
+.header__logo { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.header__logo svg { width: 34px; height: 34px; }
+.header__wordmark {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: var(--c-ink);
+}
+
+.nav { display: none; }
+
+@media (min-width: 1024px) {
+    .nav { display: flex; align-items: center; gap: var(--sp-3); }
+    .nav a {
+        position: relative;
+        font-size: var(--t-sm);
+        color: var(--c-muted);
+        transition: color 200ms var(--ease);
+    }
+    .nav a:hover { color: var(--c-ink); }
+
+    /* Золота риска виростає з лівого краю — той самий жест, що й лінія-ескіз
+       між секціями, тільки в мініатюрі. */
+    .nav a::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -5px;
+        height: 1px;
+        background: var(--c-accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 260ms var(--ease);
+    }
+    .nav a:hover::after,
+    .nav a:focus-visible::after { transform: scaleX(1); }
+}
+
+.header__cta { display: none; }
+@media (min-width: 768px) { .header__cta { display: inline-flex; } }
+
+.burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    background: none;
+    cursor: pointer;
+}
+@media (min-width: 1024px) { .burger { display: none; } }
+.burger span {
+    display: block;
+    width: 18px; height: 1px;
+    background: var(--c-ink);
+    position: relative;
+}
+.burger span::before,
+.burger span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px; height: 1px;
+    background: var(--c-ink);
+}
+.burger span::before { top: -6px; }
+.burger span::after { top: 6px; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: min(88vh, 780px);
+    padding-block: var(--sp-6) var(--sp-5);
+    overflow: hidden;
+}
+
+.hero__grid {
+    display: grid;
+    gap: var(--sp-5);
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .hero__grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: var(--sp-6);
+    }
+}
+
+.hero__brand {
+    font-size: var(--t-xs);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin: 0 0 var(--sp-3);
+}
+
+/* Головна обіцянка — це цитата майстра, а не рекламний слоган.
+   Тому вона набрана як цитата: великим serif, без лапок-прикрас. */
+.hero__title {
+    font-size: var(--t-3xl);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--sp-3);
+}
+.hero__title em {
+    font-style: italic;
+    color: var(--c-accent-dk);
+}
+
+.hero__lead {
+    max-width: 46ch;
+    color: var(--c-muted);
+    font-size: var(--t-md);
+    margin: 0 0 var(--sp-4);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+}
+
+/* На вузькому екрані кнопки різної ширини виглядають неохайно — тягнемо на всю. */
+@media (max-width: 559px) {
+    .hero__actions .btn { flex: 1 1 100%; }
+}
+
+.hero__signature {
+    margin-top: var(--sp-4);
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+}
+.hero__signature strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--t-md);
+    font-weight: 500;
+    color: var(--c-ink);
+}
+
+.hero__figure {
+    position: relative;
+    margin: 0;
+}
+
+.hero__media {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.hero__figure img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+/* ---------- Поява першого екрана ----------
+   Рядки виходять по черзі, з кроком 90 мс — око встигає пройти зверху вниз
+   і дійти до кнопок природно, а не зустріти всю сторінку одним ударом.
+
+   Ховається це через .js: якщо скрипт не завантажився, перший екран
+   лишається видимим одразу. */
+
+.js .hero__in {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.hero.is-ready .hero__in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+    transition-delay: calc(var(--hero-step, 0) * 90ms);
+}
+
+/* Повільне наближення портрета: 1,06 → 1 за вісім секунд. Настільки повільно,
+   що руху не видно — помітно лише, що кадр «дихає». */
+.js .hero__media img { transform: scale(1.06); }
+
+.hero.is-ready .hero__media img {
+    transform: scale(1);
+    transition: transform 8s cubic-bezier(.16, .6, .2, 1);
+}
+
+/* Тонка золота рамка зі зсувом — єдина декоративна деталь у hero. */
+.hero__figure::after {
+    content: '';
+    position: absolute;
+    inset: 20px -20px -20px 20px;
+    border: 1px solid var(--c-accent);
+    opacity: .55;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ---------- Реакція на prefers-reduced-motion ----------
+   Вимикаються всі рухи й перетворення. Зміна кольору лишається:
+   без неї кнопки перестають відгукуватися на наведення. */
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    /* Перший екран показуємо одразу і без наближення. */
+    .js .hero__in { opacity: 1; transform: none; }
+    .js .hero__media img { transform: none; }
+
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-property: background-color, border-color, color, opacity !important;
+        transition-duration: 200ms !important;
+    }
+}
+</style>
+
+<link rel="stylesheet" href="/estetica/assets/css/main.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/estetica/assets/css/main.css"></noscript>
+
+<script type="module" src="/estetica/assets/js/app.js" defer></script>
+
+<style>
+.static-notice {
+    padding: var(--sp-4);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    display: grid;
+    gap: var(--sp-2);
+    justify-items: start;
+}
+.static-notice h3 { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 500; }
+.static-notice p { color: var(--c-muted); max-width: 46ch; }
+.static-banner {
+    position: sticky; top: 0; z-index: 500;
+    padding: 0.55rem var(--sp-3);
+    background: var(--c-ink); color: var(--c-bg);
+    font-size: var(--t-xs); text-align: center;
+}
+.static-banner a { color: var(--c-nude); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="static-banner">Попередній перегляд для узгодження ·
+Форма запису й Telegram працюють лише на робочому сайті ·
+<a href="https://github.com/kjjumpskill-coder/estetica">Про проєкт</a></div>
+<a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+<header class="header" data-header>
+    <div class="wrap header__inner">
+        <a class="header__logo" href="/estetica/" aria-label="Estetika — на головну">
+            <span style="color:var(--c-accent)"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"
+     stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 23.6C8.2 17.6 13 13.6 17.2 16.6c2.6 1.9 4.6 3.6 6.8 3.6s4.2-1.7 6.8-3.6c4.2-3 9 1 12.7 7"/>
+    <path d="M4.5 23.6c5.6 8.9 12.4 13 19.5 13s13.9-4.1 19.5-13"/>
+    <path d="M4.5 23.6c6.3 1.9 12.8 2.8 19.5 2.8s13.2-.9 19.5-2.8" stroke-width="1"/>
+</svg>
+</span>
+            <span class="header__wordmark">Estetika</span>
+        </a>
+
+        <nav class="nav" aria-label="Основне меню">
+                            <a href="#pro-maystra">Про майстра</a>
+                            <a href="#poslugy">Послуги</a>
+                            <a href="#roboty">Роботи</a>
+                            <a href="#vidguky">Відгуки</a>
+                            <a href="#pytannya">Питання</a>
+                            <a href="#lokaciyi">Локації</a>
+                    </nav>
+
+        <div style="display:flex;gap:.5rem;align-items:center">
+            <a class="btn btn--primary header__cta" href="#zapys">Записатись</a>
+            <button class="burger" type="button" data-nav-open aria-label="Відкрити меню" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <section class="section section--top" style="min-height:60vh;display:grid;place-items:center;text-align:center">
+    <div class="wrap" style="max-width:520px">
+        <p class="eyebrow">404</p>
+        <h1 class="section__title">Такої сторінки немає</h1>
+        <p class="section__lead" style="margin-inline:auto">
+            Можливо, посилання застаріло. Усе, що є на сайті, — на головній.
+        </p>
+        <div class="center-action">
+            <a class="btn btn--primary" href="/estetica/">На головну</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer__grid">
+
+            <div>
+                <div class="footer__brand">
+                    <span style="color:var(--c-nude)"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"
+     stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="22.4" stroke-width="0.75" opacity=".5"/>
+        <path d="M4.5 23.6C8.2 17.6 13 13.6 17.2 16.6c2.6 1.9 4.6 3.6 6.8 3.6s4.2-1.7 6.8-3.6c4.2-3 9 1 12.7 7"/>
+    <path d="M4.5 23.6c5.6 8.9 12.4 13 19.5 13s13.9-4.1 19.5-13"/>
+    <path d="M4.5 23.6c6.3 1.9 12.8 2.8 19.5 2.8s13.2-.9 19.5-2.8" stroke-width="1"/>
+</svg>
+</span>
+                    <span>Estetika</span>
+                </div>
+                <p>Кірілова Ольга Олександрівна<br>Косметолог-естетист, майстер перманентного макіяжу</p>
+
+                            </div>
+
+            <div>
+                <h2>Контакти</h2>
+                <ul>
+                                                            <li>вул. Велика Діївська, 32</li>
+                    <li>вул. Зиновія Матли, 2</li>
+                    <li>Дніпро</li>
+                </ul>
+
+                                    <h3 style="margin-top:1.5rem">Ми в мережі</h3>
+                    <ul>
+                                                    <li>
+                                <a href="https://www.instagram.com/kirillova_ok_permanent_studio/" target="_blank" rel="noopener"
+                                   data-event="messenger_click">Instagram</a>
+                            </li>
+                                            </ul>
+                            </div>
+
+            <div>
+                <h2>Документи</h2>
+                <ul>
+                    <li><a href="/estetica/polityka-konfidenciynosti/">Політика конфіденційності</a></li>
+                    <li><a href="/estetica/dogovir-oferty/">Договір оферти</a></li>
+                    <li><a href="/estetica/pravyla-zapysu/">Правила запису та відвідування</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>&copy; 2026 Estetika</span>
+                    </div>
+    </div>
+</footer>
+<div class="mobile-nav" data-nav-panel data-open="false" role="dialog" aria-modal="true" aria-label="Меню">
+    <div class="mobile-nav__top">
+        <button class="icon-btn" type="button" data-nav-close aria-label="Закрити меню">&times;</button>
+    </div>
+
+            <a href="#pro-maystra" data-nav-link>Про майстра</a>
+            <a href="#poslugy" data-nav-link>Послуги</a>
+            <a href="#roboty" data-nav-link>Роботи</a>
+            <a href="#vidguky" data-nav-link>Відгуки</a>
+            <a href="#pytannya" data-nav-link>Питання</a>
+            <a href="#lokaciyi" data-nav-link>Локації</a>
+    
+    <a class="btn btn--primary" href="#zapys" data-nav-link>Записатись</a>
+
+    </div>
+<div class="modal" data-modal="service" data-open="false" role="dialog" aria-modal="true" aria-labelledby="service-modal-title" hidden>
+    <div class="modal__panel">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрити">&times;</button>
+        <h2 class="modal__title" id="service-modal-title"></h2>
+        <p class="modal__meta" data-modal-meta></p>
+        <div class="modal__body" data-modal-body></div>
+        <div class="modal__actions">
+            <a class="btn btn--primary" href="#zapys" data-modal-book>Записатись на процедуру</a>
+            <button class="btn btn--ghost" type="button" data-modal-close>Закрити</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal lightbox" data-modal="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Перегляд зображення" hidden>
+    <div class="modal__panel">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрити">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Попереднє">&#8249;</button>
+        <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Наступне">&#8250;</button>
+        <img alt="" data-lightbox-img>
+        <p class="lightbox__caption" data-lightbox-caption></p>
+    </div>
+</div>
+
+</body>
+</html>

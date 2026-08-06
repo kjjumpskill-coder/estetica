@@ -1,0 +1,2113 @@
+<!doctype html>
+<html lang="uk" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Ольга Кірілова — перманентний макіяж та косметологія у Дніпрі | Estetika</title>
+<meta name="description" content="Перманентний макіяж, ін’єкційна косметологія та догляд у Дніпрі. Понад 20 років практики, 5 000 клієнток, призерка чемпіонатів України. Запис онлайн.">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="canonical" href="https://kjjumpskill-coder.github.io/estetica/">
+
+<meta name="google" content="notranslate">
+<meta http-equiv="content-language" content="uk">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Estetika">
+<meta property="og:title" content="Ольга Кірілова — перманентний макіяж та косметологія у Дніпрі | Estetika">
+<meta property="og:description" content="Перманентний макіяж, ін’єкційна косметологія та догляд у Дніпрі. Понад 20 років практики, 5 000 клієнток, призерка чемпіонатів України. Запис онлайн.">
+<meta property="og:image" content="https://kjjumpskill-coder.github.io/estetica/estetica/assets/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/estetica/assets/img/favicon.svg" type="image/svg+xml">
+
+<link rel="preload" href="/estetica/assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/estetica/assets/fonts/playfair-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>/* Критичний CSS. Інлайниться в <head>, покриває все до першого прокручування:
+   токени, шрифти, скидання, шапку й hero. Решта — у main.css із відкладеним завантаженням. */
+
+/* ---------- Шрифти ----------
+   Українському тексту потрібні обидва сабсети: літери в cyrillic,
+   а апостроф ’ (U+2019) — у latin. Тому latin не можна викидати як «зайвий». */
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/estetica/assets/fonts/playfair-cyrillic.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/estetica/assets/fonts/playfair-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/estetica/assets/fonts/manrope-cyrillic.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/estetica/assets/fonts/manrope-latin.woff2') format('woff2');
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+        U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Токени ---------- */
+
+/* ---------- Кольори ----------
+   Палітра з брифу лишається, але для тексту й для декору потрібні різні відтінки:
+   лінія не мусить бути читабельною, а напис мусить. Виміряно за WCAG.
+
+     золото #B08D57 на молочному ........ 2,92:1 — для тексту замало
+     білий на #B08D57 ................... 3,09:1 — теж, а це головна кнопка
+     #857A70 на молочному ............... 3,96:1 — нижче норми 4,5:1
+
+   Тому декоративні застосування (рамки, розділювачі, іконки) лишаються на
+   вихідному золоті, а текст і кнопки отримали затемнені відтінки того ж тону. */
+
+:root {
+    --c-bg: #FBF8F5;
+    --c-surface: #F3ECE5;
+    --c-ink: #2E2A27;
+    /* Другорядний текст: 5,12:1 на фоні, 4,63:1 на картці. */
+    --c-muted: #736860;
+    --c-line: #E3D8CC;
+    /* Золото для ліній, рамок та іконок — контраст тут не потрібен. */
+    --c-accent: #B08D57;
+    /* Фон кнопки: білий напис на ньому дає 4,75:1. */
+    --c-accent-dk: #8C6E42;
+    /* Золото для тексту — надзаголовки й посилання, 5,43:1. */
+    --c-accent-text: #7E6139;
+    /* Найтемніше золото — наведення на кнопку, 6,47:1. */
+    --c-accent-deep: #755939;
+    --c-nude: #DCC5B4;
+
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Плавна типографіка: від 360px до 1440px */
+    --t-xs: 0.75rem;
+    --t-sm: 0.875rem;
+    --t-base: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
+    --t-md: clamp(1.125rem, 1.06rem + 0.28vw, 1.25rem);
+    --t-lg: clamp(1.375rem, 1.25rem + 0.55vw, 1.75rem);
+    --t-xl: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
+    --t-2xl: clamp(2.125rem, 1.7rem + 1.9vw, 3.5rem);
+    --t-3xl: clamp(2.5rem, 1.9rem + 2.7vw, 4.5rem);
+
+    --sp-1: 0.5rem;
+    --sp-2: 1rem;
+    --sp-3: 1.5rem;
+    --sp-4: 2rem;
+    --sp-5: 3rem;
+    --sp-6: 4rem;
+    --sp-7: 6rem;
+    --sp-8: 8rem;
+
+    --wrap: 1200px;
+    --wrap-narrow: 720px;
+    --radius: 2px;
+
+    --ease: cubic-bezier(.22, 1, .36, 1);
+    --dur: 650ms;
+
+    --shadow-soft: 0 1px 2px rgba(46, 42, 39, .04), 0 8px 24px rgba(46, 42, 39, .06);
+    --shadow-lift: 0 2px 4px rgba(46, 42, 39, .06), 0 16px 40px rgba(46, 42, 39, .10);
+}
+
+/* ---------- Скидання ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Якір не має ховатися під липкою шапкою. */
+    scroll-padding-top: 88px;
+}
+
+body {
+    margin: 0;
+    background: var(--c-bg);
+    color: var(--c-ink);
+    font-family: var(--font-body);
+    font-size: var(--t-base);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img, picture, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+
+/* ---------- Проявлення фото ----------
+   Поки справжнє зображення вантажиться, видно 20-піксельну заглушку з бази,
+   розтягнуту на весь кадр. Розмиття ховає її піксельність, а коли фото
+   приходить — розмиття плавно сходить, і кадр ніби наводиться на різкість.
+
+   Прив'язано до .js: без скрипта клас is-loaded ніхто не поставить,
+   і фото лишилося б розмитим назавжди. */
+
+.js img[data-lqip] {
+    filter: blur(12px);
+    transition: filter 600ms ease-out;
+}
+
+.js img[data-lqip].is-loaded { filter: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .js img[data-lqip] { filter: none; }
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+    text-wrap: balance;
+}
+
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px; left: var(--sp-2);
+    z-index: 200;
+    padding: var(--sp-1) var(--sp-2);
+    background: var(--c-ink);
+    color: var(--c-bg);
+    transition: top 150ms var(--ease);
+}
+.skip-link:focus { top: var(--sp-1); }
+
+/* ---------- Каркас ---------- */
+
+.wrap {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-inline: var(--sp-3);
+}
+
+@media (min-width: 768px) {
+    .wrap { padding-inline: var(--sp-4); }
+}
+
+.eyebrow {
+    font-size: var(--t-xs);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--c-accent-text);
+    margin: 0 0 var(--sp-2);
+}
+
+/* ---------- Кнопки ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-1);
+    padding: 0.9rem 1.75rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-size: var(--t-sm);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    text-align: center;
+    background: none;
+    transition: background-color 200ms var(--ease),
+                color 200ms var(--ease),
+                border-color 200ms var(--ease),
+                box-shadow 200ms var(--ease),
+                transform 200ms var(--ease);
+}
+
+.btn--primary {
+    background: var(--c-accent-dk);
+    color: #fff;
+}
+.btn--primary:hover {
+    background: var(--c-accent-deep);
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-1px);
+}
+
+.btn--ghost {
+    border-color: var(--c-line);
+    color: var(--c-ink);
+}
+.btn--ghost:hover {
+    border-color: var(--c-accent);
+    color: var(--c-accent-text);
+    transform: translateY(-1px);
+}
+
+/* Відгук на натискання. Без нього кнопка на дотик здається «мертвою»:
+   палець уже натиснув, а на екрані нічого не сталося. */
+.btn:active { transform: translateY(0) scale(.985); }
+
+/* ---------- Шапка ---------- */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--c-bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 250ms var(--ease), background-color 250ms var(--ease);
+}
+.header[data-scrolled='true'] { border-bottom-color: var(--c-line); }
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    min-height: 72px;
+}
+
+.header__logo { display: flex; align-items: center; gap: 0.6rem; flex-shrink: 0; }
+.header__logo svg { width: 34px; height: 34px; }
+.header__wordmark {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+    color: var(--c-ink);
+}
+
+.nav { display: none; }
+
+@media (min-width: 1024px) {
+    .nav { display: flex; align-items: center; gap: var(--sp-3); }
+    .nav a {
+        position: relative;
+        font-size: var(--t-sm);
+        color: var(--c-muted);
+        transition: color 200ms var(--ease);
+    }
+    .nav a:hover { color: var(--c-ink); }
+
+    /* Золота риска виростає з лівого краю — той самий жест, що й лінія-ескіз
+       між секціями, тільки в мініатюрі. */
+    .nav a::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; bottom: -5px;
+        height: 1px;
+        background: var(--c-accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 260ms var(--ease);
+    }
+    .nav a:hover::after,
+    .nav a:focus-visible::after { transform: scaleX(1); }
+}
+
+.header__cta { display: none; }
+@media (min-width: 768px) { .header__cta { display: inline-flex; } }
+
+.burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    background: none;
+    cursor: pointer;
+}
+@media (min-width: 1024px) { .burger { display: none; } }
+.burger span {
+    display: block;
+    width: 18px; height: 1px;
+    background: var(--c-ink);
+    position: relative;
+}
+.burger span::before,
+.burger span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px; height: 1px;
+    background: var(--c-ink);
+}
+.burger span::before { top: -6px; }
+.burger span::after { top: 6px; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: min(88vh, 780px);
+    padding-block: var(--sp-6) var(--sp-5);
+    overflow: hidden;
+}
+
+.hero__grid {
+    display: grid;
+    gap: var(--sp-5);
+    align-items: center;
+}
+
+@media (min-width: 900px) {
+    .hero__grid {
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: var(--sp-6);
+    }
+}
+
+.hero__brand {
+    font-size: var(--t-xs);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin: 0 0 var(--sp-3);
+}
+
+/* Головна обіцянка — це цитата майстра, а не рекламний слоган.
+   Тому вона набрана як цитата: великим serif, без лапок-прикрас. */
+.hero__title {
+    font-size: var(--t-3xl);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--sp-3);
+}
+.hero__title em {
+    font-style: italic;
+    color: var(--c-accent-dk);
+}
+
+.hero__lead {
+    max-width: 46ch;
+    color: var(--c-muted);
+    font-size: var(--t-md);
+    margin: 0 0 var(--sp-4);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+}
+
+/* На вузькому екрані кнопки різної ширини виглядають неохайно — тягнемо на всю. */
+@media (max-width: 559px) {
+    .hero__actions .btn { flex: 1 1 100%; }
+}
+
+.hero__signature {
+    margin-top: var(--sp-4);
+    font-size: var(--t-sm);
+    color: var(--c-muted);
+}
+.hero__signature strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--t-md);
+    font-weight: 500;
+    color: var(--c-ink);
+}
+
+.hero__figure {
+    position: relative;
+    margin: 0;
+}
+
+.hero__media {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.hero__figure img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+/* ---------- Поява першого екрана ----------
+   Рядки виходять по черзі, з кроком 90 мс — око встигає пройти зверху вниз
+   і дійти до кнопок природно, а не зустріти всю сторінку одним ударом.
+
+   Ховається це через .js: якщо скрипт не завантажився, перший екран
+   лишається видимим одразу. */
+
+.js .hero__in {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.hero.is-ready .hero__in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 700ms var(--ease), transform 700ms var(--ease);
+    transition-delay: calc(var(--hero-step, 0) * 90ms);
+}
+
+/* Повільне наближення портрета: 1,06 → 1 за вісім секунд. Настільки повільно,
+   що руху не видно — помітно лише, що кадр «дихає». */
+.js .hero__media img { transform: scale(1.06); }
+
+.hero.is-ready .hero__media img {
+    transform: scale(1);
+    transition: transform 8s cubic-bezier(.16, .6, .2, 1);
+}
+
+/* Тонка золота рамка зі зсувом — єдина декоративна деталь у hero. */
+.hero__figure::after {
+    content: '';
+    position: absolute;
+    inset: 20px -20px -20px 20px;
+    border: 1px solid var(--c-accent);
+    opacity: .55;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ---------- Реакція на prefers-reduced-motion ----------
+   Вимикаються всі рухи й перетворення. Зміна кольору лишається:
+   без неї кнопки перестають відгукуватися на наведення. */
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    /* Перший екран показуємо одразу і без наближення. */
+    .js .hero__in { opacity: 1; transform: none; }
+    .js .hero__media img { transform: none; }
+
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        transition-property: background-color, border-color, color, opacity !important;
+        transition-duration: 200ms !important;
+    }
+}
+</style>
+
+<link rel="stylesheet" href="/estetica/assets/css/main.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/estetica/assets/css/main.css"></noscript>
+
+<script type="module" src="/estetica/assets/js/app.js" defer></script>
+
+<style>
+.static-notice {
+    padding: var(--sp-4);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    display: grid;
+    gap: var(--sp-2);
+    justify-items: start;
+}
+.static-notice h3 { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 500; }
+.static-notice p { color: var(--c-muted); max-width: 46ch; }
+.static-banner {
+    position: sticky; top: 0; z-index: 500;
+    padding: 0.55rem var(--sp-3);
+    background: var(--c-ink); color: var(--c-bg);
+    font-size: var(--t-xs); text-align: center;
+}
+.static-banner a { color: var(--c-nude); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="static-banner">Попередній перегляд для узгодження ·
+Форма запису й Telegram працюють лише на робочому сайті ·
+<a href="https://github.com/kjjumpskill-coder/estetica">Про проєкт</a></div>
+<a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+<header class="header" data-header>
+    <div class="wrap header__inner">
+        <a class="header__logo" href="/estetica/" aria-label="Estetika — на головну">
+            <span style="color:var(--c-accent)"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"
+     stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 23.6C8.2 17.6 13 13.6 17.2 16.6c2.6 1.9 4.6 3.6 6.8 3.6s4.2-1.7 6.8-3.6c4.2-3 9 1 12.7 7"/>
+    <path d="M4.5 23.6c5.6 8.9 12.4 13 19.5 13s13.9-4.1 19.5-13"/>
+    <path d="M4.5 23.6c6.3 1.9 12.8 2.8 19.5 2.8s13.2-.9 19.5-2.8" stroke-width="1"/>
+</svg>
+</span>
+            <span class="header__wordmark">Estetika</span>
+        </a>
+
+        <nav class="nav" aria-label="Основне меню">
+                            <a href="#pro-maystra">Про майстра</a>
+                            <a href="#poslugy">Послуги</a>
+                            <a href="#roboty">Роботи</a>
+                            <a href="#vidguky">Відгуки</a>
+                            <a href="#pytannya">Питання</a>
+                            <a href="#lokaciyi">Локації</a>
+                    </nav>
+
+        <div style="display:flex;gap:.5rem;align-items:center">
+            <a class="btn btn--primary header__cta" href="#zapys">Записатись</a>
+            <button class="burger" type="button" data-nav-open aria-label="Відкрити меню" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero" data-hero>
+    <div class="wrap hero__grid">
+        <div>
+            <p class="hero__brand hero__in" style="--hero-step:0">
+                Estetika · Дніпро            </p>
+
+            <h1 class="hero__title hero__in" style="--hero-step:1">Я вже бачу вас <em>красивими</em></h1>
+
+            <p class="hero__lead hero__in" style="--hero-step:2">Перманентний макіяж та ін’єкційна косметологія в Дніпрі. Понад 20 років практики й 5 000 клієнток, які пішли від мене собою — тільки такими, якими хотіли себе бачити.</p>
+
+            <div class="hero__actions hero__in" style="--hero-step:3">
+                <a class="btn btn--primary" href="#zapys" data-event="cta_hero">Записатись</a>
+                <a class="btn btn--ghost" href="#zapys" data-event="cta_consult">Безкоштовна консультація</a>
+            </div>
+
+            <p class="hero__signature hero__in" style="--hero-step:4">
+                <strong>Ольга Кірілова</strong>
+                Косметолог-естетист, майстер перманентного макіяжу            </p>
+        </div>
+
+                    <figure class="hero__figure hero__in" style="--hero-step:1">
+                                <div class="hero__media">
+                    <img src="/estetica/media/master/a57d701432edca5e-960.webp" srcset="/estetica/media/master/a57d701432edca5e-480.webp 480w, /estetica/media/master/a57d701432edca5e-960.webp 960w, /estetica/media/master/a57d701432edca5e-1440.webp 1440w, /estetica/media/master/a57d701432edca5e-1920.webp 1920w" sizes="(min-width: 900px) 46vw, 100vw" width="1920" height="2880" alt="Ольга Кірілова — косметолог-естетист, майстер перманентного макіяжу" fetchpriority="high" data-lqip style="background-image:url(data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUAB4APu1mqk8ppaOiKA1RMB2JZwAALnT51bq08zDePSi8gAD+5wgd7/ISBHPWtLG7EGN8ryuwZIp0FEAlfMKXk8vB6GjFeCD+5jiBPBW/is9QlL/uQAAA);background-size:cover" decoding="async">                </div>
+            </figure>
+            </div>
+</section>
+<section class="trust">
+    <div class="wrap">
+        <ul class="trust__list">
+                            <li data-reveal style="--reveal-delay: 0ms">
+                    <span class="trust__num"
+                          data-counter="20"
+                          data-suffix="+">0+</span>
+                    <span class="trust__label">років у сфері краси</span>
+                </li>
+                            <li data-reveal style="--reveal-delay: 70ms">
+                    <span class="trust__num"
+                          data-counter="5000"
+                          data-suffix="+">0+</span>
+                    <span class="trust__label">задоволених клієнток</span>
+                </li>
+                            <li data-reveal style="--reveal-delay: 140ms">
+                    <span class="trust__num"
+                          data-counter="2"
+                          data-suffix="">0</span>
+                    <span class="trust__label">призові місця на чемпіонатах України</span>
+                </li>
+                            <li data-reveal style="--reveal-delay: 210ms">
+                    <span class="trust__num"
+                          data-counter="100"
+                          data-suffix="+">0+</span>
+                    <span class="trust__label">дипломів і сертифікатів</span>
+                </li>
+                    </ul>
+    </div>
+</section>
+<section class="section" id="pro-maystra">
+    <div class="wrap about__grid">
+
+                    <figure class="about__figure" data-reveal>
+                                <img src="/estetica/media/studio/04c744d3a9b1c814-960.webp" srcset="/estetica/media/studio/04c744d3a9b1c814-480.webp 480w, /estetica/media/studio/04c744d3a9b1c814-960.webp 960w, /estetica/media/studio/04c744d3a9b1c814-1440.webp 1440w, /estetica/media/studio/04c744d3a9b1c814-1920.webp 1920w" sizes="(min-width: 900px) 38vw, 100vw" width="2268" height="4032" alt="Кабінет салону краси Estetika у Дніпрі" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAABwBgCdASoUACQAPu1srVIppaQiqrgIATAdiWUAvk2rwaKrdTof53CzuJ0WuVR+HIhV1XgDsjQ3NlYhRAAAyO49sJ68UVe8bO6caapD7PxhsnAlmHRiKCJAxjQ5q4YHENcrq6xran8hQXt52UG4stxeZdbjckMSE218eYWywj6whNyGXEOLarXYW/vVmj7RmplCIzmhdgQ1y/tVetc7oU1/4uT+W5qBVzKyrzpZGj3kWeKaA7atlpOKoNNBNTRB5Ut+JlJR5Mn8SzsMLNtozd37ox0pr7h6G6VB/lZQZynN5bNWECAAAA==);background-size:cover" decoding="async">            </figure>
+        
+        <div class="about__body" data-reveal style="--reveal-delay:80ms">
+            <p class="eyebrow">Про майстра</p>
+            <h2 class="section__title">Кірілова Ольга Олександрівна</h2>
+
+            <p>
+                Усе почалося у 2006 році з манікюру. Далі були навчання за навчанням —
+                косметологія, перманентний макіяж, ін’єкційні методики — і кожне з них
+                додавало по одному вмінню до того, що сьогодні виглядає як єдина професія.
+            </p>
+            <p>
+                За майже двадцять років через мої руки пройшло понад п’ять тисяч жінок:
+                молоді мами, підприємиці, лікарки, викладачки. Хтось приїжджає з іншого
+                міста, хтось — з-за кордону, коли буває вдома. Майже всі приходять за
+                чиєюсь рекомендацією, і це найточніший показник роботи, який я знаю.
+            </p>
+            <p>
+                Зараз Estetika — це вже третій мій салон.
+                Але суть роботи не змінилася з першого дня: я не переробляю обличчя.
+                Я прибираю з нього втому.
+            </p>
+
+            <blockquote class="quote">
+                <p>Я вже бачу вас красивими — моє завдання лише делікатно підкреслити вашу природну красу та індивідуальність.</p>
+                <footer>Ольга Кірілова</footer>
+            </blockquote>
+
+            <ul class="credentials">
+                <li>Бронзова та золота призерка чемпіонатів України з перманентного макіяжу</li>
+                <li>Членкиня Міжнародної спілки фахівців у сфері краси</li>
+                <li>Медичний коледж з відзнакою</li>
+                <li>Понад 100 дипломів і сертифікатів про підвищення кваліфікації</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<svg class="rule" data-draw viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M2 4.3C152 2.5 298 5.6 452 3.9s258 2.3 412 .4 182 2.1 334 -.6"/>
+</svg>
+<section class="section" id="interviu">
+    <div class="wrap">
+        <div class="section__head section__head--center" data-reveal>
+            <p class="eyebrow">Інтерв’ю</p>
+            <h2 class="section__title">Ольга в ефірі «Новий день»</h2>
+            <p class="section__lead">
+                Розмова про професію, про те, як змінювалася індустрія за двадцять років,
+                і чому природність складніша за яскравий результат.
+            </p>
+        </div>
+
+        <button class="interview__frame" type="button"
+                data-youtube="v0r3_N4A5D4"
+                data-event="interview_play"
+                aria-label="Відтворити інтерв’ю з Ольгою Кіріловою">
+                        <img src="/estetica/assets/img/interview-cover.jpg"
+                 alt="Кадр з інтерв’ю: Ольга Кірілова в телестудії"
+                 width="1280" height="720" loading="lazy" decoding="async">
+            <span class="interview__play">
+                <svg viewBox="0 0 22 26" aria-hidden="true"><path d="M0 0l22 13L0 26z"/></svg>
+            </span>
+        </button>
+
+        <p class="interview__caption">Ольга в ефірі ранкової програми «Новий день»</p>
+    </div>
+</section>
+
+<svg class="rule" data-draw viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M2 4.3C152 2.5 298 5.6 452 3.9s258 2.3 412 .4 182 2.1 334 -.6"/>
+</svg>
+<section class="section section--surface" id="poslugy">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Послуги</p>
+            <h2 class="section__title">Що я роблю</h2>
+            <p class="section__lead">
+                Натисніть на картку, щоб прочитати, як проходить процедура і чого від неї чекати.
+                Вартість називаю особисто — вона залежить від препарату, а ціни на препарати
+                прив’язані до курсу.
+            </p>
+        </div>
+
+                    
+            <div class="services__group">
+                <h3 class="services__group-title" data-reveal>
+                    Перманентний макіяж                </h3>
+
+                <ul class="cards">
+                                            <li data-reveal style="--reveal-delay: 0ms">
+                            <button class="card" type="button"
+                                    data-service="1"
+                                    data-title="Брови — пудрове напилення"
+                                    data-duration="1–1,5 години"
+                                    data-desc="Починаємо з розмови й побудови форми. Я малюю ескіз просто на вашому обличчі, і ми дивимось на нього разом — процедура не почнеться, поки ви не скажете «так».
+
+Пудрове напилення дає м’який розсіяний колір без чітких контурів і волосків. Здалеку це виглядає як брови, які ви щойно акуратно підвели, зблизька — як ваш власний природний колір.
+
+Перші дні відтінок здається насиченішим за очікуваний. Це нормально: за два тижні він світлішає приблизно на третину і стає тим, що ми узгодили на ескізі.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M3 14c3.5-5 8.5-7 13-6.5M16 7.5c2 .3 3.7 1.2 5 2.5"/></svg>
+</span>
+                                <span class="card__title">Брови — пудрове напилення</span>
+                                                                    <span class="card__meta">1–1,5 години</span>
+                                                                <span class="card__desc">М’який пудровий ефект, схожий на легку тінь від олівця. Природна форма, підібрана саме під ваше обличчя.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 60ms">
+                            <button class="card" type="button"
+                                    data-service="2"
+                                    data-title="Губи"
+                                    data-duration="1,5 години"
+                                    data-desc="Найчастіша тривога перед процедурою — що губи стануть яскравими й помітними. Тому колір ми підбираємо від вашого природного відтінку, а не від каталогу.
+
+Робота йде м’яко: спершу вирівнюємо контур, потім наповнюємо кольором. Результат читається як «добре виспалась», а не як макіяж.
+
+Перший тиждень губи будуть яскравішими й трохи сухішими — це період загоєння. Остаточний відтінок ви побачите приблизно на четвертий тиждень.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M3 12c3-4 6-4 9-1 3-3 6-3 9 1-3 5-6 6.5-9 6.5S6 17 3 12z"/></svg>
+</span>
+                                <span class="card__title">Губи</span>
+                                                                    <span class="card__meta">1,5 години</span>
+                                                                <span class="card__desc">Повертає губам колір, який з роками стає блідішим. Рівний контур, без відчуття намальованих губ.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 120ms">
+                            <button class="card" type="button"
+                                    data-service="3"
+                                    data-title="Міжвійковий простір"
+                                    data-duration="45–60 хвилин"
+                                    data-desc="Пігмент заповнює простір між віями, і лінія росту вій виглядає щільнішою. Стрілки немає — є відчуття, що ви від природи маєте густі вії.
+
+Це найтихіша з усіх процедур перманентного макіяжу за результатом: помітно, що обличчя стало виразнішим, але незрозуміло, за рахунок чого.
+
+Добре працює для тих, хто щодня підводить очі й хоче прокидатися вже з відкритим поглядом.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M3 14c4-4.5 14-4.5 18 0"/><path d="M6 12.6V9M10 11.2V7.4M14 11.2V7.4M18 12.6V9"/></svg>
+</span>
+                                <span class="card__title">Міжвійковий простір</span>
+                                                                    <span class="card__meta">45–60 хвилин</span>
+                                                                <span class="card__desc">Погляд стає виразнішим, а вій — візуально густішими. При цьому нічого не видно: лінії як такої немає.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 180ms">
+                            <button class="card" type="button"
+                                    data-service="4"
+                                    data-title="Стрілки"
+                                    data-duration="1–1,5 години"
+                                    data-desc="Перед роботою я малюю стрілку звичайним олівцем і даю вам дзеркало. Ми дивимось на неї у різних ракурсах, поки форма не влаштує вас повністю.
+
+Товщину й довжину обираєте ви: від тонкої лінії, яка просто підкреслює вії, до вираженої графічної стрілки.
+
+Щоденне підведення очей після цього стає непотрібним — стрілка тримає форму й у спеку, і після басейну.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M3 14c4-4.5 12-4.5 16 0"/><path d="M19 14c1.4.3 2.3-.6 2-2"/></svg>
+</span>
+                                <span class="card__title">Стрілки</span>
+                                                                    <span class="card__meta">1–1,5 години</span>
+                                                                <span class="card__desc">Від ледь помітної до графічної — форму малюємо під розріз ваших очей, а не за шаблоном.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 240ms">
+                            <button class="card" type="button"
+                                    data-service="5"
+                                    data-title="Корекція та перекриття старого перманенту"
+                                    data-duration="за домовленістю"
+                                    data-desc="Планова корекція робиться через 4–8 тижнів після першої процедури: ми дивимось, як пігмент прижився, і доводимо форму та насиченість.
+
+Окремий випадок — перекриття роботи іншого майстра. Тут спершу потрібна консультація: іноді достатньо перекрити, а іноді старий пігмент доводиться спочатку освітлити.
+
+Чесно скажу одразу, що можливо зробити за один візит, а що потребуватиме двох.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 17.5 15.5 6a2.1 2.1 0 0 1 3 3L7 20.5l-4 1z"/></svg>
+</span>
+                                <span class="card__title">Корекція та перекриття старого перманенту</span>
+                                                                    <span class="card__meta">за домовленістю</span>
+                                                                <span class="card__desc">Виправлення форми чи кольору після попереднього майстра. Оплачується окремо — 50% вартості основної процедури.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 300ms">
+                            <button class="card" type="button"
+                                    data-service="6"
+                                    data-title="Видалення перманенту"
+                                    data-duration="15–30 хвилин"
+                                    data-desc="Іноді форма, яка була модною кілька років тому, сьогодні вже не пасує. Або попередній майстер зробив занадто темно.
+
+Процедура освітлює старий пігмент і дає можливість або лишити обличчя чистим, або пізніше зробити новий перманент у нормальному кольорі.
+
+Кількість сеансів залежить від того, наскільки глибоко й наскільки давно був введений пігмент — це видно вже на консультації.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 12h16"/><path d="M7.5 8.5 4 12l3.5 3.5"/><circle cx="17" cy="12" r="3.2"/></svg>
+</span>
+                                <span class="card__title">Видалення перманенту</span>
+                                                                    <span class="card__meta">15–30 хвилин</span>
+                                                                <span class="card__desc">Освітлення або повне зняття старого пігменту, якщо колишня робота більше не подобається.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                    </ul>
+            </div>
+                    
+            <div class="services__group">
+                <h3 class="services__group-title" data-reveal>
+                    Ін’єкційна косметологія та догляд                </h3>
+
+                <ul class="cards">
+                                            <li data-reveal style="--reveal-delay: 0ms">
+                            <button class="card" type="button"
+                                    data-service="7"
+                                    data-title="Ботулінотерапія"
+                                    data-duration="15–20 хвилин"
+                                    data-desc="Головне заперечення до цієї процедури — страх «замороженого» обличчя. Воно виникає, коли препарат вводять надлишково.
+
+Я працюю мінімальними обсягами: міміка зберігається, ви так само хмуритесь і смієтесь, але залому на шкірі після цього не лишається.
+
+Ефект розвивається поступово протягом двох тижнів і тримається кілька місяців. Перші дні різниці майже не видно — це нормально, не поспішайте з висновками.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 18c3.5-1.5 5.5-4 6.5-7"/><path d="M8 20c4-2 6.5-5.5 8-10"/><path d="M13 21c4.5-2.5 6.5-6.5 7-11"/></svg>
+</span>
+                                <span class="card__title">Ботулінотерапія</span>
+                                                                    <span class="card__meta">15–20 хвилин</span>
+                                                                <span class="card__desc">Розгладжує мімічні зморшки на чолі, між бровами й навколо очей. Обличчя лишається живим і рухливим.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 60ms">
+                            <button class="card" type="button"
+                                    data-service="8"
+                                    data-title="Контурна пластика губ"
+                                    data-duration="30–45 хвилин"
+                                    data-desc="Перед процедурою ми домовляємось про результат словами, а не «зробіть як на фото». Чуже фото — це чужа анатомія, і повторити його точно неможливо.
+
+Працюємо з анестезією, тому відчуття терпимі. Об’єм додається поступово, з дзеркалом у ваших руках.
+
+Перші два-три дні можливий набряк — губи виглядатимуть більшими, ніж будуть насправді. Остаточну форму оцінюємо через тиждень.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 12.5c2.7-3.4 5.3-3.4 8-.8 2.7-2.6 5.3-2.6 8 .8-2.7 4.6-5.3 6-8 6s-5.3-1.4-8-6z"/><path d="M12 4v3.5M10.4 5.8h3.2"/></svg>
+</span>
+                                <span class="card__title">Контурна пластика губ</span>
+                                                                    <span class="card__meta">30–45 хвилин</span>
+                                                                <span class="card__desc">Об’єм і зволоження без ефекту «качиних губ». Працюю за принципом: краще менше, ніж помітно.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 120ms">
+                            <button class="card" type="button"
+                                    data-service="9"
+                                    data-title="Біоревіталізація"
+                                    data-duration="30 хвилин"
+                                    data-desc="Процедура для шкіри, яка виглядає втомленою: тьмяний колір, дрібні зневоднені зморшки, відчуття сухості навіть після крему.
+
+Зволоження працює зсередини, а не на поверхні, тому ефект тримається значно довше за будь-який догляд.
+
+Зазвичай потрібен курс із кількох процедур з інтервалом — одноразово різницю буде видно, але вона не закріпиться.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M12 3.5C15.5 8 18 10.8 18 14a6 6 0 0 1-12 0c0-3.2 2.5-6 6-10.5z"/></svg>
+</span>
+                                <span class="card__title">Біоревіталізація</span>
+                                                                    <span class="card__meta">30 хвилин</span>
+                                                                <span class="card__desc">Глибоке зволоження зсередини. Шкіра стає щільнішою, зникає відчуття стягнутості.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 180ms">
+                            <button class="card" type="button"
+                                    data-service="10"
+                                    data-title="Мезотерапія"
+                                    data-duration="30 хвилин"
+                                    data-desc="Це робота не з окремою зморшкою, а зі станом шкіри загалом — коли хочеться, щоб обличчя виглядало свіжішим, але нічого конкретного міняти не потрібно.
+
+Результат помітний насамперед у якості: шкіра стає рівнішою, тон вирівнюється, макіяж лягає інакше.
+
+Підбирається індивідуально після огляду — універсального протоколу тут немає.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <circle cx="7" cy="8" r="1.3"/><circle cx="13" cy="6" r="1.3"/><circle cx="17.5" cy="10" r="1.3"/><circle cx="9" cy="14.5" r="1.3"/><circle cx="15" cy="16.5" r="1.3"/><circle cx="5.5" cy="18" r="1.3"/></svg>
+</span>
+                                <span class="card__title">Мезотерапія</span>
+                                                                    <span class="card__meta">30 хвилин</span>
+                                                                <span class="card__desc">Покращує якість шкіри: тон, щільність, рівність рельєфу.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 240ms">
+                            <button class="card" type="button"
+                                    data-service="11"
+                                    data-title="Полінуклеотиди"
+                                    data-duration="30 хвилин"
+                                    data-desc="Одна з найделікатніших процедур у моєму арсеналі. Вона не додає об’єму й не змінює рис — вона відновлює саму тканину.
+
+Особливо добре відгукується зона навколо очей, де шкіра тонка й де більшість інших методик працює обережно.
+
+Ефект накопичувальний: розкривається протягом кількох тижнів після курсу й тримається довго.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M8 3c0 5 8 5 8 9s-8 4-8 9"/><path d="M16 3c0 5-8 5-8 9s8 4 8 9"/></svg>
+</span>
+                                <span class="card__title">Полінуклеотиди</span>
+                                                                    <span class="card__meta">30 хвилин</span>
+                                                                <span class="card__desc">Відновлення й регенерація. Добре працює для тонкої шкіри навколо очей.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 300ms">
+                            <button class="card" type="button"
+                                    data-service="12"
+                                    data-title="Ліполітичні ін’єкції"
+                                    data-duration="15–30 хвилин"
+                                    data-desc="Процедура для ділянок, які не йдуть ані спортом, ані дієтою: найчастіше це друге підборіддя.
+
+Працюємо курсом, з інтервалами. Після кожної процедури можливий набряк на день-два — це очікувана реакція.
+
+На консультації чесно скажу, чи ваш випадок узагалі для цієї методики: іноді потрібне інше рішення.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M5 8c3.5 3 10.5 3 14 0"/><path d="M6.5 13c3 2 8 2 11 0"/><path d="M9 17.5c2 1 4 1 6 0"/></svg>
+</span>
+                                <span class="card__title">Ліполітичні ін’єкції</span>
+                                                                    <span class="card__meta">15–30 хвилин</span>
+                                                                <span class="card__desc">Корекція локальних жирових відкладень — друге підборіддя, зона щік.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 300ms">
+                            <button class="card" type="button"
+                                    data-service="13"
+                                    data-title="Ліфтинг-процедури"
+                                    data-duration="30 хвилин"
+                                    data-desc="З віком змінюється не стільки шкіра, скільки контур: овал втрачає чіткість, кути опускаються.
+
+Ліфтинг працює саме з цим — не розгладжує зморшки, а повертає обличчю форму, яку ви пам’ятаєте.
+
+Методику підбираю після огляду: те, що підходить у сорок, у шістдесят працює інакше.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 16c4-1.5 5.5-4.5 6-8"/><path d="M20 16c-4-1.5-5.5-4.5-6-8"/><path d="M12 21V9"/><path d="M9 11.5 12 8.5l3 3"/></svg>
+</span>
+                                <span class="card__title">Ліфтинг-процедури</span>
+                                                                    <span class="card__meta">30 хвилин</span>
+                                                                <span class="card__desc">Підтягує овал обличчя й повертає чіткість контуру.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                            <li data-reveal style="--reveal-delay: 300ms">
+                            <button class="card" type="button"
+                                    data-service="14"
+                                    data-title="Консультація косметолога"
+                                    data-duration="30 хвилин"
+                                    data-desc="Найчастіше на консультацію приходять із запитом «зробіть щось» — і це нормальна відправна точка.
+
+Ми дивимось на шкіру, обговорюємо, що вас турбує, і складаємо порядок дій: що робити зараз, що можна відкласти, а чого не варто робити взагалі.
+
+Буває, що після розмови найкраща рекомендація — це домашній догляд, а не процедура. Я скажу про це прямо.">
+                                <span class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15"
+     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4H6.5"/></svg>
+</span>
+                                <span class="card__title">Консультація косметолога</span>
+                                                                    <span class="card__meta">30 хвилин</span>
+                                                                <span class="card__desc">Розбираємо, що саме потрібно вашій шкірі. Без нав’язування процедур.</span>
+                                <span class="card__more">Докладніше</span>
+                            </button>
+                        </li>
+                                    </ul>
+            </div>
+        
+        <div class="center-action">
+            <a class="btn btn--primary" href="#zapys" data-event="cta_services">Дізнатись вартість</a>
+        </div>
+    </div>
+</section>
+<section class="section" id="roboty">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Роботи</p>
+            <h2 class="section__title">До і після</h2>
+            <p class="section__lead">
+                Усі фото — мої клієнтки, без ретуші форми й кольору. Свіжі роботи зняті
+                одразу після процедури, тому шкіра на них ще трохи почервоніла — це нормальний
+                вигляд перших годин, який минає за добу.
+            </p>
+        </div>
+
+                    <ul class="filters" data-works-filters data-reveal>
+                <li><button type="button" data-filter="all" aria-pressed="true">Усі роботи</button></li>
+                                    <li>
+                        <button type="button" data-filter="brovy" aria-pressed="false">
+                            Брови — пудрове напилення                        </button>
+                    </li>
+                                    <li>
+                        <button type="button" data-filter="botulinoterapiya" aria-pressed="false">
+                            Ботулінотерапія                        </button>
+                    </li>
+                                    <li>
+                        <button type="button" data-filter="konturna-plastyka-gub" aria-pressed="false">
+                            Контурна пластика губ                        </button>
+                    </li>
+                                    <li>
+                        <button type="button" data-filter="lifting-procedury" aria-pressed="false">
+                            Ліфтинг-процедури                        </button>
+                    </li>
+                            </ul>
+        
+                    <ul class="works__grid" data-works-grid data-lightbox-group="works">
+                                                        <li class="work" data-service="konturna-plastyka-gub"
+                                                data-reveal style="--reveal-delay: 0ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/1695346db48b4d1a-1440.webp"
+                                    data-caption="Контурна пластика губ — результат до і після"
+                                    aria-label="Відкрити фото: Контурна пластика губ — результат до і після">
+                                <img src="/estetica/media/works/1695346db48b4d1a-960.webp" srcset="/estetica/media/works/1695346db48b4d1a-480.webp 480w, /estetica/media/works/1695346db48b4d1a-960.webp 960w, /estetica/media/works/1695346db48b4d1a-1440.webp 1440w, /estetica/media/works/1695346db48b4d1a-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Контурна пластика губ — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAABQBQCdASoUACQAPu1kq04ppaQiKqwBMB2JQBfnAszv6r7PKhjK2vIOiU2v5q8FG+3jVtQA/sMc1eXEKZiZd32Hk3uZ6lrUrpYsDN6Oj2nc/5SqCHdJYIa2Jg+xcvg6Hr0ZC7tPoSrnvDULJfv+3D9zXlDmjrQTfacLNcn/Jz+axz1bQmRtpVIyuSw0YymK0coXACxy71UrgQlXklyb/SLCyDjnMI1dy12DXbcK43T9pwGXV5hkdFG8baAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Контурна пластика губ</span>
+                                            </li>
+                                                        <li class="work" data-service="lifting-procedury"
+                                                data-reveal style="--reveal-delay: 50ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/28422dbe5522b8d8-1440.webp"
+                                    data-caption="Ліфтинг-процедури — результат до і після"
+                                    aria-label="Відкрити фото: Ліфтинг-процедури — результат до і після">
+                                <img src="/estetica/media/works/28422dbe5522b8d8-960.webp" srcset="/estetica/media/works/28422dbe5522b8d8-480.webp 480w, /estetica/media/works/28422dbe5522b8d8-960.webp 960w, /estetica/media/works/28422dbe5522b8d8-1440.webp 1440w, /estetica/media/works/28422dbe5522b8d8-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ліфтинг-процедури — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAADwBQCdASoUACQAPu1irFAppSQiqrgMATAdiUAXYDukb/7eiIz5jLT/LBiW8mXU7JYHxfp8T/lR6AD8WkIJaTRTTQvUweP73SM2JseVODGWXX9zuRzG5kjm7ZsQ8pRfutYf4qo8B4PgULTCXr9b6s5aHbQrk3Fxaz/Ee8tczxMzgC61tlE3SE7LukJHy6d65BHXfdMM4EdJCOHm94bnuuJiFdSz9G71V5l9I+SdKlqudJAGBuN1tTPHMfG+/jhVGmlwH/4+CIGDnn5Mzi1eVzDGwuS7qUrHR0pyxSlu/Q6zovwA);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ліфтинг-процедури</span>
+                                            </li>
+                                                        <li class="work" data-service="lifting-procedury"
+                                                data-reveal style="--reveal-delay: 100ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/8da9d1f8405abc97-1440.webp"
+                                    data-caption="Ліфтинг-процедури — результат до і після"
+                                    aria-label="Відкрити фото: Ліфтинг-процедури — результат до і після">
+                                <img src="/estetica/media/works/8da9d1f8405abc97-960.webp" srcset="/estetica/media/works/8da9d1f8405abc97-480.webp 480w, /estetica/media/works/8da9d1f8405abc97-960.webp 960w, /estetica/media/works/8da9d1f8405abc97-1440.webp 1440w, /estetica/media/works/8da9d1f8405abc97-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ліфтинг-процедури — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRv4AAABXRUJQVlA4IPIAAADQBgCdASoUACQAPu1kp02ppaOiKq35MB2JZACy51/tv9i8NgMoGH7I6hcCx+Grn01d7MAdTivXoepvYuGl/1AA+4XCg1Y5Mk+21c5NPvKZJYJQ7xtDlJz83wdctBMdFZdX6f+6qatXosSPQtRwVDZRexfQlq25/0S82OpD3G2pOpsQPrQ59msB/tHWe84QL6pUVnkIy2r3bTJymP0w2Cej12bnXzBueopVkJTpNBkWLb4NKyXeG/Ui2WHxHoZZTqa7jyZuOmkMX4Fp3n5QcL724+BdMcyi4LVAZsUX6pA2j766K3zkt++1daVlODgLawAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ліфтинг-процедури</span>
+                                            </li>
+                                                        <li class="work" data-service="lifting-procedury"
+                                                data-reveal style="--reveal-delay: 150ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/07cdb5267763c2cb-1440.webp"
+                                    data-caption="Ліфтинг-процедури — результат до і після"
+                                    aria-label="Відкрити фото: Ліфтинг-процедури — результат до і після">
+                                <img src="/estetica/media/works/07cdb5267763c2cb-960.webp" srcset="/estetica/media/works/07cdb5267763c2cb-480.webp 480w, /estetica/media/works/07cdb5267763c2cb-960.webp 960w, /estetica/media/works/07cdb5267763c2cb-1440.webp 1440w, /estetica/media/works/07cdb5267763c2cb-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ліфтинг-процедури — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBACdASoUABQAPu1ur1IppiQiqAgBMB2JYgCdMxgBixltxAv/AwoAPeXsAADNkytW5NT5ym6R4tq87VfJJBHtD/nN8UksuD/CCG03233Y6rmdJgeD3EHorFSh3DYIcSxQuMW2e0xXLyiOG6HcJ3akDqroWmv2mJQAg8AXqnjUiSQruNbEOFXsdGtJcYAA);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ліфтинг-процедури</span>
+                                            </li>
+                                                        <li class="work" data-service=""
+                                                data-reveal style="--reveal-delay: 200ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/7b904d97b0d7f176-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/7b904d97b0d7f176-960.webp" srcset="/estetica/media/works/7b904d97b0d7f176-480.webp 480w, /estetica/media/works/7b904d97b0d7f176-960.webp 960w, /estetica/media/works/7b904d97b0d7f176-1440.webp 1440w, /estetica/media/works/7b904d97b0d7f176-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABwBQCdASoUACQAPu1qrE+ppiQiKrgMATAdiWUAyRAisuhJL29bhD2qa135kCipgzUgL3nEAP7TAJ2RK71x5/AUZP65DTQ7RgMNfKjf8PGDcIX8nJlv9pdUvsJQNbiovWpwtz79U2daIWlhLBVU0ms0dKit0hK9zQEfm66DjT5YuTuCUdqUUUFm8gEllGxFFpF0nBBgOeGfoeAxR+/4Gb/so6BK4Wo8QaCkjBzoiHWAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service="brovy"
+                                                data-reveal style="--reveal-delay: 250ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/666cf4811d95de02-1440.webp"
+                                    data-caption="Брови — пудрове напилення — результат до і після"
+                                    aria-label="Відкрити фото: Брови — пудрове напилення — результат до і після">
+                                <img src="/estetica/media/works/666cf4811d95de02-960.webp" srcset="/estetica/media/works/666cf4811d95de02-480.webp 480w, /estetica/media/works/666cf4811d95de02-960.webp 960w, /estetica/media/works/666cf4811d95de02-1440.webp 1440w, /estetica/media/works/666cf4811d95de02-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="3024" height="4032" alt="Брови — пудрове напилення — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAAAQBgCdASoUABsAPu1krE+ppSQiMBgIATAdiWYAv/GoJTLIvtbJupr7tPXjqmdaH6HOVqDRVFtmmwAA/WhHtfUYD0PyLODivq+JRsNu20qVQ2103D0NyyhBhaVzmVUWvhyvk1gcYUMYbBXl5pMCKuwE60RmdKfliKU9JqnuwH6RCH+fq5WMeA3VlkEpfegczDL43uzoNgQ/NYlD0BqwkYCTE+qyM6sljGaSjdzqH+GFKXicZzUX96BqYKgAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Брови — пудрове напилення</span>
+                                            </li>
+                                                        <li class="work" data-service="brovy"
+                                                data-reveal style="--reveal-delay: 300ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/27ffaa45c2b5d5d7-1440.webp"
+                                    data-caption="Брови — пудрове напилення — результат до і після"
+                                    aria-label="Відкрити фото: Брови — пудрове напилення — результат до і після">
+                                <img src="/estetica/media/works/27ffaa45c2b5d5d7-960.webp" srcset="/estetica/media/works/27ffaa45c2b5d5d7-480.webp 480w, /estetica/media/works/27ffaa45c2b5d5d7-960.webp 960w, /estetica/media/works/27ffaa45c2b5d5d7-1440.webp 1440w, /estetica/media/works/27ffaa45c2b5d5d7-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Брови — пудрове напилення — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRgIBAABXRUJQVlA4IPYAAADQBgCdASoUACQAPu1yrlGppyQiqrgIATAdiUAYObGWSIK4Q4GW1zy+ayIdvj4sqd2YKTzLup6vwWzhgjwra4AA/ogp0DoqE4ZyPyxwyx8bwDibHKYocT/k5uHc5ctJZV/Tj4Oq0iMu+5gcYoeLwjAlaWZK69ZFpv75KtG0/2jTxUYXDA9sh2rZ+IZj05B9hrYHdc5aGbVJLAeN+dfr5J2XmqBv0L556pdfL6DWAqGADJENZoy/JMaftJWmEgOZgwKs6rneEBmYYkQatdHM+CxEgHcIk4JmIrw5eamPVw2Tj+3mNovaSmt1ZVeXOyGqx5roZkEQgAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Брови — пудрове напилення</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                                                data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/d162d8efaa4edad4-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/d162d8efaa4edad4-960.webp" srcset="/estetica/media/works/d162d8efaa4edad4-480.webp 480w, /estetica/media/works/d162d8efaa4edad4-960.webp 960w, /estetica/media/works/d162d8efaa4edad4-1440.webp 1440w, /estetica/media/works/d162d8efaa4edad4-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRvoAAABXRUJQVlA4IO4AAABQBgCdASoUACQAPu1qrVCppaQipWzJMB2JQBf/v/1o334TfckSo3yyAssoSkIE7IHQGnWeQYZ+kLfHsAD+9ZRIbpoDeEXf1LjC40LGTqp2quL6KPHkObBo/bvrWwZV9GYOyDFRgXsMiV+0muja7Zlb6GyIFSb9ASnZTt9+IRI6m1wDJxdtrcvGDXwhS2Pk6PLvFYp+1ILxCbk70bcpLP60lH9wPhVMKTRafkZrIK2Z0VGP4I/98xl/1ObsFiv4PJ5aPUaHEK2QjDGSNUJ+Vok4p+oRCKndRvWPkGrX7L5xB7ZJzU5NnHlkJaJvsxAA);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                                                data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/98929794adc9d8c7-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/98929794adc9d8c7-960.webp" srcset="/estetica/media/works/98929794adc9d8c7-480.webp 480w, /estetica/media/works/98929794adc9d8c7-960.webp 960w, /estetica/media/works/98929794adc9d8c7-1440.webp 1440w, /estetica/media/works/98929794adc9d8c7-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABwBQCdASoUABQAPu1mqk8ppaOiKA1RMB2JYgCdMtCCmBP7vRpHUHHWO2iROKQt34Ivi0gAAP3ucWs3FXv+PWoYMDGmTIGcP99UuSrsBJOnbemtSwYfRWmQr9O2vUzsEm8Hp8TG+6l/FZ0GiVTnQccNIBOdSqSo6Yv8xnTs+vPASeB5QkwaSEp7o3K8xKmFG5OmaZyirNaLV4IA);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                                                data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/dbcff793423fcd09-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/dbcff793423fcd09-960.webp" srcset="/estetica/media/works/dbcff793423fcd09-480.webp 480w, /estetica/media/works/dbcff793423fcd09-960.webp 960w, /estetica/media/works/dbcff793423fcd09-1440.webp 1440w, /estetica/media/works/dbcff793423fcd09-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACwBQCdASoUABQAPu1ur1IppiQiqAgBMB2JYgCdMsy4AqgAGtHS8KSR9f0P5KL8gayMwdGLrgAA/upU1TI8Ut1RrVlK2AL9M1vvHEmGQnXMoLmnaziPT3fDIVgZoaZNYm56KDv2x0tgSIv6/yEGUkKUytYGJv8gXUNaPv3z+1+UIHPfUkb5yQ2elM1lnyQj3tT9uz90O0PcR4BJ5PrxblmMXOVS1m4bMJ04E6y04sHgAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                                                data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/74ac88adf7cbd5a4-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/74ac88adf7cbd5a4-960.webp" srcset="/estetica/media/works/74ac88adf7cbd5a4-480.webp 480w, /estetica/media/works/74ac88adf7cbd5a4-960.webp 960w, /estetica/media/works/74ac88adf7cbd5a4-1440.webp 1440w, /estetica/media/works/74ac88adf7cbd5a4-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASoUACQAPulip02pJaOiNVgIASAdCUAYmwLMFA7uaYwnmQELxzpbCJVtvPvmAAD+rvtUTS9oNjmEyp/IA9+BtPpxdptjCJKnenBeH1B8XL9WWn/mMj7mVjDVTf396qiVt807+pDmJRwIAlOKx5a49Xj3dJU+tUEslBOQxPRm1m5FgZqXHp4gFMiG6i7JsfzkjtjR7P1V6zt8R7/XJEpLLBPWuPAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                                                data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/60688185156e9ad9-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/60688185156e9ad9-960.webp" srcset="/estetica/media/works/60688185156e9ad9-480.webp 480w, /estetica/media/works/60688185156e9ad9-960.webp 960w, /estetica/media/works/60688185156e9ad9-1440.webp 1440w, /estetica/media/works/60688185156e9ad9-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACQBQCdASoUABQAPu1sq1EppaOiqAqpMB2JZACxHtplsQkec6vVAnJPR/T/d/e9/GWBV8P4AAD+TLZKknSKbQx9E0a5HVDg0Ib9ENDd9d8rUEc/OlvPfjn11C4MKJIZCJPks4SeSsnG2LKv7KoVLMDUExoUMrnr9VR9Ig7As7mpjbB16PtNc/IvEoMWK/YgantQ165WdyqebPMzQ7L58jVNBQLGzR6AzWK1ZbE1mhC9H31DNAAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/7fc58528fc7f9b93-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/7fc58528fc7f9b93-960.webp" srcset="/estetica/media/works/7fc58528fc7f9b93-480.webp 480w, /estetica/media/works/7fc58528fc7f9b93-960.webp 960w, /estetica/media/works/7fc58528fc7f9b93-1440.webp 1440w, /estetica/media/works/7fc58528fc7f9b93-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADQBQCdASoUACQAPu1cqU2ppKQiNVgIATAdiUAWHYLNryBeYUhRPXbUYEdSZKZlH5gaDpSC1+kwAP5Qq7XAGqwMda2KzhffD+rqyorniKqnfsWXZnLIVWZWjc7S0iEH3R1l5DTJyjdd8by/nD0pqYRlL43pUpTaDFGNW7xaX1CQ0B6AM+2Z2dd5iWB/1k9obAjj3EX7YCXjx9XyBLtcmuCk5Eu6bNpNIQTWxIyo53j7vwzfnLf5yuAAAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/bdf7fb3b16bd051b-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/bdf7fb3b16bd051b-960.webp" srcset="/estetica/media/works/bdf7fb3b16bd051b-480.webp 480w, /estetica/media/works/bdf7fb3b16bd051b-960.webp 960w, /estetica/media/works/bdf7fb3b16bd051b-1440.webp 1440w, /estetica/media/works/bdf7fb3b16bd051b-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAADwBQCdASoUACQAPu1kq04ppaQiKqwBMB2JYwDGRAgA3gEacpmfgaEDx8EYxZw9+c/n7KO4GgK5wAD+0ve6ZhG6EBv0DR9COFaXbKmdkI3P0DBXFCcg/ZmYTBVOjfEX/AgkBEyOxGGjXztXk2fIEW9lnQ7rV2R8LBDMy5wRDsazSQLFiDJVoFpc959ozf9Jx2Uv3sRQFOTmkQEK7eqGt1i/TooEgWxymUdjpthYpGAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/be7edf435aaf7cf9-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/be7edf435aaf7cf9-960.webp" srcset="/estetica/media/works/be7edf435aaf7cf9-480.webp 480w, /estetica/media/works/be7edf435aaf7cf9-960.webp 960w, /estetica/media/works/be7edf435aaf7cf9-1440.webp 1440w, /estetica/media/works/be7edf435aaf7cf9-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoUACQAPu1yrlGppyQiqrgIATAdiUAADAbpO4Eo9fZnDtgK1krnzt/LMHzygAD+ivmUwwjiBjq38v8xotsoV6mQp62Grvqrgd+5P0vf93su0W1OfJuPnxEY1aGiV8cfkWr32+EGgV6uW7rWzIdIwXpWvijOkCJwhRboicrp8dnakm6yP8Q8HOeXtxw9Bv5Rr1XioT7OKsEdz8my3g3kRnN0Kri6iZvLywJV3plgAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/c954654d740cb4f9-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/c954654d740cb4f9-960.webp" srcset="/estetica/media/works/c954654d740cb4f9-480.webp 480w, /estetica/media/works/c954654d740cb4f9-960.webp 960w, /estetica/media/works/c954654d740cb4f9-1440.webp 1440w, /estetica/media/works/c954654d740cb4f9-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAABwBQCdASoUABQAPu1ur1IppiQiqAgBMB2JYgCdMoABuFrTIxh7VRDtnlMxH9JtA4sEtW+4AP6hMceDBdPXEbQDxmCSKVzd65cX7Eit/EUz53UlVOv/F7sd27A0I1slDNCgaRg6FIpJZMhAj2H6W+PMx/shKXVX+6gRQ/DEHd+cYX9gAIVjrw0pRWNe2Wtgyb3pmKDAOwkaItjrJBCYdxklPynl49j7qsoihEabX+934AAA);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/4dcdf8ea15ec1dae-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/4dcdf8ea15ec1dae-960.webp" srcset="/estetica/media/works/4dcdf8ea15ec1dae-480.webp 480w, /estetica/media/works/4dcdf8ea15ec1dae-960.webp 960w, /estetica/media/works/4dcdf8ea15ec1dae-1440.webp 1440w, /estetica/media/works/4dcdf8ea15ec1dae-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADwBQCdASoUACQAPu1cqk4ppKQiMBqqqTAdiWMAwB/WAi+bS1gz2AkezHodKmoyP2eU9v3kXXToAAD+UOGhyFkbz7+x9xhVIs/1YS20WAxRaStP/i1Ozgz+MEu9Uq/hf33ZQUxz4DSrVBebJ/cgGavDbR+m11QpzkAZD6QQUEel5JvWxVu/fBLX2Lp+FofvpnbfHnVSSSFGawPZyBWP+G+FeWEcdIbrNkfL8OBoc7R1CJLqAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/2380b8f122c67be1-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/2380b8f122c67be1-960.webp" srcset="/estetica/media/works/2380b8f122c67be1-480.webp 480w, /estetica/media/works/2380b8f122c67be1-960.webp 960w, /estetica/media/works/2380b8f122c67be1-1440.webp 1440w, /estetica/media/works/2380b8f122c67be1-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAABwBQCdASoUABQAPu1ur1IppiQiqAgBMB2JQBWGYdnAQgAJNJNb+N1A8Ym/QGt6Q/XP6EMAAP6U/YX2fpuD/km2YjWJvfysV70RjMe3/OPunV2vTx1VAgw3ehr+9m9gjp2qcbDPlEs5bF7xbcp/+oeGA5DpY2cumjc72EmdNQu00a/B7guCLXxROzWLo2st/r+mD2aAMu1J/cHZ1XEqINiiOElKj6KBR/gpNAbbwAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service="botulinoterapiya"
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/5f201845f0c9d952-1440.webp"
+                                    data-caption="Ботулінотерапія — результат до і після"
+                                    aria-label="Відкрити фото: Ботулінотерапія — результат до і після">
+                                <img src="/estetica/media/works/5f201845f0c9d952-960.webp" srcset="/estetica/media/works/5f201845f0c9d952-480.webp 480w, /estetica/media/works/5f201845f0c9d952-960.webp 960w, /estetica/media/works/5f201845f0c9d952-1440.webp 1440w, /estetica/media/works/5f201845f0c9d952-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Ботулінотерапія — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBACdASoUACQAPu1krE4ppaSiKqwBMB2JYwC7ABZteoz4HTwFpeSF0nyKx7YN/SgA/orbIUUOj/lMcjICMXR0zJNxq717FC5DjNS8jDZQ4i3dQaS6W8j3Zrc91ko4e8BAzApQ9+eLDRG1BCox5I2tn4XPDr13RJPz5GOTZDSSmFSkeTa6TsGrp12W+T5PD2lvAFsUaJdg+N90bRjmVtpwGNulNPd4AAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                                    <span class="work__tag">Ботулінотерапія</span>
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/10aefa14183b9705-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/10aefa14183b9705-960.webp" srcset="/estetica/media/works/10aefa14183b9705-480.webp 480w, /estetica/media/works/10aefa14183b9705-960.webp 960w, /estetica/media/works/10aefa14183b9705-1440.webp 1440w, /estetica/media/works/10aefa14183b9705-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAABwBQCdASoUABQAPu1wsFIppiSiqAgBMB2JagCdMoM6ABstR8X4+ObmyUUJ3XiaJQ6xQlIAAP26ee+XWCxq6GS145PDdt8fquc1aOSGr2Dc586SAAPkMpNzpVXVOOOzOr01ukq+cjIGaiobxNlv8z0OlPzhIxjJ2B/pHGN3pYJicQvEMx1Chtvh5U+oayYmePq2t75rICepKTv+wXOGGqsesjYzY2Hf2zncSIuYOh92T0ojbp/GSOQuoD84YxeKvGGsgAAA);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/dc40d26115e85116-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/dc40d26115e85116-960.webp" srcset="/estetica/media/works/dc40d26115e85116-480.webp 480w, /estetica/media/works/dc40d26115e85116-960.webp 960w, /estetica/media/works/dc40d26115e85116-1440.webp 1440w, /estetica/media/works/dc40d26115e85116-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACwBQCdASoUACQAPu1qrk+ppiQiKqoBMB2JZACzr/ABM8GEqn9KNoEyc6PcnnrmBuJtfCidDWAA/cs1z6rYTMHVvT8M9Y7oUEjL30TeHJmfzjr/OlQ522MXcBcxhhhpzGWdPvU+GIfxiFMi8kmqB2HDzXIefcGKgpykkAEpDjBUGt3Qdsre6v5Or0qG43+eyd3DY5mb8PTTa7//idjAuQuOSJLqkajxUrCsCDXPUqKG09jj7WWTGgvHc7W5bmA0eAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/e5c9a78dc89fede4-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/e5c9a78dc89fede4-960.webp" srcset="/estetica/media/works/e5c9a78dc89fede4-480.webp 480w, /estetica/media/works/e5c9a78dc89fede4-960.webp 960w, /estetica/media/works/e5c9a78dc89fede4-1440.webp 1440w, /estetica/media/works/e5c9a78dc89fede4-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAAAQBwCdASoUACQAPu1oqFAppaOiqqoBMB2JaAC1G3J6jdIEzmILgLNREIfC4NxZ8LV4DyCMJ5d2OPlFTpnFIGNIAAD926BKsIYbbPzqNfZC2f5s/PObuW8DLQIM6uDqpwobCplFMIAX1mtfPsDUBtyrMF7ndv/Sh0MHmdRKRYjjOBV8r0DF84kf9+I+9cOiU9lIuIH/VMqjaAUz1eIZP9LUJ0+qjnbOD9God2vbGsnaFCfNlq1xRFLlARZ5EchYXssilecLkZRhBEW+UHWJVuySSle35y3oTSkpUNXiMA/OgQrOV4SE8LmgpvDf16zSahpX3xSs48QvTDB2PC2Ixx0zw3rp6b9wQapmK7RX/fxFRtLXiCW2QJ9JtLje94jjYremBzNOWQP77io9J7NVnihfTkifc8G8DHswjFBE++KAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/631559af0f61f6dc-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/631559af0f61f6dc-960.webp" srcset="/estetica/media/works/631559af0f61f6dc-480.webp 480w, /estetica/media/works/631559af0f61f6dc-960.webp 960w, /estetica/media/works/631559af0f61f6dc-1440.webp 1440w, /estetica/media/works/631559af0f61f6dc-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASoUACQAPu1qrVCppaQipWzJMB2JYwDImYw7fc4XUgIUKidWH4nIqg6JgSN1VSdXpBV0AAD+jl6eJG7kPXBvaQxbNrszezmNmH7GOIClv9NxFjlvh3hOjL267a9H107gryPjnasXt/f+gTAUpxZ6mxvzTwNjw4Zwk+SoMhJ0+f6ZUiZDvs/8Z9PG+v8oZQcTIajOHDqfcoHitLfQ83hLPDpyihObnnJ6slZ1yvr8o8ermIEVY3rxoxfkB70V0aJSpMDX7QwAAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/882c61e82634ba0c-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/882c61e82634ba0c-960.webp" srcset="/estetica/media/works/882c61e82634ba0c-480.webp 480w, /estetica/media/works/882c61e82634ba0c-960.webp 960w, /estetica/media/works/882c61e82634ba0c-1440.webp 1440w, /estetica/media/works/882c61e82634ba0c-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAADwBQCdASoUACQAPu1irE8ppSQiMBVaqTAdiWMAwN3cAU6vtnz4JHBHT7MWKcOOSoMOT2w86NXsYAD+isVn1q52XGXOMaPNmBmg9J35ZS1gAufyRiLjFufUClM+/3WfHMfZ0Y4i6DUUfWThbvb7EnFT323oV0tRximPof4klulA9HRFa5C5OJVCxBWnaUKkrm3nawaYrLqympkAbeD7X76thOnMBbAuyCBnYjIAUTxy4RH41bIMzgZyt1OIUbB9WDBEQoz8lF3yuHMAAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/e14c06a5a5b1140c-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/e14c06a5a5b1140c-960.webp" srcset="/estetica/media/works/e14c06a5a5b1140c-480.webp 480w, /estetica/media/works/e14c06a5a5b1140c-960.webp 960w, /estetica/media/works/e14c06a5a5b1140c-1440.webp 1440w, /estetica/media/works/e14c06a5a5b1140c-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAADQBQCdASoUACQAPuFeoU2opSMiNVgMARAcCWIAvneJg76ZmkvrmOWZ4wV6sAKs8s7D3s0b67GAAP7nEyMUMrpntqJf0G/0lGg2eVVljSPJaKEX9bo6sj5Gvy0/MdESwDgPjhp15UlQo7hlVDCb+PsIpXFF29v0Gg50ElIEZExbUHiN3XVxzKf2dso3FxTDD8lqgReSjSkmE31CZysm0yq/Ty5hIi2NAo/UrKN5iXWdKUoAAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/5c8c2f9eae95558b-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/5c8c2f9eae95558b-960.webp" srcset="/estetica/media/works/5c8c2f9eae95558b-480.webp 480w, /estetica/media/works/5c8c2f9eae95558b-960.webp 960w, /estetica/media/works/5c8c2f9eae95558b-1440.webp 1440w, /estetica/media/works/5c8c2f9eae95558b-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACQBQCdASoUACQAPu1qqU4ppqOiKrgN+TAdiWIAuwAcQAcroFtvASQmyV7hLpL60TF1WNg2gAD+j6UTeEuFyfC5nP86X9ndS7DcYOjh77RVfj4GMaym3U+UcGAhs7hSdivwbJByc+7O0VAftAsA7ptLCA4rTczJC2XT8/MUdr9OxTEp476oyvPR7WrEJx1A2j1uLl538qE4iEi0NHwjI3l3XWqf+GY1+I3UM0jZyWqU7j8xKxXYubHnnDyQoN+3UrUS1ohiFWdIlw2k11vyRaO19IiLkehwAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/3e4a68b2cc9aa471-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/3e4a68b2cc9aa471-960.webp" srcset="/estetica/media/works/3e4a68b2cc9aa471-480.webp 480w, /estetica/media/works/3e4a68b2cc9aa471-960.webp 960w, /estetica/media/works/3e4a68b2cc9aa471-1440.webp 1440w, /estetica/media/works/3e4a68b2cc9aa471-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2796" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAACwBgCdASoUACsAPu1srlEppiQiqrgKATAdiWIAsR92ySD3ef4tixzB3anTdNUw8HXC387SxVV7pck6NaWIdAD+9Z063JJ08OsPlrVShdXFu7iRVhfBDMY/aDvxXTysyLbtgbkUscv/CbeGtmSoBr3UYL0hfn18rQjJbm1ptkm3H88zU7/MFBjPv7FZj1eDQ83CoPesn6ZG72OTD88Iy6e4dHysaeNuQ0AllpWT289Jk+8uJtaio86RIvch1Mz9/m0iD+ATFQAXYoKVk0w4D4YyR2PR5ffNOWgfYzOAcy1zn0YSMwAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/bdfe6cf635cdd8de-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/bdfe6cf635cdd8de-960.webp" srcset="/estetica/media/works/bdfe6cf635cdd8de-480.webp 480w, /estetica/media/works/bdfe6cf635cdd8de-960.webp 960w, /estetica/media/works/bdfe6cf635cdd8de-1440.webp 1440w, /estetica/media/works/bdfe6cf635cdd8de-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAABwBQCdASoUACQAPu1eq02ppKQiMBqqqTAdiWMAv+wWbU6pBcHSDHKsIOwk0ynB5iWkAG1AAP6uGsixbT1eLMLz67bMtMNvjaW/i1wvLKLouOgtKX9/3wW7DCH89a8/chDpH1hyJAoWcfCErbiMOs23A3AWEtzvOR7/wD0WvD/nTfD84uMpqC/gnGAfybznC5e92kNtlN5R7WKyGLL0uZUpJGSKKButS68eVJZckAAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/8c88e7d0f6e92087-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/8c88e7d0f6e92087-960.webp" srcset="/estetica/media/works/8c88e7d0f6e92087-480.webp 480w, /estetica/media/works/8c88e7d0f6e92087-960.webp 960w, /estetica/media/works/8c88e7d0f6e92087-1440.webp 1440w, /estetica/media/works/8c88e7d0f6e92087-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="2048" height="2048" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADwBQCdASoUABQAPu1ur1IppiQiqAgBMB2JYgCdMuN8ftwYpVqW7AYd1CUMdIo+4VWkI3xaJhl50AD1L5PC+HVcH9CFcrVT8mWVDc9MwJ5Fdje9r4Lh/mi6SYhbZwU7YGs4J1+8LiKgk5gEQENhq4Mv1d/1AK5I2Q15sJsvd7dOzsdNYf8fR29yGxEWDZ0hjT0Fz/p/3iVy9wYkE/LSLfbAvNzpy2HZtmRXIjB9Z/tXZbC9zPv9KAZBYHDij4AA);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/f57d275ae01bb2d4-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/f57d275ae01bb2d4-960.webp" srcset="/estetica/media/works/f57d275ae01bb2d4-480.webp 480w, /estetica/media/works/f57d275ae01bb2d4-960.webp 960w, /estetica/media/works/f57d275ae01bb2d4-1440.webp 1440w, /estetica/media/works/f57d275ae01bb2d4-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAABwBQCdASoUACQAPu1mrFAppSQiqrgMATAdiWMAyywisujVozhs5Dnqv75YJZyQLLNOiq3QAP7eb18hRLC4LpWKvkw5xtZFXs+/77BjwUSN8YTSMB52OtZiN5azN2Q8aftzVL7ExxxfXMK+uAtpBlIFs5lr2+lJRWZ8vbMcKtJZYusANXkCv/8ZXvPvA/TtfexaQCgjjwb4Q0Sy0/2E7T6pfX2Hfq4Lav1BXrlGAAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/c21590ee37d94aed-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/c21590ee37d94aed-960.webp" srcset="/estetica/media/works/c21590ee37d94aed-480.webp 480w, /estetica/media/works/c21590ee37d94aed-960.webp 960w, /estetica/media/works/c21590ee37d94aed-1440.webp 1440w, /estetica/media/works/c21590ee37d94aed-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAADwBQCdASoUACQAPu1eqU2ppKQiNVgIATAdiWMAxNgWbRYt8ZKcNt+bH3IfTcJA5TijoMK1M3hUGAD+0tpBqSHDDNN9yCbgZQ8LHbSAjed5dgjlvEqDgrunwNbGF8wrm8sFVnlM9teF0omlkYWo9cp8mGqE52jUTtMveIOTTwfNaT49ZzRzf/6ztQxiB8AhOYlhDptYcLJBAVWZkNYg1xV7HSLrqQ3yydtSr2cUEAaqhBBKCAAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/2c160f239534a90b-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/2c160f239534a90b-960.webp" srcset="/estetica/media/works/2c160f239534a90b-480.webp 480w, /estetica/media/works/2c160f239534a90b-960.webp 960w, /estetica/media/works/2c160f239534a90b-1440.webp 1440w, /estetica/media/works/2c160f239534a90b-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRuIAAABXRUJQVlA4INYAAACwBQCdASoUACQAPu1qrlAppaQipWzJMB2JQBlXdYWACaEG/NMWjQf4j9kdNAUm/NyophtgVmAA9t4eHxyFOFB5XFQiu0v2aFBNWM3QZU4A0D033QiEFzLKcY2mE2ImBvGGDQOHxkt+tIi4GP7hUlshWUpr21oDY1kUIl6zxlm1jUXkQ0GCkzTQCBF/gQGkWt8v6PbrlVO02mZvqYShztKhd3u/duYfCnOF4CTgNTqVzDJid/TejnSB0RTbK//3Rg/+JRGfDJBWIJYcWBdr6N596k3nAAAA);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/3f2b5155f6e957cc-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/3f2b5155f6e957cc-960.webp" srcset="/estetica/media/works/3f2b5155f6e957cc-480.webp 480w, /estetica/media/works/3f2b5155f6e957cc-960.webp 960w, /estetica/media/works/3f2b5155f6e957cc-1440.webp 1440w, /estetica/media/works/3f2b5155f6e957cc-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRuAAAABXRUJQVlA4INQAAAAwBgCdASoUACQAPu1krU+ppSQiKrgMATAdiWMAuwHcC4XnLxQy2v6aSkwGQU8DhZoqxI6qPDhY+LSgAP7DHKBc82+5BOh5N2MCOa6tz127QVNZaHyheF7qp7m34m7rX88JGfZ8c07wIT+oYMi3gkusmY2PQzIZcMVUGG8hhnBZL28KU/ra4MHtJo+I5+nVJ31hfQ8gHxABqor8A0IsXLVtjgek7rQAqe/z4E1jWIBfoEEeYC9EWpwF1dOFdy8UZ/UwWk0BUEmMgibtuo92vJnfUtAAAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/cd840b42e3e4e300-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/cd840b42e3e4e300-960.webp" srcset="/estetica/media/works/cd840b42e3e4e300-480.webp 480w, /estetica/media/works/cd840b42e3e4e300-960.webp 960w, /estetica/media/works/cd840b42e3e4e300-1440.webp 1440w, /estetica/media/works/cd840b42e3e4e300-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="1290" height="2293" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBQCdASoUACQAPu1qrlAppiQipWzJMB2JQBhQZYBXE4ZMQUAGPaYTTY0738YxL7AAAPxRve4LZDUVq5jwdTnmEC6ufoGLj6xGKKBJhiraKudTg3cZDNPHyBXzl4tSP3H7tnU3PO/AT2zESYi4t2BoDM4wKgvRCAsJST9lTZZj7IaKyn4//P3xB9823Io05yRza0DGWKnIzDbIGKZjC/BIwAA=);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/a21ad8c1dfc2faea-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/a21ad8c1dfc2faea-960.webp" srcset="/estetica/media/works/a21ad8c1dfc2faea-480.webp 480w, /estetica/media/works/a21ad8c1dfc2faea-960.webp 960w, /estetica/media/works/a21ad8c1dfc2faea-1440.webp 1440w, /estetica/media/works/a21ad8c1dfc2faea-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="4356" height="4356" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAACwBACdASoUABQAPu1urlIppiQiqAgBMB2JYgCxH1pEIA6IQ2WPihIeNilWF5OAAP5lj9OrCnzoHTMCC7LBr/Q2qayWC07CI74dnE5bMnu9CsMR5HDmOQS4X4qF/uWkO4RqFUMRuZJt09yTxoPOlrNTLSx7hTBzkF0fpNnsAAk1QAAA);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/0bb8a0bb09cd9e72-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/0bb8a0bb09cd9e72-960.webp" srcset="/estetica/media/works/0bb8a0bb09cd9e72-480.webp 480w, /estetica/media/works/0bb8a0bb09cd9e72-960.webp 960w, /estetica/media/works/0bb8a0bb09cd9e72-1440.webp 1440w, /estetica/media/works/0bb8a0bb09cd9e72-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="4060" height="4060" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoUABQAPu1qq1EppaOiqAqpMB2JZAC7AA36s8z5IvaMfcrT7wTvCp5rc3QAAP4vDwzS8k2t53FlndrM5S7APDxWeArT0vXS9ddsLpb0t5H9wnrHzo3s8W83Gh4fJkhjCxd58DdW6y9rKfxcwwyM/GZLPa2hq2k0KgeyDDTnL6sXVdp6nNn2PLZZWuEBE+g2NcYBH1hjiIduYJWtgm0wAA==);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                                                        <li class="work" data-service=""
+                        hidden data-extra="works"                        data-reveal style="--reveal-delay: 350ms">
+
+                                                    <button class="work__btn" type="button"
+                                    data-lightbox="/estetica/media/works/6140776e2d2e3330-1440.webp"
+                                    data-caption="Робота майстра — результат до і після"
+                                    aria-label="Відкрити фото: Робота майстра — результат до і після">
+                                <img src="/estetica/media/works/6140776e2d2e3330-960.webp" srcset="/estetica/media/works/6140776e2d2e3330-480.webp 480w, /estetica/media/works/6140776e2d2e3330-960.webp 960w, /estetica/media/works/6140776e2d2e3330-1440.webp 1440w, /estetica/media/works/6140776e2d2e3330-1920.webp 1920w" sizes="(min-width: 1024px) 25vw, 50vw" width="4586" height="4586" alt="Робота майстра — результат до і після" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAACwBACdASoUABQAPu1wsFKppiSiqAgBMB2JQBUk5DAg+Jx8jjTKBpfM3d6ssMIAAPyyeMPSQ90Ylpi+KSQNX+x1+MBXSTim31QYAdVba7E9VI9WZsn1HXNALPZENAhewDILsY9KojpE+kFSFyq6518FQmjPlAAA);background-size:cover" decoding="async">                            </button>
+                        
+                                            </li>
+                            </ul>
+
+                            <div class="center-action">
+                    <button class="btn btn--ghost" type="button" data-show-all="works">
+                        Показати всі роботи (37)
+                    </button>
+                </div>
+                        </div>
+</section>
+
+<svg class="rule" data-draw viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M2 4.3C152 2.5 298 5.6 452 3.9s258 2.3 412 .4 182 2.1 334 -.6"/>
+</svg>
+<section class="section" id="yak-prohodyt">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Як проходить візит</p>
+            <h2 class="section__title">П’ять кроків, і жодного сюрпризу</h2>
+        </div>
+
+        <ol class="steps">
+                            <li class="step" data-reveal style="--reveal-delay: 0ms">
+                    <h3>Розмова</h3>
+                    <p>Спершу з’ясовуємо, чого ви хочете й чого боїтесь. Я розповідаю, що реально вийде з вашими вихідними даними, а що — ні.</p>
+                </li>
+                            <li class="step" data-reveal style="--reveal-delay: 70ms">
+                    <h3>Ескіз</h3>
+                    <p>Малюю форму олівцем просто на обличчі й даю вам дзеркало. Правимо стільки разів, скільки потрібно. До роботи не переходимо, поки ви не скажете «так».</p>
+                </li>
+                            <li class="step" data-reveal style="--reveal-delay: 140ms">
+                    <h3>Процедура</h3>
+                    <p>З анестезією, у своєму темпі, із зупинками на ваше прохання. Від сорока хвилин до півтори години залежно від зони.</p>
+                </li>
+                            <li class="step" data-reveal style="--reveal-delay: 210ms">
+                    <h3>Рекомендації</h3>
+                    <p>Пояснюю, що відбуватиметься зі шкірою найближчі два тижні, і даю засіб для догляду. Мій контакт лишається у вас на весь період загоєння.</p>
+                </li>
+                            <li class="step" data-reveal style="--reveal-delay: 280ms">
+                    <h3>Корекція</h3>
+                    <p>Через 4–8 тижнів вирівнюємо насиченість і доводимо форму. Саме цей візит робить результат довговічним.</p>
+                </li>
+                    </ol>
+    </div>
+</section>
+<section class="section section--surface" id="bezpeka">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Безпека</p>
+            <h2 class="section__title">Про що ви маєте право не хвилюватись</h2>
+            <p class="section__lead">
+                Стерильність — це не те, чим варто пишатися, а норма. Розповідаю про неї тільки тому,
+                що ви маєте знати, за що платите.
+            </p>
+        </div>
+
+        <ul class="safety__grid">
+                            <li class="safety__item" data-reveal style="--reveal-delay: 0ms">
+                    <h3>Одноразове — одноразове</h3>
+                    <p>Голки, насадки, серветки, рукавички. Усе, що торкається шкіри, розпаковується у вас на очах і після процедури утилізується.</p>
+                </li>
+                            <li class="safety__item" data-reveal style="--reveal-delay: 60ms">
+                    <h3>Стерилізація інструменту</h3>
+                    <p>Багаторазові інструменти проходять повний цикл обробки — дезінфекція, очищення, стерилізація — між кожною клієнткою.</p>
+                </li>
+                            <li class="safety__item" data-reveal style="--reveal-delay: 120ms">
+                    <h3>Обробка поверхонь</h3>
+                    <p>Кушетка, столик, лампа й підлокітники дезінфікуються після кожного візиту, а не в кінці дня.</p>
+                </li>
+                            <li class="safety__item" data-reveal style="--reveal-delay: 180ms">
+                    <h3>Сертифіковані препарати</h3>
+                    <p>Тільки офіційно завезені препарати з документами. Пакування розкривається у вас на очах — термін придатності ви бачите самі.</p>
+                </li>
+                            <li class="safety__item" data-reveal style="--reveal-delay: 240ms">
+                    <h3>Міжнародні протоколи</h3>
+                    <p>Робота ведеться за протоколами, яких навчають на профільних курсах, а не «як звикла». Саме за це я щороку плачу, коли їду вчитися.</p>
+                </li>
+                            <li class="safety__item" data-reveal style="--reveal-delay: 300ms">
+                    <h3>Право сказати «ні»</h3>
+                    <p>Якщо ваш стан зараз не підходить для процедури, я відмовлю і поясню чому. Це теж частина безпеки.</p>
+                </li>
+                    </ul>
+    </div>
+</section>
+<section class="section" id="dyplomy">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Кваліфікація</p>
+            <h2 class="section__title">Дипломи, сертифікати, нагороди</h2>
+            <p class="section__lead">
+                Навчання не закінчується — методики й препарати змінюються швидше,
+                ніж встигає застаріти диплом.
+            </p>
+        </div>
+
+        <ul class="diplomas__grid" data-lightbox-group="diplomas">
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 0ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/0f27587c25a543d6-1440.webp"
+                                data-caption="Контурна пластика губ · 2024"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Контурна пластика губ">
+                            <img src="/estetica/media/diplomas/0f27587c25a543d6-960.webp" srcset="/estetica/media/diplomas/0f27587c25a543d6-480.webp 480w, /estetica/media/diplomas/0f27587c25a543d6-960.webp 960w, /estetica/media/diplomas/0f27587c25a543d6-1440.webp 1440w, /estetica/media/diplomas/0f27587c25a543d6-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1536" height="1024" alt="Контурна пластика губ" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDE2DBRYAAA/uz6Uxst89dzQhGymYC75U9KK1+F1pRZtPO8soluRSAAAA==);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Контурна пластика губ · 2024                            </figcaption>
+                                            </figure>
+                </li>
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 45ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/4262dd92156e8eb8-1440.webp"
+                                data-caption="Канюльні техніки · 2024"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Канюльні техніки">
+                            <img src="/estetica/media/diplomas/4262dd92156e8eb8-960.webp" srcset="/estetica/media/diplomas/4262dd92156e8eb8-480.webp 480w, /estetica/media/diplomas/4262dd92156e8eb8-960.webp 960w, /estetica/media/diplomas/4262dd92156e8eb8-1440.webp 1440w, /estetica/media/diplomas/4262dd92156e8eb8-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1536" height="1024" alt="Канюльні техніки" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAAAQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZwDCgC0HbEgA/u3/rYof1o1BCfBqZw7SJieLwQfED1oOR6wPNyTaAAA=);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Канюльні техніки · 2024                            </figcaption>
+                                            </figure>
+                </li>
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 90ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/1912961b04ec8f5c-1440.webp"
+                                data-caption="Ботулінотерапія · 2022"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Ботулінотерапія">
+                            <img src="/estetica/media/diplomas/1912961b04ec8f5c-960.webp" srcset="/estetica/media/diplomas/1912961b04ec8f5c-480.webp 480w, /estetica/media/diplomas/1912961b04ec8f5c-960.webp 960w, /estetica/media/diplomas/1912961b04ec8f5c-1440.webp 1440w, /estetica/media/diplomas/1912961b04ec8f5c-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1492" height="1054" alt="Ботулінотерапія" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoUAA4APu1iqU2ppaOiMAgBMB2JQBibBD4cBN6Zqcs05SntLrtgAP7x0bNkr8X0vQExm/nFqTkXrxh3FJFhsrKIf/Psa/P01jmBGC1p4Spf/d6B3MyejJzebnt/4R+6nwzkDNbou6WLHvy4tXiV5/Erblo1GiMAAAA=);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Ботулінотерапія · 2022                            </figcaption>
+                                            </figure>
+                </li>
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 135ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/138b31e34b3f89c2-1440.webp"
+                                data-caption="Канюльне введення полінуклеотидів · 2024"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Канюльне введення полінуклеотидів">
+                            <img src="/estetica/media/diplomas/138b31e34b3f89c2-960.webp" srcset="/estetica/media/diplomas/138b31e34b3f89c2-480.webp 480w, /estetica/media/diplomas/138b31e34b3f89c2-960.webp 960w, /estetica/media/diplomas/138b31e34b3f89c2-1440.webp 1440w, /estetica/media/diplomas/138b31e34b3f89c2-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1448" height="1086" alt="Канюльне введення полінуклеотидів" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZQAAUTSvP6UNIsAA/thH+18eGLVngmtzEmYhtARF8djDgJXcenLP/8uSt8p/cyL2mG8gl9iTSHPjseG9yFhGGov4FpCwAAA=);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Канюльне введення полінуклеотидів · 2024                            </figcaption>
+                                            </figure>
+                </li>
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 180ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/d85c0bd40bb81c77-1440.webp"
+                                data-caption="Техніка Magic Shading · 2022"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Техніка Magic Shading">
+                            <img src="/estetica/media/diplomas/d85c0bd40bb81c77-960.webp" srcset="/estetica/media/diplomas/d85c0bd40bb81c77-480.webp 480w, /estetica/media/diplomas/d85c0bd40bb81c77-960.webp 960w, /estetica/media/diplomas/d85c0bd40bb81c77-1440.webp 1440w, /estetica/media/diplomas/d85c0bd40bb81c77-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1469" height="1071" alt="Техніка Magic Shading" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JYwAAXkE1b1pHO/0d/wAAAP7uE0fTeQLH+Oeeyy/UppSKxR4lwqszHx7aipdPfriXm/sdhl1/ZExOnity4rQV1dCMKHKgAAA=);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Техніка Magic Shading · 2022                            </figcaption>
+                                            </figure>
+                </li>
+                            <li>
+                    <figure class="diploma" data-award="0"
+                                                        data-reveal style="--reveal-delay: 225ms">
+                        <button type="button"
+                                data-lightbox="/estetica/media/diplomas/f7d00d4cceab738d-1440.webp"
+                                data-caption="Техніка Veil on Eyes · 2020"
+                                data-event="diploma_open"
+                                aria-label="Відкрити: Техніка Veil on Eyes">
+                            <img src="/estetica/media/diplomas/f7d00d4cceab738d-960.webp" srcset="/estetica/media/diplomas/f7d00d4cceab738d-480.webp 480w, /estetica/media/diplomas/f7d00d4cceab738d-960.webp 960w, /estetica/media/diplomas/f7d00d4cceab738d-1440.webp 1440w, /estetica/media/diplomas/f7d00d4cceab738d-1920.webp 1920w" sizes="(min-width: 768px) 22vw, 45vw" width="1443" height="1090" alt="Техніка Veil on Eyes" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAwCdASoUAA8APu1iqk4ppaQiMAgBMB2JZwAAW+1msmTWtwxa8AAA/soEHHbaJxmUAVbbTxGv8Awm0EQks1QznW10nJIOcIEBqKzJ0X0JP/2jzj1MT4FEuTYun5UPgzkNfTHZx+PMig95JeAAAA==);background-size:cover" decoding="async">                        </button>
+                                                    <figcaption>
+                                Техніка Veil on Eyes · 2020                            </figcaption>
+                                            </figure>
+                </li>
+                    </ul>
+
+            </div>
+</section>
+
+<svg class="rule" data-draw viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M2 4.3C152 2.5 298 5.6 452 3.9s258 2.3 412 .4 182 2.1 334 -.6"/>
+</svg>
+<section class="section section--surface" id="vidguky">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Відгуки</p>
+            <h2 class="section__title">Що кажуть клієнтки</h2>
+        </div>
+
+        <ul class="reviews__grid" data-reviews-grid>
+                            <li class="review" data-reveal style="--reveal-delay: 0ms">
+                                            <div class="review__body"><p>Різниця очевидна. Є відчуття, що звикаю до нового обличчя, але загалом дуже подобається. Очі саме такі, як я хотіла, брови трохи більші, ніж були. Чоловік з порогу сказав: «О, прикольно вийшло!» — значить, справді вийшло.</p><p>Пройшло трохи більше тижня, я вже подружилася з бровами і стрілками. Багато хто казав, що все виглядає природно й гармонійно. Дякую за роботу і за фотозвіт!</p></div>
+                    
+                    <p class="review__meta">
+                        <span class="review__author">Лариса К.</span><span>· Стрілки · 17 червня 2024</span>                    </p>
+
+                                            
+                    
+                                    </li>
+                            <li class="review" data-reveal style="--reveal-delay: 60ms">
+                                            <div class="review__body"><p>Дівчата, рекомендую від душі цього супер косметолога!</p><p>Оля, ти супер майстер. Дякую тобі велике.</p></div>
+                    
+                    <p class="review__meta">
+                        <span class="review__author">Діана З.</span><span>· Ботулінотерапія · 27 липня 2024</span>                    </p>
+
+                                            
+                    
+                                    </li>
+                            <li class="review" data-reveal style="--reveal-delay: 120ms">
+                                            <div class="review__body"><p>Олю, взагалі крутий результат. Супер, дякую!</p><p>Оля, ти чарівниця.</p></div>
+                    
+                    <p class="review__meta">
+                        <span>Контурна пластика губ · 22 жовтня 2025</span>                    </p>
+
+                                            
+                    
+                                    </li>
+                            <li class="review" data-reveal style="--reveal-delay: 180ms">
+                                            <div class="review__body"><p>Усе забуваю написати — брови бомба. Дякую велике, з першого разу і так вдало.</p><p>Бажаю вам тільки найкращого і процвітання в кар’єрі. Ви просто класна. Уперше в житті пишу відгук, і мені приємно.</p></div>
+                    
+                    <p class="review__meta">
+                        <span>Брови — пудрове напилення · 8 липня 2026</span>                    </p>
+
+                                            
+                    
+                                    </li>
+                            <li class="review" data-reveal style="--reveal-delay: 240ms">
+                                            <div class="review__body"><p>Олюшко, дякую за шикарні брови! Хочеться змінювати життя, творити, любити, розвиватися. Дякую за позитив і гармонію.</p><p>Ви нереально класна. Кайфую від себе. До зустрічі!</p></div>
+                    
+                    <p class="review__meta">
+                        <span>Брови — пудрове напилення · 28 червня 2024</span>                    </p>
+
+                                            
+                    
+                                    </li>
+                    </ul>
+
+            </div>
+</section>
+<section class="section" id="pytannya">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Питання і відповіді</p>
+            <h2 class="section__title">Те, що питають найчастіше</h2>
+        </div>
+
+        <div data-reveal>
+            <div class="tabs" role="tablist" aria-label="Розділи питань">
+                                    <button type="button" role="tab"
+                            id="tab-faq"
+                            aria-controls="panel-faq"
+                            aria-selected="true"
+                            data-tab="faq">Часті питання</button>
+                                    <button type="button" role="tab"
+                            id="tab-contra"
+                            aria-controls="panel-contra"
+                            aria-selected="false"
+                            data-tab="contra">Протипоказання</button>
+                                    <button type="button" role="tab"
+                            id="tab-prep"
+                            aria-controls="panel-prep"
+                            aria-selected="false"
+                            data-tab="prep">Підготовка</button>
+                                    <button type="button" role="tab"
+                            id="tab-aftercare"
+                            aria-controls="panel-aftercare"
+                            aria-selected="false"
+                            data-tab="aftercare">Догляд після</button>
+                            </div>
+
+                            <div class="accordion" role="tabpanel"
+                     id="panel-faq"
+                     aria-labelledby="tab-faq"
+                     data-panel="faq"
+                     >
+                                            <details>
+                            <summary>Чи буде боляче?</summary>
+                            <div class="accordion__answer"><p>Це питання ставлять частіше за всі інші. Перед процедурою наноситься анестезія, і більшість клієнток описують відчуття як дискомфорт, а не біль — тиск, вібрація, іноді поколювання.</p><p>Багато хто засинає під час роботи. Якщо стане неприємно, ми зупиняємось у будь-який момент — про це домовляємось заздалегідь.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Чи буде виглядати неприродно?</summary>
+                            <div class="accordion__answer"><p>Природність — це те, заради чого я працюю мінімальними обсягами й починаю з ескізу.</p><p>Форму ми малюємо на вашому обличчі звичайним олівцем, ви дивитесь на неї в дзеркало, і процедура не починається, поки ви не скажете, що це саме те. Ніхто нікуди не поспішає.</p><p>Моє завдання — делікатно підкреслити те, що у вас уже є, а не намалювати нове обличчя.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Скільки тримається результат?</summary>
+                            <div class="accordion__answer"><p>Перманентний макіяж живе від року до трьох. Точний термін залежить від типу шкіри, обраного відтінку й того, як ви доглядаєте за собою на сонці.</p><p>Ін’єкційні процедури тримаються від кількох місяців до року — залежно від методики.</p><p>На консультації я називаю реальні строки для вашого випадку, а не середні для індустрії.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Чи можна перекрити роботу іншого майстра?</summary>
+                            <div class="accordion__answer"><p>Найчастіше так. Іноді достатньо перекрити старий пігмент новим, іноді його спершу потрібно освітлити — це два різні сценарії за часом і вартістю.</p><p>Щоб відповісти точно, мені треба побачити роботу. Надішліть фото в месенджер або приходьте на консультацію — скажу чесно, що вийде за один візит, а що потребуватиме двох.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Скільки це коштує?</summary>
+                            <div class="accordion__answer"><p>Вартість залежить від процедури та препарату, а ціни на препарати прив’язані до курсу валют. Тому я не публікую прайс, який застаріє за місяць.</p><p>Залиште заявку або напишіть у месенджер — назву актуальну вартість саме для вашого запиту.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Навіщо потрібна корекція?</summary>
+                            <div class="accordion__answer"><p>Пігмент приживається нерівномірно — це нормальна властивість шкіри, а не помилка майстра. Десь колір ляже щільніше, десь світліше.</p><p>Корекція через 4–8 тижнів вирівнює насиченість і доводить форму. Вона оплачується окремо й коштує 50% від основної процедури.</p><p>Без корекції результат теж буде, але саме вона робить його довговічним.</p></div>
+                        </details>
+                                    </div>
+                            <div class="accordion" role="tabpanel"
+                     id="panel-contra"
+                     aria-labelledby="tab-contra"
+                     data-panel="contra"
+                     hidden>
+                                            <details>
+                            <summary>Коли процедуру доведеться відкласти</summary>
+                            <div class="accordion__answer"><p>Вагітність і період годування груддю. Гострі запальні процеси й підвищена температура. Загострення хронічних захворювань. Герпес в активній фазі — губи в такому стані не працюємо.</p><p>Це тимчасові стани: коли вони минають, до процедури можна повертатися.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Коли потрібна попередня розмова</summary>
+                            <div class="accordion__answer"><p>Цукровий діабет. Порушення згортання крові й приймання препаратів, що на нього впливають. Схильність до келоїдних рубців. Онкологічні захворювання в анамнезі. Автоімунні стани. Алергії на анестетики.</p><p>Це не автоматична відмова. Це означає, що на консультації ми детально обговоримо ваш випадок, і за потреби я попрошу висновок вашого лікаря.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Що обов’язково сказати мені до процедури</summary>
+                            <div class="accordion__answer"><p>Про всі препарати, які ви приймаєте постійно. Про перенесені захворювання й операції. Про алергічні реакції — будь-які, навіть ті, що здаються дрібницею. Про попередні косметологічні процедури, особливо ін’єкційні, і коли саме вони були.</p><p>Нічого з цього не є приводом для відмови саме по собі. Але від цієї інформації залежить, як я побудую роботу — тому не приховуйте нічого.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Хто ухвалює остаточне рішення</summary>
+                            <div class="accordion__answer"><p>Рішення ухвалюється на консультації, після огляду й розмови — не за списком в інтернеті.</p><p>Якщо я бачу, що процедура вам зараз не підходить, я скажу про це прямо і поясню чому. Відмовити — теж робота майстра.</p></div>
+                        </details>
+                                    </div>
+                            <div class="accordion" role="tabpanel"
+                     id="panel-prep"
+                     aria-labelledby="tab-prep"
+                     data-panel="prep"
+                     hidden>
+                                            <details>
+                            <summary>За два тижні до процедури</summary>
+                            <div class="accordion__answer"><p>Не робіть пілінги, лазерні й агресивні доглядові процедури в зоні роботи. Шкіра має підійти до процедури у спокійному стані.</p><p>Якщо плануєте відпустку на морі — краще спершу відпочити, а потім прийти. Свіжа засмага і пігмент погано дружать.</p></div>
+                        </details>
+                                            <details>
+                            <summary>За добу</summary>
+                            <div class="accordion__answer"><p>Не вживайте алкоголь. Обмежте каву й енергетики — вони підвищують чутливість і посилюють кровоточивість.</p><p>Якщо приймаєте препарати, що розріджують кров, і їх можна тимчасово скасувати — обговоріть це заздалегідь зі своїм лікарем, не самостійно.</p></div>
+                        </details>
+                                            <details>
+                            <summary>У день процедури</summary>
+                            <div class="accordion__answer"><p>Приходьте зі звичним макіяжем або без нього — як зручно. Якщо ви щодня малюєте брови чи стрілки певної форми, зробіть це: мені буде корисно побачити, до чого ви звикли.</p><p>Поїжте перед візитом. Процедура триває від сорока хвилин до півтори години, і сидіти голодною некомфортно.</p><p>Закладіть трохи більше часу, ніж вказано. Ескіз і обговорення форми — це теж частина роботи, і поспіх тут зайвий.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Що взяти з собою</summary>
+                            <div class="accordion__answer"><p>Нічого спеціального. За бажанням — навушники: багато хто слухає музику або просто дрімає.</p><p>Якщо у вас є фото робіт, які вам подобаються, покажіть їх. Точну копію ми не зробимо — у вас інша анатомія, — але я зрозумію напрямок, який вам близький.</p></div>
+                        </details>
+                                    </div>
+                            <div class="accordion" role="tabpanel"
+                     id="panel-aftercare"
+                     aria-labelledby="tab-aftercare"
+                     data-panel="aftercare"
+                     hidden>
+                                            <details>
+                            <summary>Перші дні</summary>
+                            <div class="accordion__answer"><p>Ділянка буде трохи припухлою й яскравішою, ніж очікуваний результат. Це нормальний перебіг загоєння, а не помилка.</p><p>Не мочіть зону перші дні. Не тріть і не розпарюйте. Утвориться тонка скоринка — вона має зійти сама.</p><p>Здирати її не можна в жодному разі: разом зі скоринкою піде пігмент, і на цьому місці лишиться світла пляма.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Перші два тижні</summary>
+                            <div class="accordion__answer"><p>Уникайте сауни, басейну й тривалого перебування на сонці. Не робіть пілінгів у зоні роботи.</p><p>Використовуйте засіб, який я дам вам після процедури, за схемою — вона проста, але її треба дотримуватись.</p><p>Приблизно на п’ятий-сьомий день колір здасться майже зниклим. Це найтривожніший момент для клієнток і водночас найзвичайніша річ: пігмент проявиться назад до кінця другого тижня.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Що вважати нормою</summary>
+                            <div class="accordion__answer"><p>Легка припухлість перші дні. Зміна відтінку — від яскравого до майже непомітного й назад. Дрібне лущення. Відчуття сухості.</p><p>Ненормально: біль, що наростає, сильне почервоніння, виділення, температура. Якщо бачите щось із цього — пишіть мені одразу, не чекайте планової корекції.</p></div>
+                        </details>
+                                            <details>
+                            <summary>Надалі</summary>
+                            <div class="accordion__answer"><p>Користуйтеся сонцезахисним засобом на зоні перманенту. Ультрафіолет — головна причина, через яку колір вигорає швидше за строк.</p><p>Перед лазерними процедурами на обличчі попереджайте косметолога, що у вас перманентний макіяж.</p><p>І приходьте на корекцію через 4–8 тижнів — саме вона закріплює результат надовго.</p></div>
+                        </details>
+                                    </div>
+                    </div>
+    </div>
+</section>
+<section class="section section--tight" id="sertyfikaty">
+    <div class="wrap">
+        <div class="gift" data-reveal>
+            <div>
+                <p class="eyebrow">Подарунковий сертифікат</p>
+                <h2>Подарунок, який не доведеться міняти на розмір</h2>
+                <p>
+                    Сертифікат на будь-яку суму або на конкретну процедуру. Отримувачка сама
+                    обере, коли й на що його витратити, — а я допоможу їй визначитись на консультації.
+                    Оформлюється за один дзвінок.
+                </p>
+            </div>
+            <div>
+                <a class="btn btn--primary" href="#zapys" data-event="cta_gift">Замовити сертифікат</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section" id="lokaciyi">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Локації</p>
+            <h2 class="section__title">Де мене знайти</h2>
+            <p class="section__lead">
+                Два кабінети в Дніпрі. Який саме буде зручнішим,
+                домовимось під час підтвердження запису.
+            </p>
+        </div>
+
+                            <ul class="studio-strip" data-lightbox-group="studio" data-reveal>
+                                    <li>
+                        <button type="button"
+                                data-lightbox="/estetica/media/studio/df8b9df0684f7488-1440.webp"
+                                data-caption="Кабінет салону Estetika"
+                                aria-label="Відкрити фото кабінету">
+                            <img src="/estetica/media/studio/df8b9df0684f7488-960.webp" srcset="/estetica/media/studio/df8b9df0684f7488-480.webp 480w, /estetica/media/studio/df8b9df0684f7488-960.webp 960w, /estetica/media/studio/df8b9df0684f7488-1440.webp 1440w, /estetica/media/studio/df8b9df0684f7488-1920.webp 1920w" sizes="(min-width: 700px) 30vw, 90vw" width="2268" height="4032" alt="Кабінет салону краси Estetika у Дніпрі" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABwBgCdASoUACQAPu1mpk4ppaMiKq35MB2JZwDCCBK2ZbrTvOYCvElrPlvSjQIif4wrMo2rpDOwplge3AAAzG5XKFCn19A/pTfE7OfqD/yDu8HHHPrHmfMXWFnyV+bZQcczN+5diB9xeTyALK6a1HkHF4siW+E0cpJ36jMuNEt3wAxuQLXJEZGy1P6Ogt2dwJEHBKtBmc4QPiLV2i/YD3nHvlIUrMlIh2oEJj/kKKW5HbpdHb5+aeOTjE6wGabuJ4EhyIEaqlfN/R79J++OQaAlpBs+uraGXItUVlUQBXoAAA==);background-size:cover" decoding="async">                        </button>
+                    </li>
+                                    <li>
+                        <button type="button"
+                                data-lightbox="/estetica/media/studio/bf1aedc5327e0c31-1440.webp"
+                                data-caption="Кабінет салону Estetika"
+                                aria-label="Відкрити фото кабінету">
+                            <img src="/estetica/media/studio/bf1aedc5327e0c31-960.webp" srcset="/estetica/media/studio/bf1aedc5327e0c31-480.webp 480w, /estetica/media/studio/bf1aedc5327e0c31-960.webp 960w, /estetica/media/studio/bf1aedc5327e0c31-1440.webp 1440w, /estetica/media/studio/bf1aedc5327e0c31-1920.webp 1920w" sizes="(min-width: 700px) 30vw, 90vw" width="2268" height="4032" alt="Кабінет салону краси Estetika у Дніпрі" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAADQBgCdASoUACQAPu1yrlGppyQiqrgIATAdiWUAsPAIF0Ua7ArRZhP310ZGm+dBXfM/9FvBySTn9xkqHZPpNAAAzjgaNZ/3CbGF3YPDuYeDjypAv76XnyWC0m7c9r8yaFmeo746Dkm/w1KAscvwA3o6EFGJTfcnCG+t19KZuS/MLum2sNBCmkodBv1ZTXeYwi+aUii7mpC8GbIiHsKOuZz3lD3dJb3B42h5u2f4QQ0mS7oLy43WYDGrnFKqs0UV1+2zIKlRA8wz5+7CUokiaIJc9kO8GT6FD8qr4i7KvH2GMT7hUBosRaph0fkGFTAFJBkDaH3jnUaPEAAA);background-size:cover" decoding="async">                        </button>
+                    </li>
+                                    <li>
+                        <button type="button"
+                                data-lightbox="/estetica/media/studio/b7656703a1a70e98-1440.webp"
+                                data-caption="Кабінет салону Estetika"
+                                aria-label="Відкрити фото кабінету">
+                            <img src="/estetica/media/studio/b7656703a1a70e98-960.webp" srcset="/estetica/media/studio/b7656703a1a70e98-480.webp 480w, /estetica/media/studio/b7656703a1a70e98-960.webp 960w, /estetica/media/studio/b7656703a1a70e98-1440.webp 1440w, /estetica/media/studio/b7656703a1a70e98-1920.webp 1920w" sizes="(min-width: 700px) 30vw, 90vw" width="2268" height="4032" alt="Кабінет салону краси Estetika у Дніпрі" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAABwBgCdASoUACQAPu1ws1KppiSipWmZMB2JZQDAH19lwxhEwv/owlpmvesOcbqa8CwSMr71CGI2c3L8qsAA90/IJNefaQISBPMAlKqPM3+Kc81rE+BOumaHm4LqkLMasnvsaENnWV/76iH0OPp2OdcwqqilfHawVLLZB5qvDTLGAHD1TTPo8s0Xhu19LjU0e9vZq2AtVwuhwZgrDLGGY0+6Z+x39LUrAwRFQNV+0AveHgkhObPUG3dH3ZynQtmLAm2ejuGtzSYX5t0Tos3wqv1S8C4SgwdCKtPOIAgWAwAAAA==);background-size:cover" decoding="async">                        </button>
+                    </li>
+                            </ul>
+        
+        <div class="locations__grid">
+                            <article class="location" data-reveal style="--reveal-delay: 0ms">
+
+                    <div class="location__body">
+                        <h3 class="location__title">Салон Estetika plus</h3>
+                        <p class="location__address">вул. Велика Діївська, 32</p>
+                                                    <p class="location__district">Новокодацький район, Дніпро</p>
+                        
+                                                    <p class="location__hours">
+                                                                                                Нд: вихідний                            </p>
+                        
+                                                
+                                                    <a class="location__link" href="https://maps.app.goo.gl/rVwdr18A5MVAZiQY6"
+                               target="_blank" rel="noopener" data-event="map_open">
+                                Показати на карті й прокласти маршрут
+                            </a>
+                                            </div>
+                </article>
+                            <article class="location" data-reveal style="--reveal-delay: 80ms">
+
+                    <div class="location__body">
+                        <h3 class="location__title">Кабінет на Матли</h3>
+                        <p class="location__address">вул. Зиновія Матли, 2</p>
+                                                    <p class="location__district">Амур-Нижньодніпровський район, Дніпро</p>
+                        
+                                                    <p class="location__hours">
+                                                                                                Нд: вихідний                            </p>
+                        
+                                                
+                                                    <a class="location__link" href="https://maps.app.goo.gl/WxkRLkv6XgqR25bG7"
+                               target="_blank" rel="noopener" data-event="map_open">
+                                Показати на карті й прокласти маршрут
+                            </a>
+                                            </div>
+                </article>
+                    </div>
+
+                    <p class="empty-note" style="margin-top:var(--sp-3)">
+                Графік роботи уточнюється — поки що записуйтесь через форму, і я підтверджу зручний час.
+            </p>
+            </div>
+</section>
+
+<svg class="rule" data-draw viewBox="0 0 1200 8" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <path d="M2 4.3C152 2.5 298 5.6 452 3.9s258 2.3 412 .4 182 2.1 334 -.6"/>
+</svg>
+<section class="section" id="zapys">
+    <div class="wrap booking">
+
+        <div data-reveal>
+            <p class="eyebrow">Запис</p>
+            <h2 class="section__title">Залишіть заявку</h2>
+            <p class="section__lead">
+                Напишіть, що вас цікавить, і я зв’яжуся з вами, щоб узгодити час.
+                Якщо ще не визначились із процедурою — теж пишіть, розберемось на консультації.
+            </p>
+
+            <div class="booking__aside">
+                
+                                
+                                <ol class="steps steps--compact">
+                    <li class="step">
+                        <h3>Я передзвоню або напишу</h3>
+                        <p>У той спосіб, який ви оберете. Зазвичай того ж дня.</p>
+                    </li>
+                    <li class="step">
+                        <h3>Узгодимо час</h3>
+                        <p>Підберемо зручні день і кабінет. Заявка стає записом саме тут.</p>
+                    </li>
+                    <li class="step">
+                        <h3>Розкажу, як підготуватись</h3>
+                        <p>Коротко й конкретно під вашу процедуру.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="static-notice">
+    <p class="eyebrow">Попередній перегляд</p>
+    <h3>Тут форма запису не працює</h3>
+    <p>Ця сторінка — статична копія для узгодження вигляду. На робочому сайті
+    кнопка надсилає заявку майстру. Поки що напишіть, будь ласка, в Instagram.</p>
+    <a class="btn btn--primary" href="https://www.instagram.com/kirillova_ok_permanent_studio/"
+       target="_blank" rel="noopener">Написати в Instagram</a>
+</div>
+    </div>
+</section>
+<section class="section" id="blog">
+    <div class="wrap">
+        <div class="section__head" data-reveal>
+            <p class="eyebrow">Блог</p>
+            <h2 class="section__title">Корисне про догляд і процедури</h2>
+        </div>
+
+        <ul class="posts">
+                            <li class="post" data-reveal style="--reveal-delay: 0ms">
+                    <a href="/estetica/blog/perekryttya-roboty-inshogo-maystra/">
+                                                    <img src="/estetica/media/works/74ac88adf7cbd5a4-960.webp" srcset="/estetica/media/works/74ac88adf7cbd5a4-480.webp 480w, /estetica/media/works/74ac88adf7cbd5a4-960.webp 960w, /estetica/media/works/74ac88adf7cbd5a4-1440.webp 1440w, /estetica/media/works/74ac88adf7cbd5a4-1920.webp 1920w" sizes="(min-width: 768px) 32vw, 100vw" width="1290" height="2293" alt="Перекрити роботу іншого майстра: що реально можливо" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASoUACQAPulip02pJaOiNVgIASAdCUAYmwLMFA7uaYwnmQELxzpbCJVtvPvmAAD+rvtUTS9oNjmEyp/IA9+BtPpxdptjCJKnenBeH1B8XL9WWn/mMj7mVjDVTf396qiVt807+pDmJRwIAlOKx5a49Xj3dJU+tUEslBOQxPRm1m5FgZqXHp4gFMiG6i7JsfzkjtjR7P1V6zt8R7/XJEpLLBPWuPAAAA==);background-size:cover" decoding="async">                                                <time datetime="2026-07-19">
+                            19.07.2026                        </time>
+                        <h3>Перекрити роботу іншого майстра: що реально можливо</h3>
+                        <p>Стара форма, надто темний колір, синява. Розбираю, які випадки вирішуються за один візит, а які потребують кількох.</p>
+                    </a>
+                </li>
+                            <li class="post" data-reveal style="--reveal-delay: 70ms">
+                    <a href="/estetica/blog/yak-pidgotuvatys-do-procedury/">
+                                                    <img src="/estetica/media/works/60688185156e9ad9-960.webp" srcset="/estetica/media/works/60688185156e9ad9-480.webp 480w, /estetica/media/works/60688185156e9ad9-960.webp 960w, /estetica/media/works/60688185156e9ad9-1440.webp 1440w, /estetica/media/works/60688185156e9ad9-1920.webp 1920w" sizes="(min-width: 768px) 32vw, 100vw" width="2048" height="2048" alt="Як підготуватись до процедури, щоб результат тримався довше" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACQBQCdASoUABQAPu1sq1EppaOiqAqpMB2JZACxHtplsQkec6vVAnJPR/T/d/e9/GWBV8P4AAD+TLZKknSKbQx9E0a5HVDg0Ib9ENDd9d8rUEc/OlvPfjn11C4MKJIZCJPks4SeSsnG2LKv7KoVLMDUExoUMrnr9VR9Ig7As7mpjbB16PtNc/IvEoMWK/YgantQ165WdyqebPMzQ7L58jVNBQLGzR6AzWK1ZbE1mhC9H31DNAAAAA==);background-size:cover" decoding="async">                                                <time datetime="2026-06-02">
+                            02.06.2026                        </time>
+                        <h3>Як підготуватись до процедури, щоб результат тримався довше</h3>
+                        <p>Кілька простих речей за два тижні до візиту впливають на результат більше, ніж здається.</p>
+                    </a>
+                </li>
+                            <li class="post" data-reveal style="--reveal-delay: 140ms">
+                    <a href="/estetica/blog/chomu-kolir-znykaye-na-pyatyy-den/">
+                                                    <img src="/estetica/media/works/dbcff793423fcd09-960.webp" srcset="/estetica/media/works/dbcff793423fcd09-480.webp 480w, /estetica/media/works/dbcff793423fcd09-960.webp 960w, /estetica/media/works/dbcff793423fcd09-1440.webp 1440w, /estetica/media/works/dbcff793423fcd09-1920.webp 1920w" sizes="(min-width: 768px) 32vw, 100vw" width="2048" height="2048" alt="Чому колір зникає на п’ятий день — і чому це нормально" loading="lazy" data-lqip style="background-image:url(data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAACwBQCdASoUABQAPu1ur1IppiQiqAgBMB2JYgCdMsy4AqgAGtHS8KSR9f0P5KL8gayMwdGLrgAA/upU1TI8Ut1RrVlK2AL9M1vvHEmGQnXMoLmnaziPT3fDIVgZoaZNYm56KDv2x0tgSIv6/yEGUkKUytYGJv8gXUNaPv3z+1+UIHPfUkb5yQ2elM1lnyQj3tT9uz90O0PcR4BJ5PrxblmMXOVS1m4bMJ04E6y04sHgAA==);background-size:cover" decoding="async">                                                <time datetime="2026-05-14">
+                            14.05.2026                        </time>
+                        <h3>Чому колір зникає на п’ятий день — і чому це нормально</h3>
+                        <p>Найтривожніший тиждень після процедури. Розповідаю, що відбувається зі шкірою день за днем, щоб ви не хвилювались даремно.</p>
+                    </a>
+                </li>
+                    </ul>
+
+        <div class="center-action">
+            <a class="btn btn--ghost" href="/estetica/blog/">Усі статті</a>
+        </div>
+    </div>
+</section>
+
+<a class="btn btn--primary float-cta" href="#zapys" data-float-cta data-event="cta_float">Записатись</a>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BeautySalon","@id":"https://kjjumpskill-coder.github.io/estetica/#salon","name":"Estetika","description":"Перманентний макіяж та ін’єкційна косметологія у місті Дніпро","url":"https://kjjumpskill-coder.github.io/estetica","areaServed":"Дніпро","department":[{"@type":"BeautySalon","name":"Estetika — Салон Estetika plus","address":{"@type":"PostalAddress","streetAddress":"вул. Велика Діївська, 32","addressLocality":"Дніпро","addressCountry":"UA"},"geo":{"@type":"GeoCoordinates","latitude":48.4802852,"longitude":34.9256514}},{"@type":"BeautySalon","name":"Estetika — Кабінет на Матли","address":{"@type":"PostalAddress","streetAddress":"вул. Зиновія Матли, 2","addressLocality":"Дніпро","addressCountry":"UA"},"geo":{"@type":"GeoCoordinates","latitude":48.5085767,"longitude":34.9927168}}],"sameAs":["https://www.instagram.com/kirillova_ok_permanent_studio/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Послуги","itemListElement":[{"@type":"Service","name":"Брови — пудрове напилення","description":"М’який пудровий ефект, схожий на легку тінь від олівця. Природна форма, підібрана саме під ваше обличчя.","serviceType":"BeautySalon"},{"@type":"Service","name":"Губи","description":"Повертає губам колір, який з роками стає блідішим. Рівний контур, без відчуття намальованих губ.","serviceType":"BeautySalon"},{"@type":"Service","name":"Міжвійковий простір","description":"Погляд стає виразнішим, а вій — візуально густішими. При цьому нічого не видно: лінії як такої немає.","serviceType":"BeautySalon"},{"@type":"Service","name":"Стрілки","description":"Від ледь помітної до графічної — форму малюємо під розріз ваших очей, а не за шаблоном.","serviceType":"BeautySalon"},{"@type":"Service","name":"Корекція та перекриття старого перманенту","description":"Виправлення форми чи кольору після попереднього майстра. Оплачується окремо — 50% вартості основної процедури.","serviceType":"BeautySalon"},{"@type":"Service","name":"Видалення перманенту","description":"Освітлення або повне зняття старого пігменту, якщо колишня робота більше не подобається.","serviceType":"BeautySalon"},{"@type":"Service","name":"Ботулінотерапія","description":"Розгладжує мімічні зморшки на чолі, між бровами й навколо очей. Обличчя лишається живим і рухливим.","serviceType":"BeautySalon"},{"@type":"Service","name":"Контурна пластика губ","description":"Об’єм і зволоження без ефекту «качиних губ». Працюю за принципом: краще менше, ніж помітно.","serviceType":"BeautySalon"},{"@type":"Service","name":"Біоревіталізація","description":"Глибоке зволоження зсередини. Шкіра стає щільнішою, зникає відчуття стягнутості.","serviceType":"BeautySalon"},{"@type":"Service","name":"Мезотерапія","description":"Покращує якість шкіри: тон, щільність, рівність рельєфу.","serviceType":"BeautySalon"},{"@type":"Service","name":"Полінуклеотиди","description":"Відновлення й регенерація. Добре працює для тонкої шкіри навколо очей.","serviceType":"BeautySalon"},{"@type":"Service","name":"Ліполітичні ін’єкції","description":"Корекція локальних жирових відкладень — друге підборіддя, зона щік.","serviceType":"BeautySalon"},{"@type":"Service","name":"Ліфтинг-процедури","description":"Підтягує овал обличчя й повертає чіткість контуру.","serviceType":"BeautySalon"},{"@type":"Service","name":"Консультація косметолога","description":"Розбираємо, що саме потрібно вашій шкірі. Без нав’язування процедур.","serviceType":"BeautySalon"}]}},{"@type":"Person","@id":"https://kjjumpskill-coder.github.io/estetica/#master","name":"Кірілова Ольга Олександрівна","jobTitle":"Косметолог-естетист, майстер перманентного макіяжу","worksFor":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"knowsAbout":["перманентний макіяж","ін’єкційна косметологія","догляд за шкірою"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Чи буде боляче?","acceptedAnswer":{"@type":"Answer","text":"Це питання ставлять частіше за всі інші. Перед процедурою наноситься анестезія, і більшість клієнток описують відчуття як дискомфорт, а не біль — тиск, вібрація, іноді поколювання. Багато хто засинає під час роботи. Якщо стане неприємно, ми зупиняємось у будь-який момент — про це домовляємось заздалегідь."}},{"@type":"Question","name":"Чи буде виглядати неприродно?","acceptedAnswer":{"@type":"Answer","text":"Природність — це те, заради чого я працюю мінімальними обсягами й починаю з ескізу. Форму ми малюємо на вашому обличчі звичайним олівцем, ви дивитесь на неї в дзеркало, і процедура не починається, поки ви не скажете, що це саме те. Ніхто нікуди не поспішає. Моє завдання — делікатно підкреслити те, що у вас уже є, а не намалювати нове обличчя."}},{"@type":"Question","name":"Скільки тримається результат?","acceptedAnswer":{"@type":"Answer","text":"Перманентний макіяж живе від року до трьох. Точний термін залежить від типу шкіри, обраного відтінку й того, як ви доглядаєте за собою на сонці. Ін’єкційні процедури тримаються від кількох місяців до року — залежно від методики. На консультації я називаю реальні строки для вашого випадку, а не середні для індустрії."}},{"@type":"Question","name":"Чи можна перекрити роботу іншого майстра?","acceptedAnswer":{"@type":"Answer","text":"Найчастіше так. Іноді достатньо перекрити старий пігмент новим, іноді його спершу потрібно освітлити — це два різні сценарії за часом і вартістю. Щоб відповісти точно, мені треба побачити роботу. Надішліть фото в месенджер або приходьте на консультацію — скажу чесно, що вийде за один візит, а що потребуватиме двох."}},{"@type":"Question","name":"Скільки це коштує?","acceptedAnswer":{"@type":"Answer","text":"Вартість залежить від процедури та препарату, а ціни на препарати прив’язані до курсу валют. Тому я не публікую прайс, який застаріє за місяць. Залиште заявку або напишіть у месенджер — назву актуальну вартість саме для вашого запиту."}},{"@type":"Question","name":"Навіщо потрібна корекція?","acceptedAnswer":{"@type":"Answer","text":"Пігмент приживається нерівномірно — це нормальна властивість шкіри, а не помилка майстра. Десь колір ляже щільніше, десь світліше. Корекція через 4–8 тижнів вирівнює насиченість і доводить форму. Вона оплачується окремо й коштує 50% від основної процедури. Без корекції результат теж буде, але саме вона робить його довговічним."}},{"@type":"Question","name":"Коли процедуру доведеться відкласти","acceptedAnswer":{"@type":"Answer","text":"Вагітність і період годування груддю. Гострі запальні процеси й підвищена температура. Загострення хронічних захворювань. Герпес в активній фазі — губи в такому стані не працюємо. Це тимчасові стани: коли вони минають, до процедури можна повертатися."}},{"@type":"Question","name":"Коли потрібна попередня розмова","acceptedAnswer":{"@type":"Answer","text":"Цукровий діабет. Порушення згортання крові й приймання препаратів, що на нього впливають. Схильність до келоїдних рубців. Онкологічні захворювання в анамнезі. Автоімунні стани. Алергії на анестетики. Це не автоматична відмова. Це означає, що на консультації ми детально обговоримо ваш випадок, і за потреби я попрошу висновок вашого лікаря."}},{"@type":"Question","name":"Що обов’язково сказати мені до процедури","acceptedAnswer":{"@type":"Answer","text":"Про всі препарати, які ви приймаєте постійно. Про перенесені захворювання й операції. Про алергічні реакції — будь-які, навіть ті, що здаються дрібницею. Про попередні косметологічні процедури, особливо ін’єкційні, і коли саме вони були. Нічого з цього не є приводом для відмови саме по собі. Але від цієї інформації залежить, як я побудую роботу — тому не приховуйте нічого."}},{"@type":"Question","name":"Хто ухвалює остаточне рішення","acceptedAnswer":{"@type":"Answer","text":"Рішення ухвалюється на консультації, після огляду й розмови — не за списком в інтернеті. Якщо я бачу, що процедура вам зараз не підходить, я скажу про це прямо і поясню чому. Відмовити — теж робота майстра."}},{"@type":"Question","name":"За два тижні до процедури","acceptedAnswer":{"@type":"Answer","text":"Не робіть пілінги, лазерні й агресивні доглядові процедури в зоні роботи. Шкіра має підійти до процедури у спокійному стані. Якщо плануєте відпустку на морі — краще спершу відпочити, а потім прийти. Свіжа засмага і пігмент погано дружать."}},{"@type":"Question","name":"За добу","acceptedAnswer":{"@type":"Answer","text":"Не вживайте алкоголь. Обмежте каву й енергетики — вони підвищують чутливість і посилюють кровоточивість. Якщо приймаєте препарати, що розріджують кров, і їх можна тимчасово скасувати — обговоріть це заздалегідь зі своїм лікарем, не самостійно."}},{"@type":"Question","name":"У день процедури","acceptedAnswer":{"@type":"Answer","text":"Приходьте зі звичним макіяжем або без нього — як зручно. Якщо ви щодня малюєте брови чи стрілки певної форми, зробіть це: мені буде корисно побачити, до чого ви звикли. Поїжте перед візитом. Процедура триває від сорока хвилин до півтори години, і сидіти голодною некомфортно. Закладіть трохи більше часу, ніж вказано. Ескіз і обговорення форми — це теж частина роботи, і поспіх тут зайвий."}},{"@type":"Question","name":"Що взяти з собою","acceptedAnswer":{"@type":"Answer","text":"Нічого спеціального. За бажанням — навушники: багато хто слухає музику або просто дрімає. Якщо у вас є фото робіт, які вам подобаються, покажіть їх. Точну копію ми не зробимо — у вас інша анатомія, — але я зрозумію напрямок, який вам близький."}},{"@type":"Question","name":"Перші дні","acceptedAnswer":{"@type":"Answer","text":"Ділянка буде трохи припухлою й яскравішою, ніж очікуваний результат. Це нормальний перебіг загоєння, а не помилка. Не мочіть зону перші дні. Не тріть і не розпарюйте. Утвориться тонка скоринка — вона має зійти сама. Здирати її не можна в жодному разі: разом зі скоринкою піде пігмент, і на цьому місці лишиться світла пляма."}},{"@type":"Question","name":"Перші два тижні","acceptedAnswer":{"@type":"Answer","text":"Уникайте сауни, басейну й тривалого перебування на сонці. Не робіть пілінгів у зоні роботи. Використовуйте засіб, який я дам вам після процедури, за схемою — вона проста, але її треба дотримуватись. Приблизно на п’ятий-сьомий день колір здасться майже зниклим. Це найтривожніший момент для клієнток і водночас найзвичайніша річ: пігмент проявиться назад до кінця другого тижня."}},{"@type":"Question","name":"Що вважати нормою","acceptedAnswer":{"@type":"Answer","text":"Легка припухлість перші дні. Зміна відтінку — від яскравого до майже непомітного й назад. Дрібне лущення. Відчуття сухості. Ненормально: біль, що наростає, сильне почервоніння, виділення, температура. Якщо бачите щось із цього — пишіть мені одразу, не чекайте планової корекції."}},{"@type":"Question","name":"Надалі","acceptedAnswer":{"@type":"Answer","text":"Користуйтеся сонцезахисним засобом на зоні перманенту. Ультрафіолет — головна причина, через яку колір вигорає швидше за строк. Перед лазерними процедурами на обличчі попереджайте косметолога, що у вас перманентний макіяж. І приходьте на корекцію через 4–8 тижнів — саме вона закріплює результат надовго."}}]},{"@type":"Review","itemReviewed":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"author":{"@type":"Person","name":"Лариса К."},"reviewBody":"Різниця очевидна. Є відчуття, що звикаю до нового обличчя, але загалом дуже подобається. Очі саме такі, як я хотіла, брови трохи більші, ніж були. Чоловік з порогу сказав: «О, прикольно вийшло!» — значить, справді вийшло. Пройшло трохи більше тижня, я вже подружилася з бровами і стрілками. Багато хто казав, що все виглядає природно й гармонійно. Дякую за роботу і за фотозвіт!","datePublished":"2024-06-17"},{"@type":"Review","itemReviewed":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"author":{"@type":"Person","name":"Діана З."},"reviewBody":"Дівчата, рекомендую від душі цього супер косметолога! Оля, ти супер майстер. Дякую тобі велике.","datePublished":"2024-07-27"},{"@type":"Review","itemReviewed":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"author":{"@type":"Person","name":""},"reviewBody":"Олю, взагалі крутий результат. Супер, дякую! Оля, ти чарівниця.","datePublished":"2025-10-22"},{"@type":"Review","itemReviewed":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"author":{"@type":"Person","name":""},"reviewBody":"Усе забуваю написати — брови бомба. Дякую велике, з першого разу і так вдало. Бажаю вам тільки найкращого і процвітання в кар’єрі. Ви просто класна. Уперше в житті пишу відгук, і мені приємно.","datePublished":"2026-07-08"},{"@type":"Review","itemReviewed":{"@id":"https://kjjumpskill-coder.github.io/estetica/#salon"},"author":{"@type":"Person","name":""},"reviewBody":"Олюшко, дякую за шикарні брови! Хочеться змінювати життя, творити, любити, розвиватися. Дякую за позитив і гармонію. Ви нереально класна. Кайфую від себе. До зустрічі!","datePublished":"2024-06-28"}]}</script>
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <div class="footer__grid">
+
+            <div>
+                <div class="footer__brand">
+                    <span style="color:var(--c-nude)"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"
+     stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="24" r="22.4" stroke-width="0.75" opacity=".5"/>
+        <path d="M4.5 23.6C8.2 17.6 13 13.6 17.2 16.6c2.6 1.9 4.6 3.6 6.8 3.6s4.2-1.7 6.8-3.6c4.2-3 9 1 12.7 7"/>
+    <path d="M4.5 23.6c5.6 8.9 12.4 13 19.5 13s13.9-4.1 19.5-13"/>
+    <path d="M4.5 23.6c6.3 1.9 12.8 2.8 19.5 2.8s13.2-.9 19.5-2.8" stroke-width="1"/>
+</svg>
+</span>
+                    <span>Estetika</span>
+                </div>
+                <p>Кірілова Ольга Олександрівна<br>Косметолог-естетист, майстер перманентного макіяжу</p>
+
+                            </div>
+
+            <div>
+                <h2>Контакти</h2>
+                <ul>
+                                                            <li>вул. Велика Діївська, 32</li>
+                    <li>вул. Зиновія Матли, 2</li>
+                    <li>Дніпро</li>
+                </ul>
+
+                                    <h3 style="margin-top:1.5rem">Ми в мережі</h3>
+                    <ul>
+                                                    <li>
+                                <a href="https://www.instagram.com/kirillova_ok_permanent_studio/" target="_blank" rel="noopener"
+                                   data-event="messenger_click">Instagram</a>
+                            </li>
+                                            </ul>
+                            </div>
+
+            <div>
+                <h2>Документи</h2>
+                <ul>
+                    <li><a href="/estetica/polityka-konfidenciynosti/">Політика конфіденційності</a></li>
+                    <li><a href="/estetica/dogovir-oferty/">Договір оферти</a></li>
+                    <li><a href="/estetica/pravyla-zapysu/">Правила запису та відвідування</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span>&copy; 2026 Estetika</span>
+                    </div>
+    </div>
+</footer>
+<div class="mobile-nav" data-nav-panel data-open="false" role="dialog" aria-modal="true" aria-label="Меню">
+    <div class="mobile-nav__top">
+        <button class="icon-btn" type="button" data-nav-close aria-label="Закрити меню">&times;</button>
+    </div>
+
+            <a href="#pro-maystra" data-nav-link>Про майстра</a>
+            <a href="#poslugy" data-nav-link>Послуги</a>
+            <a href="#roboty" data-nav-link>Роботи</a>
+            <a href="#vidguky" data-nav-link>Відгуки</a>
+            <a href="#pytannya" data-nav-link>Питання</a>
+            <a href="#lokaciyi" data-nav-link>Локації</a>
+    
+    <a class="btn btn--primary" href="#zapys" data-nav-link>Записатись</a>
+
+    </div>
+<div class="modal" data-modal="service" data-open="false" role="dialog" aria-modal="true" aria-labelledby="service-modal-title" hidden>
+    <div class="modal__panel">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрити">&times;</button>
+        <h2 class="modal__title" id="service-modal-title"></h2>
+        <p class="modal__meta" data-modal-meta></p>
+        <div class="modal__body" data-modal-body></div>
+        <div class="modal__actions">
+            <a class="btn btn--primary" href="#zapys" data-modal-book>Записатись на процедуру</a>
+            <button class="btn btn--ghost" type="button" data-modal-close>Закрити</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal lightbox" data-modal="lightbox" data-open="false" role="dialog" aria-modal="true" aria-label="Перегляд зображення" hidden>
+    <div class="modal__panel">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрити">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Попереднє">&#8249;</button>
+        <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Наступне">&#8250;</button>
+        <img alt="" data-lightbox-img>
+        <p class="lightbox__caption" data-lightbox-caption></p>
+    </div>
+</div>
+
+</body>
+</html>
