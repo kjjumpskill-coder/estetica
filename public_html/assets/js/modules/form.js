@@ -114,6 +114,25 @@ function applyMask(input) {
     input.addEventListener('input', onInput);
 }
 
+/**
+ * Заповнює приховані поля, які не можна віддати з кешованого HTML:
+ * мітки джерела переходу.
+ */
+function fillContext(form) {
+    const params = new URLSearchParams(window.location.search);
+
+    const set = (name, value) => {
+        const field = form.elements[name];
+        if (field) field.value = value ?? '';
+    };
+
+    set('page_path', window.location.pathname);
+    set('referrer', document.referrer);
+    set('utm_source', params.get('utm_source'));
+    set('utm_medium', params.get('utm_medium'));
+    set('utm_campaign', params.get('utm_campaign'));
+}
+
 export function initBookingForm() {
     const form = document.querySelector('[data-booking-form]');
     if (!form) return;
@@ -122,6 +141,37 @@ export function initBookingForm() {
     const status = form.querySelector('[data-form-status]');
 
     if (phone) applyMask(phone);
+
+    fillContext(form);
+
+    /**
+     * Токен береться при першому дотику до форми, а не перед відправкою.
+     *
+     * Це не оптимізація, а умова роботи антиспаму: сервер відлічує час
+     * заповнення від моменту видачі токена. Якби ми брали його вже на submit,
+     * різниця завжди була б близькою до нуля, і перевірка втратила б сенс.
+     */
+    let tokenPromise = null;
+
+    const ensureToken = () => {
+        tokenPromise ??= fetch(form.dataset.tokenEndpoint, { credentials: 'same-origin' })
+            .then((r) => r.json())
+            .then(({ token }) => {
+                form.elements._csrf.value = token;
+
+                return token;
+            })
+            .catch(() => {
+                // Дозволяємо спробувати ще раз при відправці.
+                tokenPromise = null;
+
+                return null;
+            });
+
+        return tokenPromise;
+    };
+
+    form.addEventListener('focusin', ensureToken, { once: true });
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -137,8 +187,9 @@ export function initBookingForm() {
             return;
         }
 
+        // 380 плюс дев'ять розрядів — рівно 12 цифр.
         const digits = tel.value.replace(/\D/g, '');
-        if (digits.length !== 11 || !digits.startsWith('380')) {
+        if (digits.length !== 12 || !digits.startsWith('380')) {
             failField(tel, 'Схоже, у номері не всі цифри. Формат: +38 (0XX) XXX-XX-XX');
             return;
         }
@@ -148,9 +199,14 @@ export function initBookingForm() {
         status.textContent = 'Надсилаю…';
 
         try {
+            // Зазвичай токен уже взято при першому дотику до форми; тут лише
+            // дочікуємось його — або беремо, якщо той запит не вдався.
+            await ensureToken();
+
             const response = await fetch(form.dataset.endpoint, {
                 method: 'POST',
                 headers: { 'X-Requested-With': 'fetch' },
+                credentials: 'same-origin',
                 body: new FormData(form),
             });
 
@@ -169,6 +225,10 @@ export function initBookingForm() {
             }
 
             form.reset();
+            // Після reset приховані поля теж очистились — повертаємо контекст,
+            // щоб повторна заявка не пішла без міток джерела.
+            fillContext(form);
+
             status.textContent = data.message || 'Дякую! Я зв’яжуся з вами найближчим часом.';
             status.dataset.state = 'ok';
         } catch {

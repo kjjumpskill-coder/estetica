@@ -5,7 +5,7 @@
  * Пункт зафіксовано в MISSING.md.
  */
 ?>
-<section class="section">
+<section class="section section--top">
     <div class="wrap" style="max-width:var(--wrap-narrow)">
         <p class="eyebrow">Документ</p>
         <h1 class="section__title">Політика конфіденційності</h1>

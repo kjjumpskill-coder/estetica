@@ -1,7 +1,7 @@
 <?php
 /** ЗАГЛУШКА. Остаточний текст погоджує замовниця — див. MISSING.md. */
 ?>
-<section class="section">
+<section class="section section--top">
     <div class="wrap" style="max-width:var(--wrap-narrow)">
         <p class="eyebrow">Документ</p>
         <h1 class="section__title">Договір оферти</h1>

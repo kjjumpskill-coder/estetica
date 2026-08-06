@@ -8,3 +8,4 @@
 .DS_Store
 *.local
 /.staging
+/storage/fonts/

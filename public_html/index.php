@@ -11,10 +11,13 @@ declare(strict_types=1);
 
 require dirname(__DIR__) . '/app/bootstrap.php';
 
+use App\Controllers\BlogController;
 use App\Controllers\HomeController;
+use App\Controllers\LeadController;
 use App\Controllers\LegalController;
 use App\Core\Config;
 use App\Core\Router;
+use App\Core\Sitemap;
 use App\Core\Staging;
 
 // Закриває тестовий майданчик до того, як щось буде віддано назовні.
@@ -28,6 +31,30 @@ $router->get('/', [new HomeController(), 'index']);
 $router->get('/robots.txt', static function (): void {
     header('Content-Type: text/plain; charset=utf-8');
     echo Staging::robots(rtrim(Config::str('APP_URL', ''), '/'));
+});
+
+$lead = new LeadController();
+
+$router->get('/api/token', [$lead, 'token']);
+$router->post('/zayavka', [$lead, 'store']);
+
+$blog = new BlogController();
+
+$router->get('/blog', [$blog, 'index']);
+$router->get('/blog/{slug}', [$blog, 'show']);
+
+$router->get('/sitemap.xml', static function (): void {
+    header('Content-Type: application/xml; charset=utf-8');
+
+    // На тестовому майданчику мапи сайту не існує: віддавати пошуковикам перелік
+    // сторінок, які ми тим самим запитом просимо не індексувати, безглуздо.
+    if (Staging::isActive()) {
+        http_response_code(404);
+
+        return;
+    }
+
+    echo Sitemap::xml(rtrim(Config::str('APP_URL', ''), '/'));
 });
 
 $router->get('/polityka-konfidenciynosti', [new LegalController(), 'privacy']);

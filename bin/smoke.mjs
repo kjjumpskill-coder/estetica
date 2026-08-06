@@ -218,6 +218,47 @@ await check('неповний телефон теж перехоплюється
     return `«${state.error.slice(0, 40)}…»`;
 });
 
+await check('коректно заповнена форма справді відправляється', async () => {
+    await page.locator('#lead-name').scrollIntoViewIfNeeded();
+
+    // Дотик до форми запускає серверний відлік часу заповнення.
+    await page.locator('#lead-name').click();
+    await page.fill('#lead-name', 'Тестова заявка');
+
+    // Поле треба спорожнити явно: попередні перевірки лишили в ньому хвіст,
+    // і набір дописався б до нього, а не замінив його.
+    await page.fill('#lead-phone', '');
+    await page.locator('#lead-phone').click();
+    await page.locator('#lead-phone').type('0509998877', { delay: 10 });
+
+    const shown = await page.inputValue('#lead-phone');
+    if (shown !== '+38 (050) 999-88-77') {
+        throw new Error(`маска дала "${shown}" замість "+38 (050) 999-88-77"`);
+    }
+
+    await page.fill('#lead-comment', 'Перевірка форми, видалити');
+
+    // Антиспам вимагає щонайменше 3 секунди від видачі токена.
+    await page.waitForTimeout(3500);
+
+    await page.locator('[data-booking-form] button[type="submit"]').click();
+    await page.waitForTimeout(2500);
+
+    const state = await page.evaluate(() => {
+        const s = document.querySelector('[data-form-status]');
+        return { text: s.textContent.trim(), kind: s.dataset.state ?? '' };
+    });
+
+    if (state.kind !== 'ok') {
+        throw new Error(`статус «${state.kind}»: ${state.text}`);
+    }
+
+    const cleared = await page.inputValue('#lead-name');
+    if (cleared !== '') throw new Error('форма не очистилась після успіху');
+
+    return `«${state.text.slice(0, 44)}…», поля очищено`;
+});
+
 await check('фасад відео не тягне YouTube до кліку', async () => {
     const before = await page.locator('#interviu iframe').count();
     if (before !== 0) throw new Error('iframe є ще до кліку');

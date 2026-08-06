@@ -44,9 +44,15 @@ $path   = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 <meta property="og:site_name" content="<?= e($brand) ?>">
 <meta property="og:title" content="<?= e($fullTitle) ?>">
 <meta property="og:description" content="<?= e($description) ?>">
-<?php if (!empty($ogImage)): ?>
-    <meta property="og:image" content="<?= e($appUrl . $ogImage) ?>">
-<?php endif; ?>
+<?php
+// Прев'ю посилання. Портрети майстра всі вертикальні, а месенджери очікують
+// 1,91:1 — тому за замовчуванням віддаємо зібрану картку, а не обрізаний портрет.
+$ogPath = $ogImage ?? '/assets/img/og-cover.jpg';
+?>
+<meta property="og:image" content="<?= e($appUrl . $ogPath) ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 

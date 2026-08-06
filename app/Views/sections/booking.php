@@ -76,15 +76,31 @@ foreach ($formServices as $s) {
             </div>
         </div>
 
-        <form class="form" data-booking-form data-endpoint="/zayavka" method="post" action="/zayavka" novalidate data-reveal>
-            <?= $this->raw(Csrf::field()) ?>
+        <form class="form" data-booking-form data-endpoint="/zayavka" data-token-endpoint="/api/token"
+              method="post" action="/zayavka" novalidate data-reveal>
 
-            <?php // Три шари антиспаму без CAPTCHA: пастка, час заповнення і ліміт на IP (на сервері). ?>
+            <?php
+            // CSRF-токена немає в самій розмітці свідомо. Головна сторінка на проді
+            // віддається зі статичного кешу — один і той самий HTML для всіх, — тому
+            // вкладений сюди токен був би спільним і застарілим уже за годину.
+            // JS бере свіжий токен із /api/token безпосередньо перед відправкою.
+            ?>
+            <input type="hidden" name="<?= e(Csrf::fieldName()) ?>" value="">
+
+            <?php // Три шари антиспаму без CAPTCHA: пастка, час заповнення і ліміт на IP. ?>
             <div class="hp" aria-hidden="true">
                 <label for="website">Не заповнюйте це поле</label>
                 <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
-            <input type="hidden" name="started_at" value="<?= time() ?>">
+
+            <?php // Мітки джерела проставляє JS: у кешованому HTML вони застигли б
+                  // на моменті генерації сторінки. Часу заповнення тут немає навмисно —
+                  // його відлічує сервер від моменту видачі токена. ?>
+            <input type="hidden" name="page_path" value="">
+            <input type="hidden" name="referrer" value="">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
 
             <div class="field">
                 <label for="lead-name">Як до вас звертатися <span class="req" aria-hidden="true">*</span></label>

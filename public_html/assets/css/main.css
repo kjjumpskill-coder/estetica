@@ -14,6 +14,11 @@
 
 .section--tight { padding-block: var(--sp-5); }
 
+/* Перша секція внутрішньої сторінки. На головній цю роль виконує hero з власними
+   відступами, а тут контент починається одразу — і без запасу під липку шапку
+   заголовок опинявся б під нею. */
+.section--top { padding-top: calc(var(--sp-6) + 72px); }
+
 .section--surface {
     background: var(--c-surface);
 }
@@ -956,7 +961,13 @@
 .posts { display: grid; gap: var(--sp-3); list-style: none; }
 @media (min-width: 768px) { .posts { grid-template-columns: repeat(3, 1fr); } }
 
+.posts--list { grid-template-columns: 1fr; }
+@media (min-width: 768px) { .posts--list { grid-template-columns: repeat(3, 1fr); } }
+
 .post { display: grid; gap: 0.6rem; }
+.post a { display: grid; gap: 0.6rem; }
+.post h2 { font-size: var(--t-md); font-weight: 500; font-family: var(--font-display); }
+.post a:hover h2, .post a:hover h3 { color: var(--c-accent-dk); }
 .post img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
 .post h3 { font-size: var(--t-md); font-weight: 500; }
 .post p { font-size: var(--t-sm); color: var(--c-muted); }
@@ -969,6 +980,104 @@
     border: 1px dashed var(--c-line);
     font-size: var(--t-sm);
 }
+
+/* ================================================================
+   Сторінка статті
+   ================================================================ */
+
+.article__head,
+.article__body,
+.article__cta,
+.article__more {
+    max-width: 68ch;
+    margin-inline: auto;
+}
+
+.article__cover {
+    max-width: 900px;
+    margin: var(--sp-4) auto;
+}
+
+.article__cover img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.article__body { color: var(--c-ink); }
+
+.article__body h2 {
+    font-size: var(--t-lg);
+    font-weight: 500;
+    margin-top: var(--sp-5);
+    margin-bottom: var(--sp-2);
+}
+
+.article__body h3 {
+    font-size: var(--t-md);
+    font-weight: 500;
+    margin-top: var(--sp-4);
+    margin-bottom: var(--sp-1);
+}
+
+.article__body p { margin-bottom: var(--sp-2); color: var(--c-muted); }
+.article__body strong { color: var(--c-ink); font-weight: 700; }
+
+.article__body ul {
+    list-style: none;
+    margin-bottom: var(--sp-2);
+    display: grid;
+    gap: 0.5rem;
+}
+
+.article__body li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--c-muted);
+}
+
+.article__body li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.75em;
+    width: 10px; height: 1px;
+    background: var(--c-accent);
+}
+
+.article__cta {
+    margin-top: var(--sp-5);
+    padding: var(--sp-4);
+    background: var(--c-surface);
+    border: 1px solid var(--c-line);
+    text-align: center;
+}
+
+.article__cta p { margin-bottom: var(--sp-2); color: var(--c-muted); }
+
+.article__more { margin-top: var(--sp-5); }
+
+.article__more h2 {
+    font-family: var(--font-body);
+    font-size: var(--t-xs);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: var(--sp-2);
+}
+
+.article__more ul { list-style: none; display: grid; gap: 0; }
+
+.article__more a {
+    display: grid;
+    gap: 0.25rem;
+    padding: var(--sp-3) 0;
+    border-top: 1px solid var(--c-line);
+}
+
+.article__more strong { font-family: var(--font-display); font-size: var(--t-md); font-weight: 500; }
+.article__more span { font-size: var(--t-sm); color: var(--c-muted); }
+.article__more a:hover strong { color: var(--c-accent-dk); }
 
 /* ================================================================
    Футер

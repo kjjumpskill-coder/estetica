@@ -1,4 +1,4 @@
-<section class="section" style="min-height:60vh;display:grid;place-items:center;text-align:center">
+<section class="section section--top" style="min-height:60vh;display:grid;place-items:center;text-align:center">
     <div class="wrap" style="max-width:520px">
         <p class="eyebrow">404</p>
         <h1 class="section__title">Такої сторінки немає</h1>

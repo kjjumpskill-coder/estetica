@@ -9,6 +9,7 @@ use App\Core\View;
 use App\Repositories\DiplomaRepository;
 use App\Repositories\FaqRepository;
 use App\Repositories\MediaRepository;
+use App\Repositories\PostRepository;
 use App\Repositories\ReviewRepository;
 use App\Repositories\ServiceRepository;
 use App\Repositories\SettingsRepository;
@@ -46,6 +47,7 @@ final class HomeController
             'studio'    => MediaRepository::byCategory('studio', 8),
             'master'    => MediaRepository::first('master'),
             'formServices' => ServiceRepository::forSelect(),
+            'posts'     => PostRepository::published(3),
             'pageTitle' => null,
         ]);
 
